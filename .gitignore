@@ -1,0 +1,16 @@
+# secrets — never commit the TLS keypair
+.cert.pem
+.key.pem
+# large model weights
+models/
+*.gguf
+# generated audio + transient
+audio/
+.voicetmp/
+# learner state (per-run)
+learner_state.json
+.learner_*.json
+# python
+__pycache__/
+*.pyc
+.venv/

@@ -273,3 +273,15 @@ mandated logging (INV-INSTRUMENT), not a hard-coded guess. The live questions:
 - **Tool/environment** layer (SRS store, difficulty estimator, comprehension checker, TTS).
 - **Content** sourcing/generation pipeline and the CEFR-tagged prerequisite DAG (EVP/EGP).
 - Persistence, onboarding/placement, multi-session.
+
+---
+
+## 7. Code layering (hard rule)
+
+`harness/` is the pure, language-agnostic core and **must not import any app
+module** (`brain`, `voice`, `media`, `voiceserver`, `serve`, `tutor`,
+`run_session`, `app_settings`). The dependency arrow points app → core; enforced by
+`test_harness_core_imports_no_app`. App layering: `voiceserver` (HTTP + turn engine)
+→ `media` (STT/TTS) + `brain` (LLM seam) + `harness` (pedagogy + persistence). The
+page is `index.html`; runtime knobs live in `app_settings.py`, pedagogy tunables in
+`harness/config.py`.

@@ -10,11 +10,14 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from harness import config as C
-from harness.model import LearnerModel, Item, Declarative, PendingError
+from harness.model import LearnerModel, Item, ItemState, Declarative, PendingError
 from harness.moves import Move, MoveType
 from harness.arbiter import Arbiter
 from harness.sim import SimLearner, demo_curriculum
-from harness import invariants
+from harness import invariants, persistence, scheduler, drives
+from harness.brazilian import brazilian_curriculum
+import brain
+import voiceserver
 
 
 def _names(violations):
@@ -188,6 +191,95 @@ def test_session_never_emits_illegal_move_and_spaces_reviews():
     # and the learner actually learned something
     produced = sum(1 for it in curriculum if lm.states[it.id].production_known)
     assert produced >= 1, "expected at least one item to reach production-known"
+
+
+# --- app layer: persistence, grading, GUIDE coverage, layering ----------
+
+def test_guide_covers_emitted_moves():
+    missing = {m.value for m in MoveType} - set(brain.GUIDE)
+    # explain/task_repeat are deliberately generic (not emitted by drives yet)
+    assert missing <= {"explain", "task_repeat"}, f"moves without a GUIDE prompt: {missing}"
+
+
+def test_persistence_roundtrip():
+    import os as _os, tempfile
+    cur = brazilian_curriculum()
+    lm = LearnerModel(cur)
+    lm.new_session()
+    st = lm.states["oi"]
+    st.successful_exposures = 3
+    st.production_known = True
+    st.declarative = Declarative.RECALL
+    lm.global_time = 123
+    move = Move(MoveType.ELICIT, "oi", variant="production")
+    path = _os.path.join(tempfile.mkdtemp(), "s.json")
+    persistence.save(lm, move, path)
+    lm2, pend = persistence.load(cur, path)
+    assert lm2.global_time == 123
+    s2 = lm2.states["oi"]
+    assert s2.successful_exposures == 3 and s2.production_known is True
+    assert s2.declarative == Declarative.RECALL
+    assert pend.type == MoveType.ELICIT and pend.target == "oi"
+
+
+def test_persistence_corrupt_starts_fresh():
+    import os as _os, tempfile
+    cur = brazilian_curriculum()
+    path = _os.path.join(tempfile.mkdtemp(), "bad.json")
+    open(path, "w").write("{ not valid json ")
+    lm, pend = persistence.load(cur, path)         # must not crash
+    assert lm.session == 0 and pend is None
+
+
+def test_scheduler_decay_and_growth():
+    st = ItemState()
+    st.successful_exposures = 1
+    st.last_seen_time = 0
+    st.stability = 100.0
+    assert scheduler.estimated_recall(st, 10) > scheduler.estimated_recall(st, 200)
+    s0 = st.stability
+    scheduler.update_after_retrieval(st, True, 200)
+    assert st.stability > s0, "a spaced success should grow stability"
+
+
+def test_drive_repair_fires_first():
+    lm = LearnerModel([Item("x", "x", "vocab", 0.3)])
+    _encode(lm, "x")
+    lm.pending_error = PendingError("x", "production", True)
+    cands, _scores = drives.generate_candidates(lm)
+    assert cands[0].drive == "Repair"
+
+
+def test_assess_response_branches():
+    lm = LearnerModel([Item("agua", "água", "vocab", 0.2)])
+    _encode(lm, "agua")
+    lm.states["agua"].total_exposures = 1
+    elicit = Move(MoveType.ELICIT, "agua")
+    _r, correct, _ = voiceserver.assess_response(elicit, "agua", lm, [lm.items["agua"]])
+    assert correct is True
+    _r, wrong, _ = voiceserver.assess_response(elicit, "café", lm, [lm.items["agua"]])
+    assert wrong is False
+    chat = Move(MoveType.CHAT)
+    _r, _c, produced = voiceserver.assess_response(chat, "eu quero água", lm, list(lm.items.values()))
+    assert produced == "agua"
+
+
+def test_local_match():
+    assert voiceserver.local_match("água", "água")
+    assert voiceserver.local_match("agua", "água")            # accent-insensitive
+    assert voiceserver.local_match("bom dia amigo", "bom dia")  # multiword subset
+    assert not voiceserver.local_match("café", "água")
+
+
+def test_harness_core_imports_no_app():
+    import glob, os as _os
+    app = {"brain", "voice", "media", "voiceserver", "serve", "tutor",
+           "run_session", "app_settings"}
+    root = _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))
+    for f in glob.glob(_os.path.join(root, "harness", "*.py")):
+        src = open(f).read()
+        for a in app:
+            assert f"import {a}" not in src, f"{_os.path.basename(f)} imports app module {a}"
 
 
 def main():

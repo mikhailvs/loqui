@@ -1,0 +1,15 @@
+[project]
+name = "loqui"
+version = "0.1.0"
+description = "An evidence-based agent harness for teaching a spoken language — pedagogy in code, push-to-talk voice loop, local LLM."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+# The pure harness core has NO third-party dependencies. These are for the voice app.
+dependencies = [
+    "faster-whisper",   # speech-to-text
+    "edge-tts",         # text-to-speech
+]
+
+# System prerequisites (not pip-installable): ffmpeg, openssl, and a brain —
+# either the `claude` CLI on PATH or an Ollama endpoint (see app_settings.BRAIN_URL).

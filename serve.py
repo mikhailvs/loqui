@@ -19,8 +19,9 @@ from harness.model import LearnerModel, Declarative
 from harness.arbiter import Arbiter
 from harness.sim import SimLearner, demo_curriculum
 from harness import invariants
+import app_settings
 
-PORT = 8000
+PORT = app_settings.SIM_PORT
 
 DRIVE_COLOR = {
     "Repair": "#ff6b6b", "Review": "#4dabf7", "Progress": "#51cf66",

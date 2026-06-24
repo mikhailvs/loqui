@@ -2,11 +2,18 @@
 facing text. Q4: the LLM realizes *under constraint*; the harness has already
 chosen the move and the invariants have already vetoed illegal ones.
 
-`MockRealizer` is a deterministic stub so the loop runs with no API dependency.
-A real `LLMRealizer` would implement the same `realize(move, model) -> str`
-contract, prompting the model with the move, the target item, and the learner
-state — and its output would itself be re-checked against any output-level
-invariants before being shown.
+There are intentionally TWO realization paths with DIFFERENT contracts:
+
+  - `MockRealizer.realize(move, lm) -> str` (here): a deterministic, no-dependency
+    stub used ONLY by the simulation viewers (run_session.py, serve.py).
+  - `brain.realize(move, item, ctx) -> {"say", "display"}`: the PRODUCTION path,
+    called directly by the voice app. It returns structured text (target-language
+    audio + English scaffold), not a bare string.
+
+They are not unified on purpose — there is one consumer of each. If you ever add a
+second *production* realizer, unify on the brain.realize signature then (and inject
+it via `Arbiter(realizer=...)`); until then, do not build an ABC/registry for two
+implementations.
 """
 from __future__ import annotations
 from .moves import Move, MoveType

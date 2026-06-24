@@ -12,29 +12,29 @@ voice — English there would be mangled); all English scaffolding goes in 'disp
 """
 from __future__ import annotations
 import json
+import logging
 import os
 import re
 import subprocess
 import urllib.request
 
-# Default to a local Ollama; point at a LAN box with e.g.
-#   BRAIN_URL=http://192.168.1.50:11434/api/chat BRAIN_MODEL=qwen3:30b-a3b
-BRAIN_URL = os.environ.get("BRAIN_URL", "http://localhost:11434/api/chat")
-BRAIN_MODEL = os.environ.get("BRAIN_MODEL", "qwen3:8b")
+import app_settings
+
+log = logging.getLogger("loqui.brain")
+
+BRAIN_URL = app_settings.BRAIN_URL
+BRAIN_MODEL = app_settings.BRAIN_MODEL
 HTTP_TIMEOUT = 30
 CLAUDE_TIMEOUT = 60
 
 SAY_SCHEMA = {"type": "object", "required": ["say", "display"],
               "properties": {"say": {"type": "string"}, "display": {"type": "string"}}}
-# 'note' before 'produced_item' so the model reasons before committing the id
-ASSESS_SCHEMA = {"type": "object", "required": ["note", "produced_item"],
-                 "properties": {"note": {"type": "string"},
-                                "produced_item": {"type": ["string", "null"]}}}
 
 GUIDE = {
     "introduce": "Introduce the new word/phrase. 'say' = ONLY the word/phrase in the target language, clearly. 'display' = the word, its English meaning, and a 3-6 word usage tip.",
     "input": "Give ONE short EASY sentence in the target language using mostly already-known words plus the target, that the learner can understand. 'say' = the target-language sentence only. 'display' = its English meaning.",
     "elicit": "Ask the learner to SAY something themselves. Do NOT reveal the answer. 'say' = a brief natural cue in the target language, or empty. 'display' = the English instruction of what to say (e.g. \"Say: 'I want water'\").",
+    "probe": "Recognition check (easier than elicit). Do NOT reveal the answer in 'say'. 'say' = a brief cue in the target language or empty. 'display' = a simple English recognition question, e.g. \"Which means 'water'?\" or \"Does this mean X? (yes/no)\".",
     "prompt": "The learner just erred. Withhold the answer; nudge a retry. 'say' = a short encouraging cue in the target language. 'display' = a small hint in English, NOT the full answer.",
     "recast": "The learner erred. Give the CORRECT form naturally. 'say' = the correct form in the target language only. 'display' = a brief English note of the fix.",
     "correct": "Briefly correct ONE thing. 'say' = the correct target-language form. 'display' = one short English note.",
@@ -78,15 +78,25 @@ def _claude(prompt: str, fallback: dict) -> dict:
 
 
 def _brain(system: str, user: str, schema: dict, fallback: dict) -> dict:
-    """Mac/Ollama first; claude -p as fallback; static fallback last."""
+    """Ollama first; claude -p as fallback; static fallback last. The returned
+    dict carries '_via' so callers can tell a real LLM reply from the stub
+    (which is structurally a plausible tutor line — silent failure is the trap)."""
     try:
-        return _ollama(system, user, schema, fallback)
-    except Exception:
+        r = _ollama(system, user, schema, fallback)
+        r["_via"] = "ollama"
+        return r
+    except Exception as e:
+        log.warning("brain: ollama (%s) failed (%r); trying claude", BRAIN_URL, e)
         try:
-            return _claude(system + "\n\n" + user + "\n\nOutput ONLY the JSON object.",
-                           fallback)
-        except Exception:
-            return fallback
+            r = _claude(system + "\n\n" + user + "\n\nOutput ONLY the JSON object.",
+                        fallback)
+            r["_via"] = "claude"
+            return r
+        except Exception as e2:
+            log.warning("brain: claude -p failed (%r); using static fallback", e2)
+            r = dict(fallback)
+            r["_via"] = "fallback"
+            return r
 
 
 def realize(move: dict, item: dict | None, ctx: dict) -> dict:
@@ -107,12 +117,3 @@ def realize(move: dict, item: dict | None, ctx: dict) -> dict:
     fb = {"say": item["lemma"] if item else "",
           "display": (f"{item['lemma']} — {item['gloss']}" if item else "Let's keep going.")}
     return _brain(_system_realize(lang), user, SAY_SCHEMA, fb)
-
-
-def assess_chat(transcript: str, candidates: list) -> dict:
-    cand = "; ".join(f"{c['id']}='{c['lemma']}' ({c['gloss']})" for c in candidates) or "(none)"
-    system = ("You grade a beginner's free Brazilian Portuguese. Output ONLY JSON. "
-              "'note' = <=4 words. 'produced_item' = the id of a listed item they used "
-              "correctly and meaningfully, or null.")
-    user = f"Learner said (imperfect STT): \"{transcript}\".\nKnown items: {cand}."
-    return _brain(system, user, ASSESS_SCHEMA, {"note": "", "produced_item": None})

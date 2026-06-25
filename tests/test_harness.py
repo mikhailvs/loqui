@@ -13,7 +13,7 @@ from harness import config as C
 from harness.model import LearnerModel, Item, ItemState, Declarative, PendingError
 from harness.moves import Move, MoveType
 from harness.arbiter import Arbiter
-from harness.sim import SimLearner, demo_curriculum
+from harness.sim import SimLearner, demo_curriculum, Response
 from harness import invariants, persistence, scheduler, drives
 from harness.brazilian import brazilian_curriculum
 import brain
@@ -311,6 +311,58 @@ def test_drive_proposes_contrast_for_confusable():
     cands, _ = drives.generate_candidates(lm)
     assert any(c.variant == "contrast" for c in cands), \
         "expected a contrast candidate when a confusable counterpart is encoded"
+
+
+def test_evidence_channel_purity():
+    # exposure moves (introduce/input/recast) must NOT feed mastery; only graded
+    # retrieval does (INV-DOSAGE). [back-ported from the lsat-harness audit]
+    lm = LearnerModel([Item("x", "x", "vocab", 0.3)])
+    arb = Arbiter()
+    for m in (Move(MoveType.INTRODUCE, "x"),
+              Move(MoveType.INPUT, "x", variant="inference"),
+              Move(MoveType.RECAST, "x", variant="marked")):
+        arb.apply_emit(lm, m)
+        arb.ingest(lm, m, Response())
+    assert lm.learning_log == [], "exposure moves must not write the learning log"
+    assert lm.states["x"].declarative_known is False, "exposure alone must not set declarative_known"
+    _encode(lm, "x")                                  # now a passed elicit DOES feed mastery
+    el = Move(MoveType.ELICIT, "x", variant="production")
+    arb.apply_emit(lm, el)
+    arb.ingest(lm, el, Response(success=True))
+    assert lm.learning_log and lm.states["x"].declarative_known
+
+
+def test_feedback_does_not_consume_massing_budget():
+    # a recast (feedback) must not eat the item's per-session exposure budget
+    # [back-ported from the lsat-harness audit]
+    lm = LearnerModel([Item("x", "x", "vocab", 0.3)])
+    _encode(lm, "x")
+    arb = Arbiter()
+    arb.apply_emit(lm, Move(MoveType.RECAST, "x", variant="marked"))
+    assert lm.states["x"].session_exposures == 0, "feedback must not increment session_exposures"
+    arb.apply_emit(lm, Move(MoveType.ELICIT, "x"))    # a real practice rep does
+    assert lm.states["x"].session_exposures == 1
+
+
+def test_multi_seed_no_starvation():
+    # across many seeds: never dead-end, never an illegal move, and progress is made
+    # [back-ported from the lsat-harness audit: multi-seed no-starvation property]
+    cur = demo_curriculum()
+    for seed in range(8):
+        lm = LearnerModel(cur)
+        sim = SimLearner(cur, seed=seed)
+        arb = Arbiter()
+        for _s in range(8):
+            lm.new_session()
+            for _t in range(C.SESSION_CAP):
+                lm.errors_flagged_this_turn = 0
+                tr = arb.select(lm)
+                assert not invariants.validate(tr.move, lm), f"seed {seed}: illegal {tr.move}"
+                arb.apply_emit(lm, tr.move)
+                arb.ingest(lm, tr.move, sim.respond(tr.move, lm))
+                lm.tick()
+        introduced = sum(1 for it in cur if lm.states[it.id].total_exposures > 0)
+        assert introduced >= 8, f"seed {seed}: only {introduced} items introduced (starvation?)"
 
 
 def test_harness_core_imports_no_app():

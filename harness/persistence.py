@@ -92,6 +92,10 @@ def load(curriculum: list, path: str):
         return lm, None
     try:
         blob = json.load(open(path))
+        if blob.get("schema_version") != SCHEMA_VERSION:
+            log.warning("learner state schema %s != %s at %s; starting fresh",
+                        blob.get("schema_version"), SCHEMA_VERSION, path)
+            return LearnerModel(curriculum), None
         lm.session = blob["session"]
         lm.turn = blob["turn"]
         lm.global_time = blob["global_time"]

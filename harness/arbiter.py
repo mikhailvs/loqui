@@ -8,6 +8,7 @@ the hard rule (INV-DOSAGE) that mastery is written ONLY from retrieval/probe
 outcomes, never from exposure, chat volume, or time-on-task.
 """
 from __future__ import annotations
+import logging
 from dataclasses import dataclass
 
 from . import config as C
@@ -17,6 +18,8 @@ from .model import LearnerModel, Declarative, PendingError
 from .moves import Move, MoveType, RETRIEVAL_MOVES
 from .drives import generate_candidates
 from .realizer import MockRealizer
+
+log = logging.getLogger("loqui.arbiter")
 
 EXPOSURE_TYPES = {MoveType.INTRODUCE, MoveType.INPUT, MoveType.RECAST,
                   MoveType.CORRECT, MoveType.EXPLAIN}
@@ -39,6 +42,9 @@ class Arbiter:
         for cand in candidates:
             violations = invariants.validate(cand, lm)
             if not violations:
+                if cand.drive == "Fallback":     # nothing actionable was legal — an alarm, not health
+                    log.warning("fallback move emitted (%d candidates vetoed first); "
+                                "state may be over-constrained", len(vetoes))
                 return TurnTrace(cand, scores, vetoes)
             vetoes.append((str(cand), violations))
         # _fallbacks guarantees a legal move; reaching here is a bug
@@ -47,11 +53,15 @@ class Arbiter:
     def apply_emit(self, lm: LearnerModel, m: Move) -> None:
         if m.target is not None:
             st = lm.states[m.target]
-            if lm.last_emitted is not None and lm.last_emitted.target == m.target:
-                st.consecutive_count += 1
-            else:
-                st.consecutive_count = 1
-            st.session_exposures += 1
+            # feedback is a corrective response, not a practice rep — it must NOT
+            # consume the anti-massing budget that INV-NOMASS exempts it from
+            # (else a recast/correct silently eats k_session/k_consec for the item).
+            if not m.is_feedback:
+                if lm.last_emitted is not None and lm.last_emitted.target == m.target:
+                    st.consecutive_count += 1
+                else:
+                    st.consecutive_count = 1
+                st.session_exposures += 1
             st.total_exposures += 1
             st.last_seen_session = lm.session
         if m.flags_error:

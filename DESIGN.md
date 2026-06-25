@@ -285,3 +285,32 @@ module** (`brain`, `voice`, `media`, `voiceserver`, `serve`, `tutor`,
 → `media` (STT/TTS) + `brain` (LLM seam) + `harness` (pedagogy + persistence). The
 page is `index.html`; runtime knobs live in `app_settings.py`, pedagogy tunables in
 `harness/config.py`.
+
+---
+
+## 8. Known limitations (from a cross-project audit)
+
+A sibling fork (`lsat-harness`) ran a four-persona audit of this shared harness;
+these findings apply here and are stated honestly rather than hidden. Confirmed
+bugs were fixed (feedback no longer consumes the anti-massing budget; schema is
+checked on load; `Fallback` emissions are logged as an alarm; added evidence-
+channel-purity, feedback-budget, and multi-seed no-starvation tests). The
+following are *acknowledged gaps*, not yet closed:
+
+- **`INV-PUSHEDELICIT` is inert** — no drive emits a `pushed` variant, so the
+  predicate never fires. It is *ready-to-wire, not enforced*. (Likewise, a few
+  design-doc invariants — `INV-MASTERY` validation gate, `INV-INSTRUMENT` — are
+  aspirational; the *enforced* pedagogy is exactly the predicates in
+  `invariants.INVARIANTS`.)
+- **`interactivity > 1` items are unreachable** — `INV-NOVEL` vetoes teaching
+  them and there is no decomposition move/state. Generated curricula use
+  `interactivity = 1`; the demo's high-interactivity item is intentional
+  scaffolding to exercise the veto.
+- **Mastery flags don't demote** — `declarative_known` / `production_known` are
+  set true and never false. The recall-based Review drive partially compensates
+  (decayed items still come due), but a true forgetting/demotion model is
+  unimplemented; `mastery()`'s exposure term is a saturating count, not a rate.
+- **The simulator is plumbing, not efficacy** — `SimLearner` bakes in the effects
+  the design hypothesizes, so a green run validates the *control loop*, never the
+  pedagogy. Efficacy needs delayed, production-like evidence from real learners
+  (§5).

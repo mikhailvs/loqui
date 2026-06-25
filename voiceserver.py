@@ -124,6 +124,11 @@ def _emit_next(ctx: dict) -> dict:
     S.arb.apply_emit(S.lm, move)
     S.pending = move
     item = S.lm.items.get(move.target)
+    if move.variant == "contrast" and item is not None:
+        cf = [c for c in item.confusable if c in S.lm.items and S.lm.is_encoded(c)]
+        if cf:
+            ci = S.lm.items[cf[0]]
+            ctx = {**ctx, "contrast_with": {"lemma": ci.lemma, "gloss": ci.gloss}}
 
     tr = time.time()
     r = brain.realize({"type": move.type.value, "variant": move.variant, "drive": move.drive},

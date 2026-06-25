@@ -84,7 +84,14 @@ def _consolidate_candidates(lm: LearnerModel) -> list:
             out.append(Move(MoveType.INPUT, tgt, variant="inference", drive="Consolidate",
                             rationale="shaky + sub-floor: re-encode"))
             continue
-        # elicit first; INV-BANDS will route to probe if it's too hard
+        # if a CONFUSABLE counterpart is also encoded, prefer a discriminative contrast
+        # (evidence: interleaving helps by contrasting confusable items; INV-INTERLEAVE:
+        # both members introduced before juxtaposing)
+        cf = [c for c in lm.items[tgt].confusable if c in lm.items and lm.is_encoded(c)]
+        if cf:
+            out.append(Move(MoveType.ELICIT, tgt, variant="contrast", drive="Consolidate",
+                            rationale=f"contrast {tgt} vs confusable {cf[0]}"))
+        # elicit; INV-BANDS will route to probe if it's too hard
         out.append(Move(MoveType.ELICIT, tgt, variant="production", drive="Consolidate",
                         rationale="production retrieval of shaky item"))
         out.append(Move(MoveType.PROBE, tgt, variant="recognition", drive="Consolidate",

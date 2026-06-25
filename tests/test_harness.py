@@ -201,6 +201,14 @@ def test_guide_covers_emitted_moves():
     assert missing <= {"explain", "task_repeat"}, f"moves without a GUIDE prompt: {missing}"
 
 
+def test_brain_extract_json():
+    fb = {"say": "x", "display": "y"}
+    assert brain._extract_json('```json\n{"say":"a","display":"b"}\n```', fb)["say"] == "a"
+    assert brain._extract_json('{"say":"c","display":"d"}', fb)["display"] == "d"
+    assert brain._extract_json('Here: {"say":"e","display":"f"} done', fb)["say"] == "e"
+    assert brain._extract_json('no json at all', fb) == fb
+
+
 def test_persistence_roundtrip():
     import os as _os, tempfile
     cur = brazilian_curriculum()
@@ -269,6 +277,17 @@ def test_local_match():
     assert voiceserver.local_match("agua", "água")            # accent-insensitive
     assert voiceserver.local_match("bom dia amigo", "bom dia")  # multiword subset
     assert not voiceserver.local_match("café", "água")
+
+
+def test_drive_proposes_contrast_for_confusable():
+    a = Item("ser", "ser", "grammar", 0.5, confusable=("estar",))
+    b = Item("estar", "estar", "grammar", 0.5, confusable=("ser",))
+    lm = LearnerModel([a, b])
+    _encode(lm, "ser")
+    _encode(lm, "estar")                 # both encoded + shaky
+    cands, _ = drives.generate_candidates(lm)
+    assert any(c.variant == "contrast" for c in cands), \
+        "expected a contrast candidate when a confusable counterpart is encoded"
 
 
 def test_harness_core_imports_no_app():

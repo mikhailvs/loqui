@@ -53,6 +53,21 @@ def _system_realize(lang: str) -> str:
         "Put ALL English (meaning, instructions, hints) in 'display', 1-2 short lines. Keep it short.")
 
 
+def _extract_json(text: str, fallback: dict) -> dict:
+    """Pull a JSON object out of model text (handles ```json fences / preamble);
+    never raises — returns the fallback if nothing parseable is found."""
+    text = (text or "").strip()
+    if "```" in text:                              # strip markdown fences
+        text = text.replace("```json", "```").split("```")[1] if text.count("```") >= 2 else text
+    m = re.search(r"\{.*\}", text, re.DOTALL)
+    if not m:
+        return dict(fallback)
+    try:
+        return json.loads(m.group(0))
+    except Exception:
+        return dict(fallback)
+
+
 def _ollama(system: str, user: str, schema: dict, fallback: dict) -> dict:
     body = json.dumps({
         "model": BRAIN_MODEL, "think": False, "stream": False, "format": schema,
@@ -65,16 +80,13 @@ def _ollama(system: str, user: str, schema: dict, fallback: dict) -> dict:
                                  headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as r:
         d = json.loads(r.read())
-    content = d["message"]["content"]
-    m = re.search(r"\{.*\}", content, re.DOTALL)
-    return json.loads(m.group(0)) if m else fallback
+    return _extract_json(d["message"]["content"], fallback)
 
 
 def _claude(prompt: str, fallback: dict) -> dict:
     p = subprocess.run(["claude", "-p", prompt], capture_output=True,
                        text=True, timeout=CLAUDE_TIMEOUT)
-    m = re.search(r"\{.*\}", p.stdout.strip(), re.DOTALL)
-    return json.loads(m.group(0)) if m else fallback
+    return _extract_json(p.stdout, fallback)
 
 
 def _claude_then_fallback(system: str, user: str, fallback: dict) -> dict:
@@ -107,6 +119,12 @@ def _brain(system: str, user: str, schema: dict, fallback: dict) -> dict:
 def realize(move: dict, item: dict | None, ctx: dict) -> dict:
     lang = ctx.get("lang", "Brazilian Portuguese")
     guide = GUIDE.get(move["type"], "Deliver the move naturally for a beginner.")
+    cw = ctx.get("contrast_with")
+    if move.get("variant") == "contrast" and cw:
+        guide = (f"The learner mixes this up with '{cw['lemma']}' ({cw['gloss']}). CONTRAST them: in "
+                 f"'display', point out the difference in ONE short line, then ask the learner to produce "
+                 f"something using the TARGET word (NOT the confusable). Do NOT reveal the answer. "
+                 f"'say' = a brief natural cue in the target language, or empty.")
     known = ", ".join(ctx.get("known", [])) or "(nothing yet)"
     lastline = ""
     if ctx.get("transcript"):

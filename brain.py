@@ -77,26 +77,31 @@ def _claude(prompt: str, fallback: dict) -> dict:
     return json.loads(m.group(0)) if m else fallback
 
 
+def _claude_then_fallback(system: str, user: str, fallback: dict) -> dict:
+    try:
+        r = _claude(system + "\n\n" + user + "\n\nOutput ONLY the JSON object.", fallback)
+        r["_via"] = "claude"
+        return r
+    except Exception as e:
+        log.warning("brain: claude -p failed (%r); using static fallback", e)
+        r = dict(fallback)
+        r["_via"] = "fallback"
+        return r
+
+
 def _brain(system: str, user: str, schema: dict, fallback: dict) -> dict:
-    """Ollama first; claude -p as fallback; static fallback last. The returned
-    dict carries '_via' so callers can tell a real LLM reply from the stub
-    (which is structurally a plausible tutor line — silent failure is the trap)."""
+    """Pick the backend (app_settings.BRAIN_BACKEND). The returned dict carries
+    '_via' so callers can tell a real LLM reply from the static stub (which is a
+    structurally plausible tutor line — silent failure is the trap)."""
+    if app_settings.BRAIN_BACKEND == "claude":
+        return _claude_then_fallback(system, user, fallback)
     try:
         r = _ollama(system, user, schema, fallback)
         r["_via"] = "ollama"
         return r
     except Exception as e:
-        log.warning("brain: ollama (%s) failed (%r); trying claude", BRAIN_URL, e)
-        try:
-            r = _claude(system + "\n\n" + user + "\n\nOutput ONLY the JSON object.",
-                        fallback)
-            r["_via"] = "claude"
-            return r
-        except Exception as e2:
-            log.warning("brain: claude -p failed (%r); using static fallback", e2)
-            r = dict(fallback)
-            r["_via"] = "fallback"
-            return r
+        log.warning("brain: ollama (%s) failed (%r); falling back to claude", BRAIN_URL, e)
+        return _claude_then_fallback(system, user, fallback)
 
 
 def realize(move: dict, item: dict | None, ctx: dict) -> dict:

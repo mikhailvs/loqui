@@ -7,7 +7,10 @@ meant to be overridden from the environment.
 """
 import os
 
-# brain (LLM) endpoint — point at a LAN box e.g.
+# brain (LLM) backend: "ollama" (local/LAN, fast) or "claude" (the claude CLI,
+# slower but rock-solid — no local GPU/RAM contention).
+BRAIN_BACKEND = os.environ.get("BRAIN_BACKEND", "ollama")
+# ollama endpoint — point at a LAN box e.g.
 #   BRAIN_URL=http://192.168.1.50:11434/api/chat BRAIN_MODEL=qwen3:30b-a3b
 BRAIN_URL = os.environ.get("BRAIN_URL", "http://localhost:11434/api/chat")
 BRAIN_MODEL = os.environ.get("BRAIN_MODEL", "qwen3:8b")

@@ -1,0 +1,3786 @@
+[
+ {
+  "id": "pt_000",
+  "lemma": "eu",
+  "gloss": "I",
+  "kind": "grammar",
+  "difficulty": 0.05,
+  "is_phonological": true,
+  "hint": "subject pronoun",
+  "confusable": [
+   "pt_001"
+  ]
+ },
+ {
+  "id": "pt_001",
+  "lemma": "você",
+  "gloss": "you (singular)",
+  "kind": "grammar",
+  "difficulty": 0.053,
+  "is_phonological": false,
+  "hint": "Brazilian standard; takes 3rd-person verb",
+  "confusable": [
+   "pt_000",
+   "pt_002"
+  ]
+ },
+ {
+  "id": "pt_002",
+  "lemma": "ele",
+  "gloss": "he / it",
+  "kind": "grammar",
+  "difficulty": 0.055,
+  "is_phonological": false,
+  "hint": "masculine",
+  "confusable": [
+   "pt_003",
+   "pt_050"
+  ]
+ },
+ {
+  "id": "pt_003",
+  "lemma": "ela",
+  "gloss": "she / it",
+  "kind": "grammar",
+  "difficulty": 0.058,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": [
+   "pt_002",
+   "pt_051"
+  ]
+ },
+ {
+  "id": "pt_004",
+  "lemma": "nós",
+  "gloss": "we",
+  "kind": "grammar",
+  "difficulty": 0.06,
+  "is_phonological": false,
+  "hint": "often replaced by 'a gente' in speech",
+  "confusable": []
+ },
+ {
+  "id": "pt_005",
+  "lemma": "ser",
+  "gloss": "to be (permanent)",
+  "kind": "grammar",
+  "difficulty": 0.063,
+  "is_phonological": false,
+  "hint": "irregular; for traits/identity vs 'estar'",
+  "confusable": [
+   "pt_006"
+  ]
+ },
+ {
+  "id": "pt_006",
+  "lemma": "estar",
+  "gloss": "to be (temporary/location)",
+  "kind": "grammar",
+  "difficulty": 0.066,
+  "is_phonological": false,
+  "hint": "irregular; for states/location vs 'ser'",
+  "confusable": [
+   "pt_005"
+  ]
+ },
+ {
+  "id": "pt_007",
+  "lemma": "ter",
+  "gloss": "to have",
+  "kind": "grammar",
+  "difficulty": 0.068,
+  "is_phonological": false,
+  "hint": "irregular; also means 'there is' (tem)",
+  "confusable": []
+ },
+ {
+  "id": "pt_008",
+  "lemma": "o",
+  "gloss": "the (masculine sing.)",
+  "kind": "grammar",
+  "difficulty": 0.071,
+  "is_phonological": false,
+  "hint": "definite article",
+  "confusable": [
+   "pt_009",
+   "pt_010",
+   "pt_012"
+  ]
+ },
+ {
+  "id": "pt_009",
+  "lemma": "a",
+  "gloss": "the (feminine sing.)",
+  "kind": "grammar",
+  "difficulty": 0.073,
+  "is_phonological": false,
+  "hint": "definite article; also 'to' as preposition",
+  "confusable": [
+   "pt_008",
+   "pt_011"
+  ]
+ },
+ {
+  "id": "pt_010",
+  "lemma": "os",
+  "gloss": "the (masculine plural)",
+  "kind": "grammar",
+  "difficulty": 0.076,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_008",
+   "pt_011"
+  ]
+ },
+ {
+  "id": "pt_011",
+  "lemma": "as",
+  "gloss": "the (feminine plural)",
+  "kind": "grammar",
+  "difficulty": 0.079,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_009",
+   "pt_010"
+  ]
+ },
+ {
+  "id": "pt_012",
+  "lemma": "um",
+  "gloss": "a / one (masculine)",
+  "kind": "grammar",
+  "difficulty": 0.081,
+  "is_phonological": true,
+  "hint": "nasal vowel; indefinite article & number",
+  "confusable": [
+   "pt_008",
+   "pt_013"
+  ]
+ },
+ {
+  "id": "pt_013",
+  "lemma": "uma",
+  "gloss": "a / one (feminine)",
+  "kind": "grammar",
+  "difficulty": 0.084,
+  "is_phonological": false,
+  "hint": "indefinite article & number",
+  "confusable": [
+   "pt_009",
+   "pt_012"
+  ]
+ },
+ {
+  "id": "pt_014",
+  "lemma": "de",
+  "gloss": "of / from",
+  "kind": "grammar",
+  "difficulty": 0.086,
+  "is_phonological": false,
+  "hint": "contracts: de+o=do, de+a=da",
+  "confusable": [
+   "pt_015"
+  ]
+ },
+ {
+  "id": "pt_015",
+  "lemma": "em",
+  "gloss": "in / on / at",
+  "kind": "grammar",
+  "difficulty": 0.089,
+  "is_phonological": true,
+  "hint": "nasal; contracts: em+o=no, em+a=na",
+  "confusable": [
+   "pt_014"
+  ]
+ },
+ {
+  "id": "pt_016",
+  "lemma": "para",
+  "gloss": "for / to",
+  "kind": "grammar",
+  "difficulty": 0.092,
+  "is_phonological": false,
+  "hint": "often spoken as 'pra'",
+  "confusable": [
+   "pt_018"
+  ]
+ },
+ {
+  "id": "pt_017",
+  "lemma": "com",
+  "gloss": "with",
+  "kind": "grammar",
+  "difficulty": 0.094,
+  "is_phonological": true,
+  "hint": "nasal vowel",
+  "confusable": [
+   "pt_056",
+   "pt_073"
+  ]
+ },
+ {
+  "id": "pt_018",
+  "lemma": "por",
+  "gloss": "by / through / for",
+  "kind": "grammar",
+  "difficulty": 0.097,
+  "is_phonological": false,
+  "hint": "contracts: por+o=pelo",
+  "confusable": [
+   "pt_016"
+  ]
+ },
+ {
+  "id": "pt_019",
+  "lemma": "e",
+  "gloss": "and",
+  "kind": "grammar",
+  "difficulty": 0.099,
+  "is_phonological": false,
+  "hint": "pronounced like 'ee'",
+  "confusable": [
+   "pt_020"
+  ]
+ },
+ {
+  "id": "pt_020",
+  "lemma": "ou",
+  "gloss": "or",
+  "kind": "grammar",
+  "difficulty": 0.102,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_019"
+  ]
+ },
+ {
+  "id": "pt_021",
+  "lemma": "mas",
+  "gloss": "but",
+  "kind": "grammar",
+  "difficulty": 0.105,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_097"
+  ]
+ },
+ {
+  "id": "pt_022",
+  "lemma": "não",
+  "gloss": "no / not",
+  "kind": "grammar",
+  "difficulty": 0.107,
+  "is_phonological": true,
+  "hint": "nasal diphthong, very common",
+  "confusable": [
+   "pt_104"
+  ]
+ },
+ {
+  "id": "pt_023",
+  "lemma": "sim",
+  "gloss": "yes",
+  "kind": "grammar",
+  "difficulty": 0.11,
+  "is_phonological": true,
+  "hint": "nasal vowel",
+  "confusable": [
+   "pt_073",
+   "pt_109"
+  ]
+ },
+ {
+  "id": "pt_024",
+  "lemma": "que",
+  "gloss": "that / what / which",
+  "kind": "grammar",
+  "difficulty": 0.112,
+  "is_phonological": false,
+  "hint": "connector & question word",
+  "confusable": [
+   "pt_059",
+   "pt_061"
+  ]
+ },
+ {
+  "id": "pt_025",
+  "lemma": "se",
+  "gloss": "if / oneself",
+  "kind": "grammar",
+  "difficulty": 0.115,
+  "is_phonological": false,
+  "hint": "conjunction & reflexive pronoun",
+  "confusable": [
+   "pt_073"
+  ]
+ },
+ {
+  "id": "pt_026",
+  "lemma": "este",
+  "gloss": "this (masculine)",
+  "kind": "grammar",
+  "difficulty": 0.118,
+  "is_phonological": false,
+  "hint": "near speaker",
+  "confusable": [
+   "pt_158",
+   "pt_161"
+  ]
+ },
+ {
+  "id": "pt_027",
+  "lemma": "isso",
+  "gloss": "that (neuter)",
+  "kind": "grammar",
+  "difficulty": 0.12,
+  "is_phonological": false,
+  "hint": "common in speech; refers to idea/thing",
+  "confusable": [
+   "pt_158",
+   "pt_161"
+  ]
+ },
+ {
+  "id": "pt_028",
+  "lemma": "aqui",
+  "gloss": "here",
+  "kind": "vocab",
+  "difficulty": 0.123,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_029",
+   "pt_162"
+  ]
+ },
+ {
+  "id": "pt_029",
+  "lemma": "ali",
+  "gloss": "there (nearby)",
+  "kind": "vocab",
+  "difficulty": 0.125,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_028",
+   "pt_162"
+  ]
+ },
+ {
+  "id": "pt_030",
+  "lemma": "agora",
+  "gloss": "now",
+  "kind": "vocab",
+  "difficulty": 0.128,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_031",
+   "pt_065"
+  ]
+ },
+ {
+  "id": "pt_031",
+  "lemma": "hoje",
+  "gloss": "today",
+  "kind": "vocab",
+  "difficulty": 0.131,
+  "is_phonological": true,
+  "hint": "'h' is silent; 'j' is soft",
+  "confusable": [
+   "pt_175",
+   "pt_176"
+  ]
+ },
+ {
+  "id": "pt_032",
+  "lemma": "muito",
+  "gloss": "very / much / a lot",
+  "kind": "vocab",
+  "difficulty": 0.133,
+  "is_phonological": true,
+  "hint": "the 'ui' is nasalized: 'muĩto'",
+  "confusable": [
+   "pt_096"
+  ]
+ },
+ {
+  "id": "pt_033",
+  "lemma": "bem",
+  "gloss": "well / fine",
+  "kind": "vocab",
+  "difficulty": 0.136,
+  "is_phonological": true,
+  "hint": "nasal; adverb vs 'bom' (adjective)",
+  "confusable": [
+   "pt_032",
+   "pt_034"
+  ]
+ },
+ {
+  "id": "pt_034",
+  "lemma": "bom",
+  "gloss": "good (masculine)",
+  "kind": "vocab",
+  "difficulty": 0.138,
+  "is_phonological": true,
+  "hint": "nasal; feminine is 'boa'",
+  "confusable": [
+   "pt_033"
+  ]
+ },
+ {
+  "id": "pt_035",
+  "lemma": "grande",
+  "gloss": "big / large",
+  "kind": "vocab",
+  "difficulty": 0.141,
+  "is_phonological": false,
+  "hint": "same form for both genders",
+  "confusable": []
+ },
+ {
+  "id": "pt_036",
+  "lemma": "querer",
+  "gloss": "to want",
+  "kind": "vocab",
+  "difficulty": 0.144,
+  "is_phonological": false,
+  "hint": "irregular; 'eu quero'",
+  "confusable": [
+   "pt_037",
+   "pt_080"
+  ]
+ },
+ {
+  "id": "pt_037",
+  "lemma": "poder",
+  "gloss": "can / to be able to",
+  "kind": "vocab",
+  "difficulty": 0.146,
+  "is_phonological": false,
+  "hint": "irregular; 'eu posso'",
+  "confusable": [
+   "pt_036",
+   "pt_074"
+  ]
+ },
+ {
+  "id": "pt_038",
+  "lemma": "fazer",
+  "gloss": "to do / to make",
+  "kind": "vocab",
+  "difficulty": 0.149,
+  "is_phonological": false,
+  "hint": "irregular; 'eu faço'",
+  "confusable": [
+   "pt_040"
+  ]
+ },
+ {
+  "id": "pt_039",
+  "lemma": "ir",
+  "gloss": "to go",
+  "kind": "vocab",
+  "difficulty": 0.151,
+  "is_phonological": false,
+  "hint": "irregular; 'eu vou'",
+  "confusable": [
+   "pt_077"
+  ]
+ },
+ {
+  "id": "pt_040",
+  "lemma": "falar",
+  "gloss": "to speak / to talk",
+  "kind": "vocab",
+  "difficulty": 0.154,
+  "is_phonological": false,
+  "hint": "regular -ar verb",
+  "confusable": [
+   "pt_038",
+   "pt_078"
+  ]
+ },
+ {
+  "id": "pt_041",
+  "lemma": "casa",
+  "gloss": "house / home",
+  "kind": "vocab",
+  "difficulty": 0.157,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": [
+   "pt_093"
+  ]
+ },
+ {
+  "id": "pt_042",
+  "lemma": "água",
+  "gloss": "water",
+  "kind": "vocab",
+  "difficulty": 0.159,
+  "is_phonological": false,
+  "hint": "feminine despite ending; stress on first syllable",
+  "confusable": []
+ },
+ {
+  "id": "pt_043",
+  "lemma": "dia",
+  "gloss": "day",
+  "kind": "vocab",
+  "difficulty": 0.162,
+  "is_phonological": false,
+  "hint": "masculine despite -a ending",
+  "confusable": [
+   "pt_099"
+  ]
+ },
+ {
+  "id": "pt_044",
+  "lemma": "pessoa",
+  "gloss": "person",
+  "kind": "vocab",
+  "difficulty": 0.164,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": []
+ },
+ {
+  "id": "pt_045",
+  "lemma": "obrigado",
+  "gloss": "thank you",
+  "kind": "chunk",
+  "difficulty": 0.167,
+  "is_phonological": false,
+  "hint": "man says 'obrigado', woman says 'obrigada'",
+  "confusable": [
+   "pt_046",
+   "pt_101"
+  ]
+ },
+ {
+  "id": "pt_046",
+  "lemma": "por favor",
+  "gloss": "please",
+  "kind": "chunk",
+  "difficulty": 0.17,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_045"
+  ]
+ },
+ {
+  "id": "pt_047",
+  "lemma": "bom dia",
+  "gloss": "good morning",
+  "kind": "chunk",
+  "difficulty": 0.172,
+  "is_phonological": false,
+  "hint": "used until noon",
+  "confusable": [
+   "pt_152",
+   "pt_153"
+  ]
+ },
+ {
+  "id": "pt_048",
+  "lemma": "oi",
+  "gloss": "hi",
+  "kind": "chunk",
+  "difficulty": 0.175,
+  "is_phonological": false,
+  "hint": "casual greeting",
+  "confusable": [
+   "pt_150",
+   "pt_151"
+  ]
+ },
+ {
+  "id": "pt_049",
+  "lemma": "tudo bem?",
+  "gloss": "how are you? / all good?",
+  "kind": "chunk",
+  "difficulty": 0.177,
+  "is_phonological": false,
+  "hint": "answer: 'tudo bem' / 'tudo bom'",
+  "confusable": []
+ },
+ {
+  "id": "pt_050",
+  "lemma": "eles",
+  "gloss": "they (masc.)",
+  "kind": "grammar",
+  "difficulty": 0.18,
+  "is_phonological": false,
+  "hint": "masc. or mixed plural",
+  "confusable": [
+   "pt_002",
+   "pt_051"
+  ]
+ },
+ {
+  "id": "pt_051",
+  "lemma": "elas",
+  "gloss": "they (fem.)",
+  "kind": "grammar",
+  "difficulty": 0.183,
+  "is_phonological": false,
+  "hint": "all-female plural",
+  "confusable": [
+   "pt_003",
+   "pt_050"
+  ]
+ },
+ {
+  "id": "pt_052",
+  "lemma": "meu",
+  "gloss": "my (masc.)",
+  "kind": "grammar",
+  "difficulty": 0.185,
+  "is_phonological": false,
+  "hint": "masc. form; fem. is minha",
+  "confusable": [
+   "pt_053"
+  ]
+ },
+ {
+  "id": "pt_053",
+  "lemma": "minha",
+  "gloss": "my (fem.)",
+  "kind": "grammar",
+  "difficulty": 0.188,
+  "is_phonological": false,
+  "hint": "fem. form of meu",
+  "confusable": [
+   "pt_052"
+  ]
+ },
+ {
+  "id": "pt_054",
+  "lemma": "seu",
+  "gloss": "your/his/her (masc.)",
+  "kind": "grammar",
+  "difficulty": 0.19,
+  "is_phonological": false,
+  "hint": "masc.; fem. is sua",
+  "confusable": [
+   "pt_055"
+  ]
+ },
+ {
+  "id": "pt_055",
+  "lemma": "sua",
+  "gloss": "your/his/her (fem.)",
+  "kind": "grammar",
+  "difficulty": 0.193,
+  "is_phonological": false,
+  "hint": "fem. of seu",
+  "confusable": [
+   "pt_054"
+  ]
+ },
+ {
+  "id": "pt_056",
+  "lemma": "como",
+  "gloss": "how / as / like",
+  "kind": "grammar",
+  "difficulty": 0.196,
+  "is_phonological": false,
+  "hint": "also question word 'how?'",
+  "confusable": [
+   "pt_057",
+   "pt_060"
+  ]
+ },
+ {
+  "id": "pt_057",
+  "lemma": "quando",
+  "gloss": "when",
+  "kind": "grammar",
+  "difficulty": 0.198,
+  "is_phonological": false,
+  "hint": "question/relative word",
+  "confusable": [
+   "pt_056",
+   "pt_060"
+  ]
+ },
+ {
+  "id": "pt_058",
+  "lemma": "onde",
+  "gloss": "where",
+  "kind": "grammar",
+  "difficulty": 0.201,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_057"
+  ]
+ },
+ {
+  "id": "pt_059",
+  "lemma": "quem",
+  "gloss": "who",
+  "kind": "grammar",
+  "difficulty": 0.203,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_017",
+   "pt_024"
+  ]
+ },
+ {
+  "id": "pt_060",
+  "lemma": "quanto",
+  "gloss": "how much / how many",
+  "kind": "grammar",
+  "difficulty": 0.206,
+  "is_phonological": false,
+  "hint": "agrees: quanto/quanta/quantos",
+  "confusable": [
+   "pt_057"
+  ]
+ },
+ {
+  "id": "pt_061",
+  "lemma": "qual",
+  "gloss": "which / what",
+  "kind": "grammar",
+  "difficulty": 0.209,
+  "is_phonological": false,
+  "hint": "plural quais",
+  "confusable": [
+   "pt_024",
+   "pt_059"
+  ]
+ },
+ {
+  "id": "pt_062",
+  "lemma": "por que",
+  "gloss": "why",
+  "kind": "chunk",
+  "difficulty": 0.211,
+  "is_phonological": false,
+  "hint": "two words in questions; resposta uses porque",
+  "confusable": [
+   "pt_063"
+  ]
+ },
+ {
+  "id": "pt_063",
+  "lemma": "porque",
+  "gloss": "because",
+  "kind": "grammar",
+  "difficulty": 0.214,
+  "is_phonological": false,
+  "hint": "one word for answers; contrast 'por que'",
+  "confusable": [
+   "pt_062"
+  ]
+ },
+ {
+  "id": "pt_064",
+  "lemma": "também",
+  "gloss": "also / too",
+  "kind": "grammar",
+  "difficulty": 0.216,
+  "is_phonological": true,
+  "hint": "nasal 'ãe' ending",
+  "confusable": []
+ },
+ {
+  "id": "pt_065",
+  "lemma": "já",
+  "gloss": "already / now",
+  "kind": "grammar",
+  "difficulty": 0.219,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_066",
+  "lemma": "ainda",
+  "gloss": "still / yet",
+  "kind": "grammar",
+  "difficulty": 0.222,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_067",
+  "lemma": "sempre",
+  "gloss": "always",
+  "kind": "vocab",
+  "difficulty": 0.224,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_068"
+  ]
+ },
+ {
+  "id": "pt_068",
+  "lemma": "nunca",
+  "gloss": "never",
+  "kind": "vocab",
+  "difficulty": 0.227,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_067"
+  ]
+ },
+ {
+  "id": "pt_069",
+  "lemma": "depois",
+  "gloss": "after / later",
+  "kind": "grammar",
+  "difficulty": 0.229,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_070"
+  ]
+ },
+ {
+  "id": "pt_070",
+  "lemma": "antes",
+  "gloss": "before",
+  "kind": "grammar",
+  "difficulty": 0.232,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_069"
+  ]
+ },
+ {
+  "id": "pt_071",
+  "lemma": "sobre",
+  "gloss": "about / on top of",
+  "kind": "grammar",
+  "difficulty": 0.235,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_072",
+  "lemma": "até",
+  "gloss": "until / even",
+  "kind": "grammar",
+  "difficulty": 0.237,
+  "is_phonological": false,
+  "hint": "stress on final é",
+  "confusable": [
+   "pt_009"
+  ]
+ },
+ {
+  "id": "pt_073",
+  "lemma": "sem",
+  "gloss": "without",
+  "kind": "grammar",
+  "difficulty": 0.24,
+  "is_phonological": true,
+  "hint": "nasal; opposite of com",
+  "confusable": [
+   "pt_017",
+   "pt_199"
+  ]
+ },
+ {
+  "id": "pt_074",
+  "lemma": "saber",
+  "gloss": "to know (facts)",
+  "kind": "vocab",
+  "difficulty": 0.242,
+  "is_phonological": false,
+  "hint": "irregular: eu sei",
+  "confusable": [
+   "pt_007",
+   "pt_209"
+  ]
+ },
+ {
+  "id": "pt_075",
+  "lemma": "ver",
+  "gloss": "to see",
+  "kind": "vocab",
+  "difficulty": 0.245,
+  "is_phonological": false,
+  "hint": "irregular: eu vejo, eu vi",
+  "confusable": [
+   "pt_077",
+   "pt_223"
+  ]
+ },
+ {
+  "id": "pt_076",
+  "lemma": "dar",
+  "gloss": "to give",
+  "kind": "vocab",
+  "difficulty": 0.248,
+  "is_phonological": false,
+  "hint": "irregular: eu dou",
+  "confusable": [
+   "pt_039"
+  ]
+ },
+ {
+  "id": "pt_077",
+  "lemma": "vir",
+  "gloss": "to come",
+  "kind": "vocab",
+  "difficulty": 0.25,
+  "is_phonological": false,
+  "hint": "irregular: eu venho; vs ver",
+  "confusable": [
+   "pt_039",
+   "pt_075"
+  ]
+ },
+ {
+  "id": "pt_078",
+  "lemma": "dizer",
+  "gloss": "to say / tell",
+  "kind": "vocab",
+  "difficulty": 0.253,
+  "is_phonological": false,
+  "hint": "irregular: eu digo",
+  "confusable": [
+   "pt_040"
+  ]
+ },
+ {
+  "id": "pt_079",
+  "lemma": "gostar",
+  "gloss": "to like",
+  "kind": "vocab",
+  "difficulty": 0.255,
+  "is_phonological": false,
+  "hint": "used with de: gostar de",
+  "confusable": []
+ },
+ {
+  "id": "pt_080",
+  "lemma": "precisar",
+  "gloss": "to need",
+  "kind": "vocab",
+  "difficulty": 0.258,
+  "is_phonological": false,
+  "hint": "precisar de algo",
+  "confusable": []
+ },
+ {
+  "id": "pt_081",
+  "lemma": "achar",
+  "gloss": "to think / to find",
+  "kind": "vocab",
+  "difficulty": 0.261,
+  "is_phonological": false,
+  "hint": "'eu acho que' = I think that",
+  "confusable": [
+   "pt_145"
+  ]
+ },
+ {
+  "id": "pt_082",
+  "lemma": "trabalhar",
+  "gloss": "to work",
+  "kind": "vocab",
+  "difficulty": 0.263,
+  "is_phonological": true,
+  "hint": "lh = 'ly' sound",
+  "confusable": [
+   "pt_091"
+  ]
+ },
+ {
+  "id": "pt_083",
+  "lemma": "comer",
+  "gloss": "to eat",
+  "kind": "vocab",
+  "difficulty": 0.266,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_084"
+  ]
+ },
+ {
+  "id": "pt_084",
+  "lemma": "beber",
+  "gloss": "to drink",
+  "kind": "vocab",
+  "difficulty": 0.268,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_083"
+  ]
+ },
+ {
+  "id": "pt_085",
+  "lemma": "tempo",
+  "gloss": "time / weather",
+  "kind": "vocab",
+  "difficulty": 0.271,
+  "is_phonological": false,
+  "hint": "masc.; means both",
+  "confusable": [
+   "pt_087",
+   "pt_088"
+  ]
+ },
+ {
+  "id": "pt_086",
+  "lemma": "ano",
+  "gloss": "year",
+  "kind": "vocab",
+  "difficulty": 0.274,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "pt_237"
+  ]
+ },
+ {
+  "id": "pt_087",
+  "lemma": "hora",
+  "gloss": "hour / time of day",
+  "kind": "vocab",
+  "difficulty": 0.276,
+  "is_phonological": false,
+  "hint": "fem.; 'que horas são?'",
+  "confusable": [
+   "pt_030",
+   "pt_085"
+  ]
+ },
+ {
+  "id": "pt_088",
+  "lemma": "vez",
+  "gloss": "time (occurrence)",
+  "kind": "vocab",
+  "difficulty": 0.279,
+  "is_phonological": false,
+  "hint": "fem.; plural vezes",
+  "confusable": [
+   "pt_085",
+   "pt_087"
+  ]
+ },
+ {
+  "id": "pt_089",
+  "lemma": "amigo",
+  "gloss": "friend",
+  "kind": "vocab",
+  "difficulty": 0.281,
+  "is_phonological": false,
+  "hint": "masc.; fem. amiga",
+  "confusable": []
+ },
+ {
+  "id": "pt_090",
+  "lemma": "comida",
+  "gloss": "food",
+  "kind": "vocab",
+  "difficulty": 0.284,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_083"
+  ]
+ },
+ {
+  "id": "pt_091",
+  "lemma": "trabalho",
+  "gloss": "work / job",
+  "kind": "vocab",
+  "difficulty": 0.287,
+  "is_phonological": false,
+  "hint": "masc.; noun of trabalhar",
+  "confusable": [
+   "pt_082"
+  ]
+ },
+ {
+  "id": "pt_092",
+  "lemma": "nome",
+  "gloss": "name",
+  "kind": "vocab",
+  "difficulty": 0.289,
+  "is_phonological": false,
+  "hint": "masc.; 'qual é o seu nome?'",
+  "confusable": [
+   "pt_117"
+  ]
+ },
+ {
+  "id": "pt_093",
+  "lemma": "coisa",
+  "gloss": "thing",
+  "kind": "vocab",
+  "difficulty": 0.292,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_041"
+  ]
+ },
+ {
+  "id": "pt_094",
+  "lemma": "novo",
+  "gloss": "new / young",
+  "kind": "vocab",
+  "difficulty": 0.294,
+  "is_phonological": false,
+  "hint": "masc.; open 'ó' in nova/novos",
+  "confusable": [
+   "pt_248"
+  ]
+ },
+ {
+  "id": "pt_095",
+  "lemma": "outro",
+  "gloss": "other / another",
+  "kind": "vocab",
+  "difficulty": 0.297,
+  "is_phonological": false,
+  "hint": "agrees: outra/outros",
+  "confusable": []
+ },
+ {
+  "id": "pt_096",
+  "lemma": "pouco",
+  "gloss": "little / few",
+  "kind": "vocab",
+  "difficulty": 0.3,
+  "is_phonological": false,
+  "hint": "opposite of muito",
+  "confusable": [
+   "pt_032"
+  ]
+ },
+ {
+  "id": "pt_097",
+  "lemma": "mais",
+  "gloss": "more",
+  "kind": "grammar",
+  "difficulty": 0.302,
+  "is_phonological": false,
+  "hint": "vs 'mas' (but)",
+  "confusable": [
+   "pt_021",
+   "pt_098"
+  ]
+ },
+ {
+  "id": "pt_098",
+  "lemma": "menos",
+  "gloss": "less / fewer",
+  "kind": "grammar",
+  "difficulty": 0.305,
+  "is_phonological": false,
+  "hint": "opposite of mais",
+  "confusable": [
+   "pt_097"
+  ]
+ },
+ {
+  "id": "pt_099",
+  "lemma": "dois",
+  "gloss": "two",
+  "kind": "vocab",
+  "difficulty": 0.307,
+  "is_phonological": false,
+  "hint": "masc.; fem. duas",
+  "confusable": []
+ },
+ {
+  "id": "pt_100",
+  "lemma": "três",
+  "gloss": "three",
+  "kind": "vocab",
+  "difficulty": 0.31,
+  "is_phonological": false,
+  "hint": "open ê; vs treze (13)",
+  "confusable": []
+ },
+ {
+  "id": "pt_101",
+  "lemma": "obrigada",
+  "gloss": "thank you (said by a female)",
+  "kind": "chunk",
+  "difficulty": 0.313,
+  "is_phonological": false,
+  "hint": "woman says obrigada, man obrigado",
+  "confusable": [
+   "pt_045"
+  ]
+ },
+ {
+  "id": "pt_102",
+  "lemma": "de nada",
+  "gloss": "you're welcome",
+  "kind": "chunk",
+  "difficulty": 0.315,
+  "is_phonological": false,
+  "hint": "reply to obrigado/a",
+  "confusable": []
+ },
+ {
+  "id": "pt_103",
+  "lemma": "com licença",
+  "gloss": "excuse me",
+  "kind": "chunk",
+  "difficulty": 0.318,
+  "is_phonological": false,
+  "hint": "to pass by / get attention",
+  "confusable": [
+   "pt_275"
+  ]
+ },
+ {
+  "id": "pt_104",
+  "lemma": "nada",
+  "gloss": "nothing",
+  "kind": "vocab",
+  "difficulty": 0.32,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_106"
+  ]
+ },
+ {
+  "id": "pt_105",
+  "lemma": "todo",
+  "gloss": "all, every",
+  "kind": "grammar",
+  "difficulty": 0.323,
+  "is_phonological": false,
+  "hint": "masc.; todo/toda/todos/todas agree",
+  "confusable": []
+ },
+ {
+  "id": "pt_106",
+  "lemma": "cada",
+  "gloss": "each, every",
+  "kind": "grammar",
+  "difficulty": 0.326,
+  "is_phonological": false,
+  "hint": "invariable",
+  "confusable": [
+   "pt_104"
+  ]
+ },
+ {
+  "id": "pt_107",
+  "lemma": "mesmo",
+  "gloss": "same; even",
+  "kind": "grammar",
+  "difficulty": 0.328,
+  "is_phonological": false,
+  "hint": "masc.; agrees mesmo/mesma",
+  "confusable": [
+   "pt_098",
+   "pt_241"
+  ]
+ },
+ {
+  "id": "pt_108",
+  "lemma": "então",
+  "gloss": "so, then",
+  "kind": "grammar",
+  "difficulty": 0.331,
+  "is_phonological": true,
+  "hint": "nasal -ão",
+  "confusable": [
+   "pt_165"
+  ]
+ },
+ {
+  "id": "pt_109",
+  "lemma": "assim",
+  "gloss": "like this, thus",
+  "kind": "grammar",
+  "difficulty": 0.333,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_023",
+   "pt_029"
+  ]
+ },
+ {
+  "id": "pt_110",
+  "lemma": "talvez",
+  "gloss": "maybe",
+  "kind": "grammar",
+  "difficulty": 0.336,
+  "is_phonological": false,
+  "hint": "triggers subjunctive",
+  "confusable": [
+   "pt_088"
+  ]
+ },
+ {
+  "id": "pt_111",
+  "lemma": "primeiro",
+  "gloss": "first",
+  "kind": "vocab",
+  "difficulty": 0.339,
+  "is_phonological": false,
+  "hint": "masc.; ordinal",
+  "confusable": []
+ },
+ {
+  "id": "pt_112",
+  "lemma": "último",
+  "gloss": "last",
+  "kind": "vocab",
+  "difficulty": 0.341,
+  "is_phonological": false,
+  "hint": "stress on -ú-",
+  "confusable": []
+ },
+ {
+  "id": "pt_113",
+  "lemma": "melhor",
+  "gloss": "better, best",
+  "kind": "vocab",
+  "difficulty": 0.344,
+  "is_phonological": true,
+  "hint": "lh = palatal sound",
+  "confusable": [
+   "pt_114"
+  ]
+ },
+ {
+  "id": "pt_114",
+  "lemma": "pior",
+  "gloss": "worse, worst",
+  "kind": "vocab",
+  "difficulty": 0.346,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_113"
+  ]
+ },
+ {
+  "id": "pt_115",
+  "lemma": "verdade",
+  "gloss": "truth",
+  "kind": "vocab",
+  "difficulty": 0.349,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_124"
+  ]
+ },
+ {
+  "id": "pt_116",
+  "lemma": "gente",
+  "gloss": "people; (a gente) we",
+  "kind": "vocab",
+  "difficulty": 0.352,
+  "is_phonological": false,
+  "hint": "'a gente' = informal 'we', takes 3rd-sing verb",
+  "confusable": []
+ },
+ {
+  "id": "pt_117",
+  "lemma": "homem",
+  "gloss": "man",
+  "kind": "vocab",
+  "difficulty": 0.354,
+  "is_phonological": false,
+  "hint": "masc.; pl. homens",
+  "confusable": [
+   "pt_092",
+   "pt_118"
+  ]
+ },
+ {
+  "id": "pt_118",
+  "lemma": "mulher",
+  "gloss": "woman",
+  "kind": "vocab",
+  "difficulty": 0.357,
+  "is_phonological": true,
+  "hint": "fem.; lh palatal",
+  "confusable": [
+   "pt_113",
+   "pt_117"
+  ]
+ },
+ {
+  "id": "pt_119",
+  "lemma": "filho",
+  "gloss": "son",
+  "kind": "vocab",
+  "difficulty": 0.359,
+  "is_phonological": true,
+  "hint": "masc.; lh palatal",
+  "confusable": [
+   "pt_232"
+  ]
+ },
+ {
+  "id": "pt_120",
+  "lemma": "mãe",
+  "gloss": "mother",
+  "kind": "vocab",
+  "difficulty": 0.362,
+  "is_phonological": true,
+  "hint": "fem.; nasal ã",
+  "confusable": [
+   "pt_121",
+   "pt_237"
+  ]
+ },
+ {
+  "id": "pt_121",
+  "lemma": "pai",
+  "gloss": "father",
+  "kind": "vocab",
+  "difficulty": 0.365,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "pt_120",
+   "pt_236"
+  ]
+ },
+ {
+  "id": "pt_122",
+  "lemma": "vida",
+  "gloss": "life",
+  "kind": "vocab",
+  "difficulty": 0.367,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_043"
+  ]
+ },
+ {
+  "id": "pt_123",
+  "lemma": "mundo",
+  "gloss": "world",
+  "kind": "vocab",
+  "difficulty": 0.37,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "pt_124",
+  "lemma": "cidade",
+  "gloss": "city",
+  "kind": "vocab",
+  "difficulty": 0.372,
+  "is_phonological": true,
+  "hint": "fem.; final -de like 'dji'",
+  "confusable": [
+   "pt_115"
+  ]
+ },
+ {
+  "id": "pt_125",
+  "lemma": "lugar",
+  "gloss": "place",
+  "kind": "vocab",
+  "difficulty": 0.375,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "pt_304"
+  ]
+ },
+ {
+  "id": "pt_126",
+  "lemma": "parte",
+  "gloss": "part",
+  "kind": "vocab",
+  "difficulty": 0.378,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_127",
+  "lemma": "forma",
+  "gloss": "way, form",
+  "kind": "vocab",
+  "difficulty": 0.38,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_128",
+  "lemma": "problema",
+  "gloss": "problem",
+  "kind": "vocab",
+  "difficulty": 0.383,
+  "is_phonological": false,
+  "hint": "masc. despite -a ending",
+  "confusable": []
+ },
+ {
+  "id": "pt_129",
+  "lemma": "dinheiro",
+  "gloss": "money",
+  "kind": "vocab",
+  "difficulty": 0.385,
+  "is_phonological": true,
+  "hint": "masc.; -nh- palatal nasal",
+  "confusable": [
+   "pt_043"
+  ]
+ },
+ {
+  "id": "pt_130",
+  "lemma": "carro",
+  "gloss": "car",
+  "kind": "vocab",
+  "difficulty": 0.388,
+  "is_phonological": true,
+  "hint": "masc.; rr = strong/guttural r",
+  "confusable": [
+   "pt_185"
+  ]
+ },
+ {
+  "id": "pt_131",
+  "lemma": "rua",
+  "gloss": "street",
+  "kind": "vocab",
+  "difficulty": 0.391,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_055"
+  ]
+ },
+ {
+  "id": "pt_132",
+  "lemma": "escola",
+  "gloss": "school",
+  "kind": "vocab",
+  "difficulty": 0.393,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_133",
+  "lemma": "noite",
+  "gloss": "night",
+  "kind": "vocab",
+  "difficulty": 0.396,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_247"
+  ]
+ },
+ {
+  "id": "pt_134",
+  "lemma": "manhã",
+  "gloss": "morning",
+  "kind": "vocab",
+  "difficulty": 0.398,
+  "is_phonological": true,
+  "hint": "fem.; nasal ã, stress on end",
+  "confusable": [
+   "pt_176"
+  ]
+ },
+ {
+  "id": "pt_135",
+  "lemma": "semana",
+  "gloss": "week",
+  "kind": "vocab",
+  "difficulty": 0.401,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_136",
+  "lemma": "mês",
+  "gloss": "month",
+  "kind": "vocab",
+  "difficulty": 0.404,
+  "is_phonological": false,
+  "hint": "masc.; pl. meses",
+  "confusable": [
+   "pt_097",
+   "pt_241"
+  ]
+ },
+ {
+  "id": "pt_137",
+  "lemma": "momento",
+  "gloss": "moment",
+  "kind": "vocab",
+  "difficulty": 0.406,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "pt_138",
+  "lemma": "viver",
+  "gloss": "to live",
+  "kind": "vocab",
+  "difficulty": 0.409,
+  "is_phonological": false,
+  "hint": "-er verb",
+  "confusable": [
+   "pt_075",
+   "pt_077"
+  ]
+ },
+ {
+  "id": "pt_139",
+  "lemma": "deixar",
+  "gloss": "to let, leave",
+  "kind": "vocab",
+  "difficulty": 0.411,
+  "is_phonological": false,
+  "hint": "-ar verb; ei diphthong",
+  "confusable": []
+ },
+ {
+  "id": "pt_140",
+  "lemma": "passar",
+  "gloss": "to pass, spend (time)",
+  "kind": "vocab",
+  "difficulty": 0.414,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": [
+   "pt_148",
+   "pt_204"
+  ]
+ },
+ {
+  "id": "pt_141",
+  "lemma": "chegar",
+  "gloss": "to arrive",
+  "kind": "vocab",
+  "difficulty": 0.417,
+  "is_phonological": true,
+  "hint": "ch = 'sh' sound",
+  "confusable": [
+   "pt_144"
+  ]
+ },
+ {
+  "id": "pt_142",
+  "lemma": "ficar",
+  "gloss": "to stay, become",
+  "kind": "vocab",
+  "difficulty": 0.419,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": [
+   "pt_144"
+  ]
+ },
+ {
+  "id": "pt_143",
+  "lemma": "levar",
+  "gloss": "to take, carry",
+  "kind": "vocab",
+  "difficulty": 0.422,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": []
+ },
+ {
+  "id": "pt_144",
+  "lemma": "pegar",
+  "gloss": "to grab, get",
+  "kind": "vocab",
+  "difficulty": 0.424,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": [
+   "pt_141",
+   "pt_142"
+  ]
+ },
+ {
+  "id": "pt_145",
+  "lemma": "encontrar",
+  "gloss": "to find, meet",
+  "kind": "vocab",
+  "difficulty": 0.427,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": [
+   "pt_146"
+  ]
+ },
+ {
+  "id": "pt_146",
+  "lemma": "entrar",
+  "gloss": "to enter",
+  "kind": "vocab",
+  "difficulty": 0.43,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": [
+   "pt_145",
+   "pt_165"
+  ]
+ },
+ {
+  "id": "pt_147",
+  "lemma": "abrir",
+  "gloss": "to open",
+  "kind": "vocab",
+  "difficulty": 0.432,
+  "is_phonological": false,
+  "hint": "-ir verb",
+  "confusable": []
+ },
+ {
+  "id": "pt_148",
+  "lemma": "pensar",
+  "gloss": "to think",
+  "kind": "vocab",
+  "difficulty": 0.435,
+  "is_phonological": false,
+  "hint": "-ar verb; nasal en",
+  "confusable": [
+   "pt_140"
+  ]
+ },
+ {
+  "id": "pt_149",
+  "lemma": "esperar",
+  "gloss": "to wait; to hope",
+  "kind": "vocab",
+  "difficulty": 0.437,
+  "is_phonological": false,
+  "hint": "-ar verb",
+  "confusable": []
+ },
+ {
+  "id": "pt_150",
+  "lemma": "olá",
+  "gloss": "hello",
+  "kind": "chunk",
+  "difficulty": 0.44,
+  "is_phonological": false,
+  "hint": "stress on final á",
+  "confusable": [
+   "pt_048"
+  ]
+ },
+ {
+  "id": "pt_151",
+  "lemma": "tchau",
+  "gloss": "bye",
+  "kind": "chunk",
+  "difficulty": 0.443,
+  "is_phonological": false,
+  "hint": "informal goodbye",
+  "confusable": []
+ },
+ {
+  "id": "pt_152",
+  "lemma": "boa noite",
+  "gloss": "good evening/night",
+  "kind": "chunk",
+  "difficulty": 0.445,
+  "is_phonological": false,
+  "hint": "greeting and farewell",
+  "confusable": [
+   "pt_047",
+   "pt_153"
+  ]
+ },
+ {
+  "id": "pt_153",
+  "lemma": "boa tarde",
+  "gloss": "good afternoon",
+  "kind": "chunk",
+  "difficulty": 0.448,
+  "is_phonological": false,
+  "hint": "used after midday",
+  "confusable": [
+   "pt_047",
+   "pt_152"
+  ]
+ },
+ {
+  "id": "pt_154",
+  "lemma": "até logo",
+  "gloss": "see you later",
+  "kind": "chunk",
+  "difficulty": 0.45,
+  "is_phonological": false,
+  "hint": "farewell",
+  "confusable": []
+ },
+ {
+  "id": "pt_155",
+  "lemma": "nos",
+  "gloss": "to us / ourselves (object pronoun)",
+  "kind": "grammar",
+  "difficulty": 0.453,
+  "is_phonological": false,
+  "hint": "object form of nós; no accent (vs. nós)",
+  "confusable": [
+   "pt_004"
+  ]
+ },
+ {
+  "id": "pt_156",
+  "lemma": "me",
+  "gloss": "me / to me (object pronoun)",
+  "kind": "grammar",
+  "difficulty": 0.456,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_052"
+  ]
+ },
+ {
+  "id": "pt_157",
+  "lemma": "te",
+  "gloss": "you / to you (object pronoun)",
+  "kind": "grammar",
+  "difficulty": 0.458,
+  "is_phonological": false,
+  "hint": "informal object pronoun",
+  "confusable": [
+   "pt_001",
+   "pt_054"
+  ]
+ },
+ {
+  "id": "pt_158",
+  "lemma": "isto",
+  "gloss": "this (neuter)",
+  "kind": "grammar",
+  "difficulty": 0.461,
+  "is_phonological": false,
+  "hint": "near speaker; less common than 'isso' in speech",
+  "confusable": [
+   "pt_026",
+   "pt_027"
+  ]
+ },
+ {
+  "id": "pt_159",
+  "lemma": "aquilo",
+  "gloss": "that (over there, neuter)",
+  "kind": "grammar",
+  "difficulty": 0.463,
+  "is_phonological": false,
+  "hint": "far from both speakers",
+  "confusable": [
+   "pt_027",
+   "pt_160"
+  ]
+ },
+ {
+  "id": "pt_160",
+  "lemma": "aquele",
+  "gloss": "that one (masc.)",
+  "kind": "grammar",
+  "difficulty": 0.466,
+  "is_phonological": false,
+  "hint": "far demonstrative",
+  "confusable": [
+   "pt_026",
+   "pt_159",
+   "pt_161"
+  ]
+ },
+ {
+  "id": "pt_161",
+  "lemma": "esse",
+  "gloss": "that one (near listener, masc.)",
+  "kind": "grammar",
+  "difficulty": 0.469,
+  "is_phonological": false,
+  "hint": "between este and aquele",
+  "confusable": [
+   "pt_026",
+   "pt_160"
+  ]
+ },
+ {
+  "id": "pt_162",
+  "lemma": "lá",
+  "gloss": "there (over there)",
+  "kind": "grammar",
+  "difficulty": 0.471,
+  "is_phonological": false,
+  "hint": "farther than 'ali'",
+  "confusable": [
+   "pt_028",
+   "pt_029"
+  ]
+ },
+ {
+  "id": "pt_163",
+  "lemma": "dentro",
+  "gloss": "inside",
+  "kind": "vocab",
+  "difficulty": 0.474,
+  "is_phonological": false,
+  "hint": "usually 'dentro de'",
+  "confusable": [
+   "pt_165"
+  ]
+ },
+ {
+  "id": "pt_164",
+  "lemma": "fora",
+  "gloss": "outside / out",
+  "kind": "vocab",
+  "difficulty": 0.476,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_165",
+  "lemma": "entre",
+  "gloss": "between / among",
+  "kind": "grammar",
+  "difficulty": 0.479,
+  "is_phonological": false,
+  "hint": "also = 'come in!' (verb entrar)",
+  "confusable": [
+   "pt_146",
+   "pt_163"
+  ]
+ },
+ {
+  "id": "pt_166",
+  "lemma": "contra",
+  "gloss": "against",
+  "kind": "grammar",
+  "difficulty": 0.481,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_145"
+  ]
+ },
+ {
+  "id": "pt_167",
+  "lemma": "desde",
+  "gloss": "since / from",
+  "kind": "grammar",
+  "difficulty": 0.484,
+  "is_phonological": false,
+  "hint": "of time or place",
+  "confusable": [
+   "pt_058"
+  ]
+ },
+ {
+  "id": "pt_168",
+  "lemma": "durante",
+  "gloss": "during",
+  "kind": "grammar",
+  "difficulty": 0.487,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_169",
+  "lemma": "enquanto",
+  "gloss": "while / as long as",
+  "kind": "grammar",
+  "difficulty": 0.489,
+  "is_phonological": true,
+  "hint": "nasal 'an'",
+  "confusable": [
+   "pt_057",
+   "pt_060"
+  ]
+ },
+ {
+  "id": "pt_170",
+  "lemma": "porém",
+  "gloss": "however / but",
+  "kind": "grammar",
+  "difficulty": 0.492,
+  "is_phonological": true,
+  "hint": "nasal ending '-ém'",
+  "confusable": [
+   "pt_018",
+   "pt_021",
+   "pt_063"
+  ]
+ },
+ {
+  "id": "pt_171",
+  "lemma": "embora",
+  "gloss": "although / away",
+  "kind": "grammar",
+  "difficulty": 0.494,
+  "is_phonological": false,
+  "hint": "'ir embora' = to leave",
+  "confusable": [
+   "pt_030",
+   "pt_087"
+  ]
+ },
+ {
+  "id": "pt_172",
+  "lemma": "logo",
+  "gloss": "soon / right away",
+  "kind": "vocab",
+  "difficulty": 0.497,
+  "is_phonological": false,
+  "hint": "open 'ó'",
+  "confusable": [
+   "pt_125"
+  ]
+ },
+ {
+  "id": "pt_173",
+  "lemma": "cedo",
+  "gloss": "early",
+  "kind": "vocab",
+  "difficulty": 0.5,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_174",
+  "lemma": "tarde",
+  "gloss": "late / afternoon",
+  "kind": "vocab",
+  "difficulty": 0.502,
+  "is_phonological": false,
+  "hint": "fem. as noun (a tarde)",
+  "confusable": [
+   "pt_190"
+  ]
+ },
+ {
+  "id": "pt_175",
+  "lemma": "ontem",
+  "gloss": "yesterday",
+  "kind": "vocab",
+  "difficulty": 0.505,
+  "is_phonological": true,
+  "hint": "nasal '-em'",
+  "confusable": [
+   "pt_031",
+   "pt_058"
+  ]
+ },
+ {
+  "id": "pt_176",
+  "lemma": "amanhã",
+  "gloss": "tomorrow / morning",
+  "kind": "vocab",
+  "difficulty": 0.507,
+  "is_phonological": true,
+  "hint": "nasal 'nh+ã' is tricky",
+  "confusable": [
+   "pt_134"
+  ]
+ },
+ {
+  "id": "pt_177",
+  "lemma": "perto",
+  "gloss": "near / close",
+  "kind": "vocab",
+  "difficulty": 0.51,
+  "is_phonological": false,
+  "hint": "'perto de'",
+  "confusable": []
+ },
+ {
+  "id": "pt_178",
+  "lemma": "longe",
+  "gloss": "far",
+  "kind": "vocab",
+  "difficulty": 0.513,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_269"
+  ]
+ },
+ {
+  "id": "pt_179",
+  "lemma": "junto",
+  "gloss": "together",
+  "kind": "vocab",
+  "difficulty": 0.515,
+  "is_phonological": false,
+  "hint": "nasal 'un'",
+  "confusable": []
+ },
+ {
+  "id": "pt_180",
+  "lemma": "mau",
+  "gloss": "bad (adj., masc.)",
+  "kind": "vocab",
+  "difficulty": 0.518,
+  "is_phonological": false,
+  "hint": "adjective; vs. 'mal' (adverb)",
+  "confusable": [
+   "pt_181",
+   "pt_237"
+  ]
+ },
+ {
+  "id": "pt_181",
+  "lemma": "mal",
+  "gloss": "badly / barely",
+  "kind": "vocab",
+  "difficulty": 0.52,
+  "is_phonological": false,
+  "hint": "adverb; opposite of 'bem'",
+  "confusable": [
+   "pt_180"
+  ]
+ },
+ {
+  "id": "pt_182",
+  "lemma": "feliz",
+  "gloss": "happy",
+  "kind": "vocab",
+  "difficulty": 0.523,
+  "is_phonological": false,
+  "hint": "stress on final syllable",
+  "confusable": [
+   "pt_184"
+  ]
+ },
+ {
+  "id": "pt_183",
+  "lemma": "difícil",
+  "gloss": "difficult",
+  "kind": "vocab",
+  "difficulty": 0.526,
+  "is_phonological": false,
+  "hint": "antepenult stress (esdrúxula)",
+  "confusable": [
+   "pt_184"
+  ]
+ },
+ {
+  "id": "pt_184",
+  "lemma": "fácil",
+  "gloss": "easy",
+  "kind": "vocab",
+  "difficulty": 0.528,
+  "is_phonological": false,
+  "hint": "stress on 'fá'",
+  "confusable": [
+   "pt_182",
+   "pt_183"
+  ]
+ },
+ {
+  "id": "pt_185",
+  "lemma": "caro",
+  "gloss": "expensive / dear",
+  "kind": "vocab",
+  "difficulty": 0.531,
+  "is_phonological": false,
+  "hint": "tapped 'r'",
+  "confusable": [
+   "pt_130",
+   "pt_249"
+  ]
+ },
+ {
+  "id": "pt_186",
+  "lemma": "barato",
+  "gloss": "cheap",
+  "kind": "vocab",
+  "difficulty": 0.533,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_187",
+  "lemma": "velho",
+  "gloss": "old",
+  "kind": "vocab",
+  "difficulty": 0.536,
+  "is_phonological": true,
+  "hint": "'lh' palatal sound",
+  "confusable": [
+   "pt_094",
+   "pt_190"
+  ]
+ },
+ {
+  "id": "pt_188",
+  "lemma": "jovem",
+  "gloss": "young",
+  "kind": "vocab",
+  "difficulty": 0.539,
+  "is_phonological": false,
+  "hint": "nasal '-em'",
+  "confusable": []
+ },
+ {
+  "id": "pt_189",
+  "lemma": "bonito",
+  "gloss": "pretty / nice-looking",
+  "kind": "vocab",
+  "difficulty": 0.541,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_190",
+  "lemma": "verde",
+  "gloss": "green",
+  "kind": "vocab",
+  "difficulty": 0.544,
+  "is_phonological": false,
+  "hint": "same form for both genders",
+  "confusable": [
+   "pt_115"
+  ]
+ },
+ {
+  "id": "pt_191",
+  "lemma": "branco",
+  "gloss": "white",
+  "kind": "vocab",
+  "difficulty": 0.546,
+  "is_phonological": false,
+  "hint": "masc.; nasal 'an'",
+  "confusable": []
+ },
+ {
+  "id": "pt_192",
+  "lemma": "preto",
+  "gloss": "black",
+  "kind": "vocab",
+  "difficulty": 0.549,
+  "is_phonological": false,
+  "hint": "open 'ê'→'é'",
+  "confusable": [
+   "pt_177"
+  ]
+ },
+ {
+  "id": "pt_193",
+  "lemma": "vermelho",
+  "gloss": "red",
+  "kind": "vocab",
+  "difficulty": 0.552,
+  "is_phonological": true,
+  "hint": "'lh' palatal sound",
+  "confusable": [
+   "pt_113",
+   "pt_187"
+  ]
+ },
+ {
+  "id": "pt_194",
+  "lemma": "quatro",
+  "gloss": "four",
+  "kind": "vocab",
+  "difficulty": 0.554,
+  "is_phonological": false,
+  "hint": "'qua' = /kw/",
+  "confusable": [
+   "pt_289"
+  ]
+ },
+ {
+  "id": "pt_195",
+  "lemma": "cinco",
+  "gloss": "five",
+  "kind": "vocab",
+  "difficulty": 0.557,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_196",
+  "lemma": "seis",
+  "gloss": "six",
+  "kind": "vocab",
+  "difficulty": 0.559,
+  "is_phonological": false,
+  "hint": "diphthong 'ei'",
+  "confusable": [
+   "pt_073",
+   "pt_197"
+  ]
+ },
+ {
+  "id": "pt_197",
+  "lemma": "sete",
+  "gloss": "seven",
+  "kind": "vocab",
+  "difficulty": 0.562,
+  "is_phonological": false,
+  "hint": "open 'é'",
+  "confusable": [
+   "pt_196"
+  ]
+ },
+ {
+  "id": "pt_198",
+  "lemma": "dez",
+  "gloss": "ten",
+  "kind": "vocab",
+  "difficulty": 0.565,
+  "is_phonological": false,
+  "hint": "final 's'→/s/, open vowel",
+  "confusable": [
+   "pt_099",
+   "pt_100"
+  ]
+ },
+ {
+  "id": "pt_199",
+  "lemma": "cem",
+  "gloss": "one hundred",
+  "kind": "vocab",
+  "difficulty": 0.567,
+  "is_phonological": true,
+  "hint": "nasal '-em'; becomes 'cento' before a number",
+  "confusable": [
+   "pt_023",
+   "pt_073"
+  ]
+ },
+ {
+  "id": "pt_200",
+  "lemma": "mil",
+  "gloss": "one thousand",
+  "kind": "vocab",
+  "difficulty": 0.57,
+  "is_phonological": false,
+  "hint": "invariable",
+  "confusable": [
+   "pt_181"
+  ]
+ },
+ {
+  "id": "pt_201",
+  "lemma": "telefone",
+  "gloss": "telephone / phone",
+  "kind": "vocab",
+  "difficulty": 0.572,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "pt_202",
+  "lemma": "livro",
+  "gloss": "book",
+  "kind": "vocab",
+  "difficulty": 0.575,
+  "is_phonological": false,
+  "hint": "masc.; false friend: not 'free' (livre)",
+  "confusable": []
+ },
+ {
+  "id": "pt_203",
+  "lemma": "comprar",
+  "gloss": "to buy",
+  "kind": "vocab",
+  "difficulty": 0.578,
+  "is_phonological": false,
+  "hint": "false friend: not 'to comprehend'",
+  "confusable": []
+ },
+ {
+  "id": "pt_204",
+  "lemma": "pagar",
+  "gloss": "to pay",
+  "kind": "vocab",
+  "difficulty": 0.58,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_305"
+  ]
+ },
+ {
+  "id": "pt_205",
+  "lemma": "ajudar",
+  "gloss": "to help",
+  "kind": "vocab",
+  "difficulty": 0.583,
+  "is_phonological": false,
+  "hint": "'j' = /ʒ/",
+  "confusable": []
+ },
+ {
+  "id": "pt_206",
+  "lemma": "usar",
+  "gloss": "to use / to wear",
+  "kind": "vocab",
+  "difficulty": 0.585,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_207",
+  "lemma": "começar",
+  "gloss": "to begin, to start",
+  "kind": "vocab",
+  "difficulty": 0.588,
+  "is_phonological": false,
+  "hint": "stem change: começo, começa",
+  "confusable": [
+   "pt_083"
+  ]
+ },
+ {
+  "id": "pt_208",
+  "lemma": "sentir",
+  "gloss": "to feel",
+  "kind": "vocab",
+  "difficulty": 0.591,
+  "is_phonological": false,
+  "hint": "irregular: sinto",
+  "confusable": []
+ },
+ {
+  "id": "pt_209",
+  "lemma": "conhecer",
+  "gloss": "to know (a person/place), to meet",
+  "kind": "vocab",
+  "difficulty": 0.593,
+  "is_phonological": false,
+  "hint": "use vs 'saber' for facts",
+  "confusable": [
+   "pt_074"
+  ]
+ },
+ {
+  "id": "pt_210",
+  "lemma": "perder",
+  "gloss": "to lose",
+  "kind": "vocab",
+  "difficulty": 0.596,
+  "is_phonological": false,
+  "hint": "irregular: perco",
+  "confusable": [
+   "pt_177"
+  ]
+ },
+ {
+  "id": "pt_211",
+  "lemma": "voltar",
+  "gloss": "to return, to come back",
+  "kind": "vocab",
+  "difficulty": 0.598,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_212",
+  "lemma": "morar",
+  "gloss": "to live, to reside",
+  "kind": "vocab",
+  "difficulty": 0.601,
+  "is_phonological": false,
+  "hint": "use for residence vs 'viver'",
+  "confusable": [
+   "pt_138",
+   "pt_310"
+  ]
+ },
+ {
+  "id": "pt_213",
+  "lemma": "lembrar",
+  "gloss": "to remember",
+  "kind": "vocab",
+  "difficulty": 0.604,
+  "is_phonological": false,
+  "hint": "lembrar de algo",
+  "confusable": []
+ },
+ {
+  "id": "pt_214",
+  "lemma": "mostrar",
+  "gloss": "to show",
+  "kind": "vocab",
+  "difficulty": 0.606,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_215",
+  "lemma": "entender",
+  "gloss": "to understand",
+  "kind": "vocab",
+  "difficulty": 0.609,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_146"
+  ]
+ },
+ {
+  "id": "pt_216",
+  "lemma": "estudar",
+  "gloss": "to study",
+  "kind": "vocab",
+  "difficulty": 0.611,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_217",
+  "lemma": "tentar",
+  "gloss": "to try",
+  "kind": "vocab",
+  "difficulty": 0.614,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_218",
+  "lemma": "andar",
+  "gloss": "to walk, to go (around)",
+  "kind": "vocab",
+  "difficulty": 0.617,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_219",
+  "lemma": "correr",
+  "gloss": "to run",
+  "kind": "vocab",
+  "difficulty": 0.619,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_220",
+  "lemma": "dormir",
+  "gloss": "to sleep",
+  "kind": "vocab",
+  "difficulty": 0.622,
+  "is_phonological": false,
+  "hint": "irregular: durmo",
+  "confusable": []
+ },
+ {
+  "id": "pt_221",
+  "lemma": "acordar",
+  "gloss": "to wake up",
+  "kind": "vocab",
+  "difficulty": 0.624,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_213"
+  ]
+ },
+ {
+  "id": "pt_222",
+  "lemma": "escrever",
+  "gloss": "to write",
+  "kind": "vocab",
+  "difficulty": 0.627,
+  "is_phonological": false,
+  "hint": "irregular past participle: escrito",
+  "confusable": [
+   "pt_223"
+  ]
+ },
+ {
+  "id": "pt_223",
+  "lemma": "ler",
+  "gloss": "to read",
+  "kind": "vocab",
+  "difficulty": 0.63,
+  "is_phonological": false,
+  "hint": "irregular: leio, lê",
+  "confusable": [
+   "pt_075"
+  ]
+ },
+ {
+  "id": "pt_224",
+  "lemma": "ouvir",
+  "gloss": "to hear, to listen",
+  "kind": "vocab",
+  "difficulty": 0.632,
+  "is_phonological": false,
+  "hint": "irregular: ouço",
+  "confusable": [
+   "pt_075"
+  ]
+ },
+ {
+  "id": "pt_225",
+  "lemma": "olhar",
+  "gloss": "to look (at)",
+  "kind": "vocab",
+  "difficulty": 0.635,
+  "is_phonological": false,
+  "hint": "olhar para",
+  "confusable": [
+   "pt_075",
+   "pt_238"
+  ]
+ },
+ {
+  "id": "pt_226",
+  "lemma": "perguntar",
+  "gloss": "to ask (a question)",
+  "kind": "vocab",
+  "difficulty": 0.637,
+  "is_phonological": false,
+  "hint": "vs 'pedir' to request",
+  "confusable": [
+   "pt_228"
+  ]
+ },
+ {
+  "id": "pt_227",
+  "lemma": "responder",
+  "gloss": "to answer, to respond",
+  "kind": "vocab",
+  "difficulty": 0.64,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_228",
+  "lemma": "pedir",
+  "gloss": "to ask for, to request, to order",
+  "kind": "vocab",
+  "difficulty": 0.643,
+  "is_phonological": false,
+  "hint": "irregular: peço",
+  "confusable": [
+   "pt_210",
+   "pt_226"
+  ]
+ },
+ {
+  "id": "pt_229",
+  "lemma": "vender",
+  "gloss": "to sell",
+  "kind": "vocab",
+  "difficulty": 0.645,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_077"
+  ]
+ },
+ {
+  "id": "pt_230",
+  "lemma": "mandar",
+  "gloss": "to send, to order",
+  "kind": "vocab",
+  "difficulty": 0.648,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_231",
+  "lemma": "receber",
+  "gloss": "to receive",
+  "kind": "vocab",
+  "difficulty": 0.65,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_232",
+  "lemma": "filha",
+  "gloss": "daughter",
+  "kind": "vocab",
+  "difficulty": 0.653,
+  "is_phonological": false,
+  "hint": "feminine of filho",
+  "confusable": [
+   "pt_119"
+  ]
+ },
+ {
+  "id": "pt_233",
+  "lemma": "irmão",
+  "gloss": "brother",
+  "kind": "vocab",
+  "difficulty": 0.656,
+  "is_phonological": true,
+  "hint": "masculine; nasal -ão",
+  "confusable": [
+   "pt_234"
+  ]
+ },
+ {
+  "id": "pt_234",
+  "lemma": "irmã",
+  "gloss": "sister",
+  "kind": "vocab",
+  "difficulty": 0.658,
+  "is_phonological": true,
+  "hint": "feminine; nasal",
+  "confusable": [
+   "pt_233"
+  ]
+ },
+ {
+  "id": "pt_235",
+  "lemma": "família",
+  "gloss": "family",
+  "kind": "vocab",
+  "difficulty": 0.661,
+  "is_phonological": false,
+  "hint": "feminine; stress on -mí-",
+  "confusable": []
+ },
+ {
+  "id": "pt_236",
+  "lemma": "país",
+  "gloss": "country",
+  "kind": "vocab",
+  "difficulty": 0.663,
+  "is_phonological": false,
+  "hint": "masculine; stress on -ís; vs 'pais' parents",
+  "confusable": [
+   "pt_124"
+  ]
+ },
+ {
+  "id": "pt_237",
+  "lemma": "mão",
+  "gloss": "hand",
+  "kind": "vocab",
+  "difficulty": 0.666,
+  "is_phonological": true,
+  "hint": "feminine despite -ão; nasal",
+  "confusable": [
+   "pt_120"
+  ]
+ },
+ {
+  "id": "pt_238",
+  "lemma": "olho",
+  "gloss": "eye",
+  "kind": "vocab",
+  "difficulty": 0.669,
+  "is_phonological": true,
+  "hint": "masculine; lh sound",
+  "confusable": [
+   "pt_225"
+  ]
+ },
+ {
+  "id": "pt_239",
+  "lemma": "cabeça",
+  "gloss": "head",
+  "kind": "vocab",
+  "difficulty": 0.671,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": []
+ },
+ {
+  "id": "pt_240",
+  "lemma": "porta",
+  "gloss": "door",
+  "kind": "vocab",
+  "difficulty": 0.674,
+  "is_phonological": false,
+  "hint": "feminine; vs 'porto' port",
+  "confusable": []
+ },
+ {
+  "id": "pt_241",
+  "lemma": "mesa",
+  "gloss": "table",
+  "kind": "vocab",
+  "difficulty": 0.676,
+  "is_phonological": false,
+  "hint": "feminine; s sounds like z",
+  "confusable": []
+ },
+ {
+  "id": "pt_242",
+  "lemma": "café",
+  "gloss": "coffee, café",
+  "kind": "vocab",
+  "difficulty": 0.679,
+  "is_phonological": false,
+  "hint": "masculine; stress on -fé",
+  "confusable": []
+ },
+ {
+  "id": "pt_243",
+  "lemma": "pão",
+  "gloss": "bread",
+  "kind": "vocab",
+  "difficulty": 0.682,
+  "is_phonological": true,
+  "hint": "masculine; nasal -ão",
+  "confusable": [
+   "pt_237"
+  ]
+ },
+ {
+  "id": "pt_244",
+  "lemma": "roupa",
+  "gloss": "clothes, clothing",
+  "kind": "vocab",
+  "difficulty": 0.684,
+  "is_phonological": false,
+  "hint": "feminine; usually singular",
+  "confusable": []
+ },
+ {
+  "id": "pt_245",
+  "lemma": "criança",
+  "gloss": "child",
+  "kind": "vocab",
+  "difficulty": 0.687,
+  "is_phonological": false,
+  "hint": "feminine even for a boy",
+  "confusable": []
+ },
+ {
+  "id": "pt_246",
+  "lemma": "número",
+  "gloss": "number",
+  "kind": "vocab",
+  "difficulty": 0.689,
+  "is_phonological": false,
+  "hint": "masculine; stress on nú-",
+  "confusable": []
+ },
+ {
+  "id": "pt_247",
+  "lemma": "oito",
+  "gloss": "eight",
+  "kind": "vocab",
+  "difficulty": 0.692,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_248",
+  "lemma": "nove",
+  "gloss": "nine",
+  "kind": "vocab",
+  "difficulty": 0.695,
+  "is_phonological": false,
+  "hint": "vs 'nova' new (fem)",
+  "confusable": [
+   "pt_094"
+  ]
+ },
+ {
+  "id": "pt_249",
+  "lemma": "claro",
+  "gloss": "of course, clear, light (color)",
+  "kind": "vocab",
+  "difficulty": 0.697,
+  "is_phonological": false,
+  "hint": "also 'claro!' = sure!",
+  "confusable": []
+ },
+ {
+  "id": "pt_250",
+  "lemma": "importante",
+  "gloss": "important",
+  "kind": "vocab",
+  "difficulty": 0.7,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_251",
+  "lemma": "certo",
+  "gloss": "right, correct",
+  "kind": "vocab",
+  "difficulty": 0.702,
+  "is_phonological": false,
+  "hint": "vs 'errado' wrong",
+  "confusable": []
+ },
+ {
+  "id": "pt_252",
+  "lemma": "todo mundo",
+  "gloss": "everyone, everybody",
+  "kind": "chunk",
+  "difficulty": 0.705,
+  "is_phonological": false,
+  "hint": "BR idiom; takes singular verb",
+  "confusable": []
+ },
+ {
+  "id": "pt_253",
+  "lemma": "um pouco",
+  "gloss": "a little, a bit",
+  "kind": "chunk",
+  "difficulty": 0.708,
+  "is_phonological": false,
+  "hint": "um pouco de água",
+  "confusable": [
+   "pt_096"
+  ]
+ },
+ {
+  "id": "pt_254",
+  "lemma": "por exemplo",
+  "gloss": "for example",
+  "kind": "chunk",
+  "difficulty": 0.71,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_255",
+  "lemma": "de novo",
+  "gloss": "again",
+  "kind": "chunk",
+  "difficulty": 0.713,
+  "is_phonological": false,
+  "hint": "BR colloquial for 'again'",
+  "confusable": [
+   "pt_094"
+  ]
+ },
+ {
+  "id": "pt_256",
+  "lemma": "tudo bem",
+  "gloss": "all good, it's fine (reply)",
+  "kind": "chunk",
+  "difficulty": 0.715,
+  "is_phonological": false,
+  "hint": "answer to greeting",
+  "confusable": [
+   "pt_049"
+  ]
+ },
+ {
+  "id": "pt_257",
+  "lemma": "claro que sim",
+  "gloss": "of course (yes)",
+  "kind": "chunk",
+  "difficulty": 0.718,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_258",
+  "lemma": "agora mesmo",
+  "gloss": "right now",
+  "kind": "chunk",
+  "difficulty": 0.721,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_030"
+  ]
+ },
+ {
+  "id": "pt_259",
+  "lemma": "cima",
+  "gloss": "top, up (em cima)",
+  "kind": "vocab",
+  "difficulty": 0.723,
+  "is_phonological": false,
+  "hint": "used as 'em cima' = on top",
+  "confusable": [
+   "pt_260"
+  ]
+ },
+ {
+  "id": "pt_260",
+  "lemma": "baixo",
+  "gloss": "low, down (embaixo)",
+  "kind": "vocab",
+  "difficulty": 0.726,
+  "is_phonological": false,
+  "hint": "'embaixo' = underneath",
+  "confusable": [
+   "pt_259"
+  ]
+ },
+ {
+  "id": "pt_261",
+  "lemma": "lado",
+  "gloss": "side",
+  "kind": "vocab",
+  "difficulty": 0.728,
+  "is_phonological": false,
+  "hint": "ao lado de = next to",
+  "confusable": []
+ },
+ {
+  "id": "pt_262",
+  "lemma": "frente",
+  "gloss": "front",
+  "kind": "vocab",
+  "difficulty": 0.731,
+  "is_phonological": false,
+  "hint": "feminine; em frente = ahead",
+  "confusable": []
+ },
+ {
+  "id": "pt_263",
+  "lemma": "cor",
+  "gloss": "color",
+  "kind": "vocab",
+  "difficulty": 0.734,
+  "is_phonological": false,
+  "hint": "feminine; de que cor?",
+  "confusable": []
+ },
+ {
+  "id": "pt_264",
+  "lemma": "azul",
+  "gloss": "blue",
+  "kind": "vocab",
+  "difficulty": 0.736,
+  "is_phonological": false,
+  "hint": "plural: azuis",
+  "confusable": []
+ },
+ {
+  "id": "pt_265",
+  "lemma": "amarelo",
+  "gloss": "yellow",
+  "kind": "vocab",
+  "difficulty": 0.739,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_266",
+  "lemma": "quente",
+  "gloss": "hot, warm",
+  "kind": "vocab",
+  "difficulty": 0.741,
+  "is_phonological": false,
+  "hint": "vs 'frio' cold",
+  "confusable": [
+   "pt_267"
+  ]
+ },
+ {
+  "id": "pt_267",
+  "lemma": "frio",
+  "gloss": "cold",
+  "kind": "vocab",
+  "difficulty": 0.744,
+  "is_phonological": false,
+  "hint": "estar com frio = to be cold",
+  "confusable": [
+   "pt_266"
+  ]
+ },
+ {
+  "id": "pt_268",
+  "lemma": "cheio",
+  "gloss": "full",
+  "kind": "vocab",
+  "difficulty": 0.747,
+  "is_phonological": false,
+  "hint": "vs 'vazio' empty; ch sound",
+  "confusable": []
+ },
+ {
+  "id": "pt_269",
+  "lemma": "longo",
+  "gloss": "long",
+  "kind": "vocab",
+  "difficulty": 0.749,
+  "is_phonological": false,
+  "hint": "vs 'longe' far",
+  "confusable": [
+   "pt_178",
+   "pt_270"
+  ]
+ },
+ {
+  "id": "pt_270",
+  "lemma": "curto",
+  "gloss": "short (length)",
+  "kind": "vocab",
+  "difficulty": 0.752,
+  "is_phonological": false,
+  "hint": "vs 'baixo' for height",
+  "confusable": [
+   "pt_269"
+  ]
+ },
+ {
+  "id": "pt_271",
+  "lemma": "forte",
+  "gloss": "strong",
+  "kind": "vocab",
+  "difficulty": 0.754,
+  "is_phonological": false,
+  "hint": "vs 'fraco' weak",
+  "confusable": []
+ },
+ {
+  "id": "pt_272",
+  "lemma": "número de telefone",
+  "gloss": "phone number",
+  "kind": "chunk",
+  "difficulty": 0.757,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_273",
+  "lemma": "muito obrigado",
+  "gloss": "thank you very much",
+  "kind": "chunk",
+  "difficulty": 0.76,
+  "is_phonological": false,
+  "hint": "obrigada if speaker is female",
+  "confusable": [
+   "pt_045"
+  ]
+ },
+ {
+  "id": "pt_274",
+  "lemma": "prazer",
+  "gloss": "pleasure (nice to meet you)",
+  "kind": "chunk",
+  "difficulty": 0.762,
+  "is_phonological": false,
+  "hint": "said when introduced",
+  "confusable": []
+ },
+ {
+  "id": "pt_275",
+  "lemma": "desculpa",
+  "gloss": "sorry, excuse me",
+  "kind": "chunk",
+  "difficulty": 0.765,
+  "is_phonological": false,
+  "hint": "BR colloquial; also 'desculpe'",
+  "confusable": [
+   "pt_103"
+  ]
+ },
+ {
+  "id": "pt_276",
+  "lemma": "trinta",
+  "gloss": "thirty",
+  "kind": "vocab",
+  "difficulty": 0.767,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_277",
+  "lemma": "cem mil",
+  "gloss": "hundred thousand",
+  "kind": "chunk",
+  "difficulty": 0.77,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_278",
+  "lemma": "meio",
+  "gloss": "half / middle",
+  "kind": "vocab",
+  "difficulty": 0.773,
+  "is_phonological": false,
+  "hint": "masc.; 'meio-dia' = noon",
+  "confusable": [
+   "pt_113",
+   "pt_279"
+  ]
+ },
+ {
+  "id": "pt_279",
+  "lemma": "metade",
+  "gloss": "half (a half)",
+  "kind": "vocab",
+  "difficulty": 0.775,
+  "is_phonological": false,
+  "hint": "fem. noun",
+  "confusable": [
+   "pt_278"
+  ]
+ },
+ {
+  "id": "pt_280",
+  "lemma": "vez em quando",
+  "gloss": "once in a while",
+  "kind": "chunk",
+  "difficulty": 0.778,
+  "is_phonological": false,
+  "hint": "full form: 'de vez em quando'",
+  "confusable": []
+ },
+ {
+  "id": "pt_281",
+  "lemma": "cidade grande",
+  "gloss": "big city",
+  "kind": "chunk",
+  "difficulty": 0.78,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_282",
+  "lemma": "praia",
+  "gloss": "beach",
+  "kind": "vocab",
+  "difficulty": 0.783,
+  "is_phonological": true,
+  "hint": "fem.; 'ai' diphthong",
+  "confusable": [
+   "pt_283"
+  ]
+ },
+ {
+  "id": "pt_283",
+  "lemma": "praça",
+  "gloss": "town square",
+  "kind": "vocab",
+  "difficulty": 0.786,
+  "is_phonological": true,
+  "hint": "fem.; nasal/affricate 'ça'",
+  "confusable": [
+   "pt_282"
+  ]
+ },
+ {
+  "id": "pt_284",
+  "lemma": "loja",
+  "gloss": "shop, store",
+  "kind": "vocab",
+  "difficulty": 0.788,
+  "is_phonological": false,
+  "hint": "fem.; soft 'j'",
+  "confusable": [
+   "pt_178"
+  ]
+ },
+ {
+  "id": "pt_285",
+  "lemma": "mercado",
+  "gloss": "market, grocery store",
+  "kind": "vocab",
+  "difficulty": 0.791,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "pt_286",
+  "lemma": "restaurante",
+  "gloss": "restaurant",
+  "kind": "vocab",
+  "difficulty": 0.793,
+  "is_phonological": true,
+  "hint": "masc.; final 'e' sounds like 'i'",
+  "confusable": []
+ },
+ {
+  "id": "pt_287",
+  "lemma": "hospital",
+  "gloss": "hospital",
+  "kind": "vocab",
+  "difficulty": 0.796,
+  "is_phonological": false,
+  "hint": "masc.; silent 'h'",
+  "confusable": []
+ },
+ {
+  "id": "pt_288",
+  "lemma": "banheiro",
+  "gloss": "bathroom, restroom",
+  "kind": "vocab",
+  "difficulty": 0.799,
+  "is_phonological": true,
+  "hint": "masc.; nasal 'nh'",
+  "confusable": [
+   "pt_129"
+  ]
+ },
+ {
+  "id": "pt_289",
+  "lemma": "quarto",
+  "gloss": "bedroom / room; fourth",
+  "kind": "vocab",
+  "difficulty": 0.801,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "pt_194"
+  ]
+ },
+ {
+  "id": "pt_290",
+  "lemma": "janela",
+  "gloss": "window",
+  "kind": "vocab",
+  "difficulty": 0.804,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_291",
+  "lemma": "cama",
+  "gloss": "bed",
+  "kind": "vocab",
+  "difficulty": 0.806,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "pt_041"
+  ]
+ },
+ {
+  "id": "pt_292",
+  "lemma": "chave",
+  "gloss": "key",
+  "kind": "vocab",
+  "difficulty": 0.809,
+  "is_phonological": true,
+  "hint": "fem.; 'ch' = sh",
+  "confusable": []
+ },
+ {
+  "id": "pt_293",
+  "lemma": "dia da semana",
+  "gloss": "day of the week",
+  "kind": "chunk",
+  "difficulty": 0.812,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_294",
+  "lemma": "fim de semana",
+  "gloss": "weekend",
+  "kind": "chunk",
+  "difficulty": 0.814,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_295",
+  "lemma": "sábado",
+  "gloss": "Saturday",
+  "kind": "vocab",
+  "difficulty": 0.817,
+  "is_phonological": false,
+  "hint": "masc.; stress on first syllable",
+  "confusable": [
+   "pt_296"
+  ]
+ },
+ {
+  "id": "pt_296",
+  "lemma": "domingo",
+  "gloss": "Sunday",
+  "kind": "vocab",
+  "difficulty": 0.819,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "pt_295"
+  ]
+ },
+ {
+  "id": "pt_297",
+  "lemma": "segunda-feira",
+  "gloss": "Monday",
+  "kind": "vocab",
+  "difficulty": 0.822,
+  "is_phonological": false,
+  "hint": "fem.; often shortened to 'segunda'",
+  "confusable": []
+ },
+ {
+  "id": "pt_298",
+  "lemma": "hora certa",
+  "gloss": "the right time / on time",
+  "kind": "chunk",
+  "difficulty": 0.825,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_299",
+  "lemma": "que horas são?",
+  "gloss": "what time is it?",
+  "kind": "chunk",
+  "difficulty": 0.827,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_300",
+  "lemma": "tarde demais",
+  "gloss": "too late",
+  "kind": "chunk",
+  "difficulty": 0.83,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_301",
+  "lemma": "acontecer",
+  "gloss": "to happen",
+  "kind": "vocab",
+  "difficulty": 0.832,
+  "is_phonological": false,
+  "hint": "-cer verb; 'aconteceu' = it happened",
+  "confusable": [
+   "pt_145"
+  ]
+ },
+ {
+  "id": "pt_302",
+  "lemma": "parecer",
+  "gloss": "to seem, to look like",
+  "kind": "vocab",
+  "difficulty": 0.835,
+  "is_phonological": false,
+  "hint": "'parece que' = it seems that",
+  "confusable": []
+ },
+ {
+  "id": "pt_303",
+  "lemma": "continuar",
+  "gloss": "to continue",
+  "kind": "vocab",
+  "difficulty": 0.838,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_304",
+  "lemma": "jogar",
+  "gloss": "to play (a game); to throw",
+  "kind": "vocab",
+  "difficulty": 0.84,
+  "is_phonological": false,
+  "hint": "soft 'j'",
+  "confusable": [
+   "pt_141",
+   "pt_305"
+  ]
+ },
+ {
+  "id": "pt_305",
+  "lemma": "ligar",
+  "gloss": "to call (phone); to turn on",
+  "kind": "vocab",
+  "difficulty": 0.843,
+  "is_phonological": false,
+  "hint": "'ligar para' = to phone someone",
+  "confusable": [
+   "pt_141",
+   "pt_304"
+  ]
+ },
+ {
+  "id": "pt_306",
+  "lemma": "desligar",
+  "gloss": "to hang up; to turn off",
+  "kind": "vocab",
+  "difficulty": 0.845,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "pt_305"
+  ]
+ },
+ {
+  "id": "pt_307",
+  "lemma": "viajar",
+  "gloss": "to travel",
+  "kind": "vocab",
+  "difficulty": 0.848,
+  "is_phonological": false,
+  "hint": "stress on 'jar'",
+  "confusable": [
+   "pt_082"
+  ]
+ },
+ {
+  "id": "pt_308",
+  "lemma": "cozinhar",
+  "gloss": "to cook",
+  "kind": "vocab",
+  "difficulty": 0.851,
+  "is_phonological": true,
+  "hint": "nasal 'nh'",
+  "confusable": [
+   "pt_209"
+  ]
+ },
+ {
+  "id": "pt_309",
+  "lemma": "limpar",
+  "gloss": "to clean",
+  "kind": "vocab",
+  "difficulty": 0.853,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "pt_310",
+  "lemma": "morrer",
+  "gloss": "to die",
+  "kind": "vocab",
+  "difficulty": 0.856,
+  "is_phonological": false,
+  "hint": "irregular; 'morreu' = died",
+  "confusable": [
+   "pt_212",
+   "pt_219"
+  ]
+ },
+ {
+  "id": "pt_311",
+  "lemma": "nascer",
+  "gloss": "to be born",
+  "kind": "vocab",
+  "difficulty": 0.858,
+  "is_phonological": false,
+  "hint": "'nasceu' = was born",
+  "confusable": []
+ },
+ {
+  "id": "pt_312",
+  "lemma": "crescer",
+  "gloss": "to grow",
+  "kind": "vocab",
+  "difficulty": 0.861,
+  "is_phonological": true,
+  "hint": "'sc' = ss sound",
+  "confusable": [
+   "pt_209"
+  ]
+ },
+ {
+  "id": "pt_313",
+  "lemma": "avô",
+  "gloss": "grandfather",
+  "kind": "vocab",
+  "difficulty": 0.864,
+  "is_phonological": true,
+  "hint": "masc.; closed 'ô'",
+  "confusable": [
+   "pt_314"
+  ]
+ },
+ {
+  "id": "pt_314",
+  "lemma": "avó",
+  "gloss": "grandmother",
+  "kind": "vocab",
+  "difficulty": 0.866,
+  "is_phonological": true,
+  "hint": "fem.; open 'ó'",
+  "confusable": [
+   "pt_313"
+  ]
+ },
+ {
+  "id": "pt_315",
+  "lemma": "esposa",
+  "gloss": "wife",
+  "kind": "vocab",
+  "difficulty": 0.869,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_316",
+  "lemma": "marido",
+  "gloss": "husband",
+  "kind": "vocab",
+  "difficulty": 0.871,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "pt_317",
+  "lemma": "namorado",
+  "gloss": "boyfriend",
+  "kind": "vocab",
+  "difficulty": 0.874,
+  "is_phonological": false,
+  "hint": "masc.; fem. 'namorada'",
+  "confusable": []
+ },
+ {
+  "id": "pt_318",
+  "lemma": "corpo",
+  "gloss": "body",
+  "kind": "vocab",
+  "difficulty": 0.877,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "pt_319",
+  "lemma": "pé",
+  "gloss": "foot",
+  "kind": "vocab",
+  "difficulty": 0.879,
+  "is_phonological": false,
+  "hint": "masc.; open 'é'; 'a pé' = on foot",
+  "confusable": []
+ },
+ {
+  "id": "pt_320",
+  "lemma": "perna",
+  "gloss": "leg",
+  "kind": "vocab",
+  "difficulty": 0.882,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "pt_321",
+  "lemma": "braço",
+  "gloss": "arm",
+  "kind": "vocab",
+  "difficulty": 0.884,
+  "is_phonological": false,
+  "hint": "masc.; 'ç'",
+  "confusable": []
+ },
+ {
+  "id": "pt_322",
+  "lemma": "doente",
+  "gloss": "sick, ill",
+  "kind": "vocab",
+  "difficulty": 0.887,
+  "is_phonological": false,
+  "hint": "adj.; 'estar doente'",
+  "confusable": []
+ },
+ {
+  "id": "pt_323",
+  "lemma": "cansado",
+  "gloss": "tired",
+  "kind": "vocab",
+  "difficulty": 0.89,
+  "is_phonological": false,
+  "hint": "adj.; fem. 'cansada'",
+  "confusable": []
+ },
+ {
+  "id": "pt_324",
+  "lemma": "contente",
+  "gloss": "glad, content",
+  "kind": "vocab",
+  "difficulty": 0.892,
+  "is_phonological": false,
+  "hint": "adj.; invariable gender",
+  "confusable": []
+ },
+ {
+  "id": "pt_325",
+  "lemma": "que pena",
+  "gloss": "what a pity / too bad",
+  "kind": "chunk",
+  "difficulty": 0.895,
+  "is_phonological": false,
+  "hint": "sympathy phrase",
+  "confusable": []
+ },
+ {
+  "id": "pt_326",
+  "lemma": "tomara",
+  "gloss": "I hope so / let's hope",
+  "kind": "chunk",
+  "difficulty": 0.897,
+  "is_phonological": false,
+  "hint": "often 'tomara que...'",
+  "confusable": []
+ },
+ {
+  "id": "pt_327",
+  "lemma": "valeu",
+  "gloss": "thanks! / got it! (informal)",
+  "kind": "chunk",
+  "difficulty": 0.9,
+  "is_phonological": false,
+  "hint": "very common Brazilian slang for thanks",
+  "confusable": []
+ }
+]

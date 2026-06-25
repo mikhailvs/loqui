@@ -62,7 +62,8 @@ python tests/test_harness.py     # prove the invariants fire
 | `harness/drives.py` | the five drives: score + propose candidate moves |
 | `harness/invariants.py` | the veto layer (the auditable pedagogy) |
 | `harness/arbiter.py` | per-turn loop: propose → veto → select → ingest |
-| `harness/{brazilian,russian,languages}.py` | curricula + language profiles |
+| `harness/curricula/{pt,ru}.json` + `curricula.py` | frequency-ordered curricula (data) + loader |
+| `harness/languages.py` | language profiles (curriculum + STT/TTS/brain language) |
 | `brain.py` | LLM seam (Ollama / `claude -p`), structured-output JSON |
 | `voice.py` / `voiceserver.py` | edge-tts + the push-to-talk web app |
 | `tutor.py` / `run_session.py` | CLI tutor / simulated-learner runner |

@@ -1,0 +1,3425 @@
+[
+ {
+  "id": "ru_000",
+  "lemma": "я",
+  "gloss": "I",
+  "kind": "grammar",
+  "difficulty": 0.05,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_001",
+  "lemma": "ты",
+  "gloss": "you (informal sing.)",
+  "kind": "grammar",
+  "difficulty": 0.053,
+  "is_phonological": false,
+  "hint": "informal; use for friends/family",
+  "confusable": [
+   "ru_002"
+  ]
+ },
+ {
+  "id": "ru_002",
+  "lemma": "вы",
+  "gloss": "you (formal/plural)",
+  "kind": "grammar",
+  "difficulty": 0.056,
+  "is_phonological": false,
+  "hint": "formal or plural",
+  "confusable": [
+   "ru_001"
+  ]
+ },
+ {
+  "id": "ru_003",
+  "lemma": "он",
+  "gloss": "he/it",
+  "kind": "grammar",
+  "difficulty": 0.059,
+  "is_phonological": false,
+  "hint": "masculine",
+  "confusable": [
+   "ru_004",
+   "ru_005",
+   "ru_007"
+  ]
+ },
+ {
+  "id": "ru_004",
+  "lemma": "она",
+  "gloss": "she/it",
+  "kind": "grammar",
+  "difficulty": 0.061,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": [
+   "ru_003",
+   "ru_005",
+   "ru_007"
+  ]
+ },
+ {
+  "id": "ru_005",
+  "lemma": "оно",
+  "gloss": "it",
+  "kind": "grammar",
+  "difficulty": 0.064,
+  "is_phonological": false,
+  "hint": "neuter",
+  "confusable": [
+   "ru_003",
+   "ru_004"
+  ]
+ },
+ {
+  "id": "ru_006",
+  "lemma": "мы",
+  "gloss": "we",
+  "kind": "grammar",
+  "difficulty": 0.067,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_002"
+  ]
+ },
+ {
+  "id": "ru_007",
+  "lemma": "они",
+  "gloss": "they",
+  "kind": "grammar",
+  "difficulty": 0.07,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_003",
+   "ru_004",
+   "ru_005"
+  ]
+ },
+ {
+  "id": "ru_008",
+  "lemma": "это",
+  "gloss": "this/that; it is",
+  "kind": "grammar",
+  "difficulty": 0.073,
+  "is_phonological": false,
+  "hint": "used in 'это...' = 'this is...'",
+  "confusable": [
+   "ru_056"
+  ]
+ },
+ {
+  "id": "ru_009",
+  "lemma": "не",
+  "gloss": "not",
+  "kind": "grammar",
+  "difficulty": 0.075,
+  "is_phonological": false,
+  "hint": "negates the next word",
+  "confusable": [
+   "ru_010"
+  ]
+ },
+ {
+  "id": "ru_010",
+  "lemma": "нет",
+  "gloss": "no; there is not",
+  "kind": "grammar",
+  "difficulty": 0.078,
+  "is_phonological": false,
+  "hint": "answer 'no'; also 'there isn't'",
+  "confusable": [
+   "ru_009",
+   "ru_011"
+  ]
+ },
+ {
+  "id": "ru_011",
+  "lemma": "да",
+  "gloss": "yes",
+  "kind": "grammar",
+  "difficulty": 0.081,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_010"
+  ]
+ },
+ {
+  "id": "ru_012",
+  "lemma": "и",
+  "gloss": "and",
+  "kind": "grammar",
+  "difficulty": 0.084,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_013",
+   "ru_014"
+  ]
+ },
+ {
+  "id": "ru_013",
+  "lemma": "а",
+  "gloss": "and/but (contrast)",
+  "kind": "grammar",
+  "difficulty": 0.087,
+  "is_phonological": false,
+  "hint": "mild contrast, 'whereas'",
+  "confusable": [
+   "ru_012",
+   "ru_014"
+  ]
+ },
+ {
+  "id": "ru_014",
+  "lemma": "но",
+  "gloss": "but",
+  "kind": "grammar",
+  "difficulty": 0.09,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_012",
+   "ru_013"
+  ]
+ },
+ {
+  "id": "ru_015",
+  "lemma": "в",
+  "gloss": "in/to",
+  "kind": "grammar",
+  "difficulty": 0.092,
+  "is_phonological": false,
+  "hint": "+prepositional (in) or +accusative (to)",
+  "confusable": [
+   "ru_016",
+   "ru_018"
+  ]
+ },
+ {
+  "id": "ru_016",
+  "lemma": "на",
+  "gloss": "on/at/to",
+  "kind": "grammar",
+  "difficulty": 0.095,
+  "is_phonological": false,
+  "hint": "+prepositional or +accusative",
+  "confusable": [
+   "ru_015",
+   "ru_018"
+  ]
+ },
+ {
+  "id": "ru_017",
+  "lemma": "с",
+  "gloss": "with; from",
+  "kind": "grammar",
+  "difficulty": 0.098,
+  "is_phonological": false,
+  "hint": "+instrumental (with) or +genitive (from)",
+  "confusable": [
+   "ru_018",
+   "ru_149"
+  ]
+ },
+ {
+  "id": "ru_018",
+  "lemma": "у",
+  "gloss": "at/by; have (у меня)",
+  "kind": "grammar",
+  "difficulty": 0.101,
+  "is_phonological": false,
+  "hint": "+genitive; 'у меня есть' = I have",
+  "confusable": [
+   "ru_015",
+   "ru_016"
+  ]
+ },
+ {
+  "id": "ru_019",
+  "lemma": "к",
+  "gloss": "to/toward",
+  "kind": "grammar",
+  "difficulty": 0.104,
+  "is_phonological": false,
+  "hint": "+dative",
+  "confusable": [
+   "ru_015",
+   "ru_016"
+  ]
+ },
+ {
+  "id": "ru_020",
+  "lemma": "быть",
+  "gloss": "to be",
+  "kind": "grammar",
+  "difficulty": 0.107,
+  "is_phonological": false,
+  "hint": "usually omitted in present tense",
+  "confusable": [
+   "ru_021"
+  ]
+ },
+ {
+  "id": "ru_021",
+  "lemma": "есть",
+  "gloss": "there is/are; (I) have",
+  "kind": "grammar",
+  "difficulty": 0.11,
+  "is_phonological": false,
+  "hint": "present 'to be'; also 'to eat'",
+  "confusable": [
+   "ru_010",
+   "ru_020"
+  ]
+ },
+ {
+  "id": "ru_022",
+  "lemma": "что",
+  "gloss": "what; that",
+  "kind": "grammar",
+  "difficulty": 0.112,
+  "is_phonological": true,
+  "hint": "pronounced 'shto'",
+  "confusable": [
+   "ru_023"
+  ]
+ },
+ {
+  "id": "ru_023",
+  "lemma": "кто",
+  "gloss": "who",
+  "kind": "grammar",
+  "difficulty": 0.115,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_022"
+  ]
+ },
+ {
+  "id": "ru_024",
+  "lemma": "где",
+  "gloss": "where",
+  "kind": "grammar",
+  "difficulty": 0.118,
+  "is_phonological": false,
+  "hint": "location, not direction",
+  "confusable": [
+   "ru_025"
+  ]
+ },
+ {
+  "id": "ru_025",
+  "lemma": "когда",
+  "gloss": "when",
+  "kind": "grammar",
+  "difficulty": 0.121,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_024"
+  ]
+ },
+ {
+  "id": "ru_026",
+  "lemma": "как",
+  "gloss": "how; as/like",
+  "kind": "grammar",
+  "difficulty": 0.124,
+  "is_phonological": false,
+  "hint": "'как дела?' = how are you",
+  "confusable": [
+   "ru_096"
+  ]
+ },
+ {
+  "id": "ru_027",
+  "lemma": "почему",
+  "gloss": "why",
+  "kind": "grammar",
+  "difficulty": 0.127,
+  "is_phonological": false,
+  "hint": "stress on last syllable",
+  "confusable": [
+   "ru_097"
+  ]
+ },
+ {
+  "id": "ru_028",
+  "lemma": "здравствуйте",
+  "gloss": "hello (formal)",
+  "kind": "chunk",
+  "difficulty": 0.129,
+  "is_phonological": true,
+  "hint": "first 'в' is silent; formal/plural",
+  "confusable": [
+   "ru_029"
+  ]
+ },
+ {
+  "id": "ru_029",
+  "lemma": "привет",
+  "gloss": "hi (informal)",
+  "kind": "chunk",
+  "difficulty": 0.132,
+  "is_phonological": false,
+  "hint": "informal greeting",
+  "confusable": [
+   "ru_028",
+   "ru_030"
+  ]
+ },
+ {
+  "id": "ru_030",
+  "lemma": "пока",
+  "gloss": "bye; for now",
+  "kind": "chunk",
+  "difficulty": 0.135,
+  "is_phonological": false,
+  "hint": "informal goodbye",
+  "confusable": [
+   "ru_029",
+   "ru_031"
+  ]
+ },
+ {
+  "id": "ru_031",
+  "lemma": "до свидания",
+  "gloss": "goodbye",
+  "kind": "chunk",
+  "difficulty": 0.138,
+  "is_phonological": false,
+  "hint": "neutral/formal",
+  "confusable": [
+   "ru_030"
+  ]
+ },
+ {
+  "id": "ru_032",
+  "lemma": "спасибо",
+  "gloss": "thank you",
+  "kind": "chunk",
+  "difficulty": 0.141,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_033"
+  ]
+ },
+ {
+  "id": "ru_033",
+  "lemma": "пожалуйста",
+  "gloss": "please; you're welcome",
+  "kind": "chunk",
+  "difficulty": 0.143,
+  "is_phonological": true,
+  "hint": "often pronounced 'pozhalsta'",
+  "confusable": [
+   "ru_032"
+  ]
+ },
+ {
+  "id": "ru_034",
+  "lemma": "извините",
+  "gloss": "excuse me; sorry (formal)",
+  "kind": "chunk",
+  "difficulty": 0.146,
+  "is_phonological": false,
+  "hint": "formal/plural; getting attention or apologizing",
+  "confusable": []
+ },
+ {
+  "id": "ru_035",
+  "lemma": "хорошо",
+  "gloss": "good; well; okay",
+  "kind": "vocab",
+  "difficulty": 0.149,
+  "is_phonological": false,
+  "hint": "adverb; common 'okay' reply",
+  "confusable": [
+   "ru_048"
+  ]
+ },
+ {
+  "id": "ru_036",
+  "lemma": "один",
+  "gloss": "one",
+  "kind": "vocab",
+  "difficulty": 0.152,
+  "is_phonological": false,
+  "hint": "masc.; also means 'alone'",
+  "confusable": []
+ },
+ {
+  "id": "ru_037",
+  "lemma": "два",
+  "gloss": "two",
+  "kind": "vocab",
+  "difficulty": 0.155,
+  "is_phonological": false,
+  "hint": "masc./neut.; fem. is 'две'",
+  "confusable": [
+   "ru_038"
+  ]
+ },
+ {
+  "id": "ru_038",
+  "lemma": "три",
+  "gloss": "three",
+  "kind": "vocab",
+  "difficulty": 0.158,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_037"
+  ]
+ },
+ {
+  "id": "ru_039",
+  "lemma": "человек",
+  "gloss": "person; man",
+  "kind": "vocab",
+  "difficulty": 0.16,
+  "is_phonological": false,
+  "hint": "masc.; plural is 'люди'",
+  "confusable": [
+   "ru_081"
+  ]
+ },
+ {
+  "id": "ru_040",
+  "lemma": "день",
+  "gloss": "day",
+  "kind": "vocab",
+  "difficulty": 0.163,
+  "is_phonological": false,
+  "hint": "masc.; soft sign",
+  "confusable": [
+   "ru_120"
+  ]
+ },
+ {
+  "id": "ru_041",
+  "lemma": "время",
+  "gloss": "time",
+  "kind": "vocab",
+  "difficulty": 0.166,
+  "is_phonological": false,
+  "hint": "neuter despite -я ending",
+  "confusable": []
+ },
+ {
+  "id": "ru_042",
+  "lemma": "год",
+  "gloss": "year",
+  "kind": "vocab",
+  "difficulty": 0.169,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "ru_040"
+  ]
+ },
+ {
+  "id": "ru_043",
+  "lemma": "дом",
+  "gloss": "house; home",
+  "kind": "vocab",
+  "difficulty": 0.172,
+  "is_phonological": false,
+  "hint": "masc.; 'дома' = at home",
+  "confusable": []
+ },
+ {
+  "id": "ru_044",
+  "lemma": "вода",
+  "gloss": "water",
+  "kind": "vocab",
+  "difficulty": 0.175,
+  "is_phonological": true,
+  "hint": "fem.; stress on last syllable, 'a' sounds like 'uh'",
+  "confusable": []
+ },
+ {
+  "id": "ru_045",
+  "lemma": "знать",
+  "gloss": "to know",
+  "kind": "vocab",
+  "difficulty": 0.177,
+  "is_phonological": false,
+  "hint": "facts/info",
+  "confusable": [
+   "ru_074"
+  ]
+ },
+ {
+  "id": "ru_046",
+  "lemma": "хотеть",
+  "gloss": "to want",
+  "kind": "vocab",
+  "difficulty": 0.18,
+  "is_phonological": false,
+  "hint": "irregular: хочу, хочешь",
+  "confusable": []
+ },
+ {
+  "id": "ru_047",
+  "lemma": "говорить",
+  "gloss": "to speak; to say",
+  "kind": "vocab",
+  "difficulty": 0.183,
+  "is_phonological": true,
+  "hint": "unstressed 'о' sounds like 'a'",
+  "confusable": [
+   "ru_234"
+  ]
+ },
+ {
+  "id": "ru_048",
+  "lemma": "хороший",
+  "gloss": "good",
+  "kind": "vocab",
+  "difficulty": 0.186,
+  "is_phonological": false,
+  "hint": "adjective (masc.)",
+  "confusable": [
+   "ru_035",
+   "ru_092"
+  ]
+ },
+ {
+  "id": "ru_049",
+  "lemma": "большой",
+  "gloss": "big",
+  "kind": "vocab",
+  "difficulty": 0.189,
+  "is_phonological": false,
+  "hint": "adjective (masc.)",
+  "confusable": [
+   "ru_091"
+  ]
+ },
+ {
+  "id": "ru_050",
+  "lemma": "мой",
+  "gloss": "my, mine",
+  "kind": "grammar",
+  "difficulty": 0.192,
+  "is_phonological": false,
+  "hint": "agrees in gender/number: моя, моё, мои",
+  "confusable": [
+   "ru_000",
+   "ru_006"
+  ]
+ },
+ {
+  "id": "ru_051",
+  "lemma": "твой",
+  "gloss": "your (informal)",
+  "kind": "grammar",
+  "difficulty": 0.195,
+  "is_phonological": false,
+  "hint": "agrees in gender/number: твоя, твоё",
+  "confusable": [
+   "ru_001"
+  ]
+ },
+ {
+  "id": "ru_052",
+  "lemma": "наш",
+  "gloss": "our",
+  "kind": "grammar",
+  "difficulty": 0.197,
+  "is_phonological": false,
+  "hint": "agrees in gender/number: наша, наше",
+  "confusable": [
+   "ru_006",
+   "ru_053"
+  ]
+ },
+ {
+  "id": "ru_053",
+  "lemma": "ваш",
+  "gloss": "your (formal/plural)",
+  "kind": "grammar",
+  "difficulty": 0.2,
+  "is_phonological": false,
+  "hint": "agrees in gender/number: ваша, ваше",
+  "confusable": [
+   "ru_002",
+   "ru_052"
+  ]
+ },
+ {
+  "id": "ru_054",
+  "lemma": "весь",
+  "gloss": "all, whole",
+  "kind": "grammar",
+  "difficulty": 0.203,
+  "is_phonological": false,
+  "hint": "forms: вся, всё, все",
+  "confusable": []
+ },
+ {
+  "id": "ru_055",
+  "lemma": "тот",
+  "gloss": "that (one)",
+  "kind": "grammar",
+  "difficulty": 0.206,
+  "is_phonological": false,
+  "hint": "forms: та, то, те",
+  "confusable": [
+   "ru_008",
+   "ru_056"
+  ]
+ },
+ {
+  "id": "ru_056",
+  "lemma": "этот",
+  "gloss": "this (one)",
+  "kind": "grammar",
+  "difficulty": 0.209,
+  "is_phonological": false,
+  "hint": "forms: эта, это, эти",
+  "confusable": [
+   "ru_008",
+   "ru_055"
+  ]
+ },
+ {
+  "id": "ru_057",
+  "lemma": "сейчас",
+  "gloss": "now, right now",
+  "kind": "vocab",
+  "difficulty": 0.211,
+  "is_phonological": true,
+  "hint": "ч often pronounced like щ here",
+  "confusable": [
+   "ru_060"
+  ]
+ },
+ {
+  "id": "ru_058",
+  "lemma": "здесь",
+  "gloss": "here",
+  "kind": "vocab",
+  "difficulty": 0.214,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_024"
+  ]
+ },
+ {
+  "id": "ru_059",
+  "lemma": "там",
+  "gloss": "there",
+  "kind": "vocab",
+  "difficulty": 0.217,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_060",
+  "lemma": "сегодня",
+  "gloss": "today",
+  "kind": "vocab",
+  "difficulty": 0.22,
+  "is_phonological": true,
+  "hint": "г pronounced as 'v'",
+  "confusable": [
+   "ru_057",
+   "ru_061"
+  ]
+ },
+ {
+  "id": "ru_061",
+  "lemma": "завтра",
+  "gloss": "tomorrow",
+  "kind": "vocab",
+  "difficulty": 0.223,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_060",
+   "ru_062"
+  ]
+ },
+ {
+  "id": "ru_062",
+  "lemma": "вчера",
+  "gloss": "yesterday",
+  "kind": "vocab",
+  "difficulty": 0.226,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_057",
+   "ru_061"
+  ]
+ },
+ {
+  "id": "ru_063",
+  "lemma": "очень",
+  "gloss": "very",
+  "kind": "vocab",
+  "difficulty": 0.228,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_064",
+  "lemma": "тоже",
+  "gloss": "also, too",
+  "kind": "vocab",
+  "difficulty": 0.231,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_065",
+  "lemma": "только",
+  "gloss": "only, just",
+  "kind": "vocab",
+  "difficulty": 0.234,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_066",
+  "lemma": "ещё",
+  "gloss": "still, more, yet",
+  "kind": "vocab",
+  "difficulty": 0.237,
+  "is_phonological": true,
+  "hint": "stressed ё",
+  "confusable": [
+   "ru_067"
+  ]
+ },
+ {
+  "id": "ru_067",
+  "lemma": "уже",
+  "gloss": "already",
+  "kind": "vocab",
+  "difficulty": 0.24,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_066"
+  ]
+ },
+ {
+  "id": "ru_068",
+  "lemma": "можно",
+  "gloss": "may, it's allowed",
+  "kind": "vocab",
+  "difficulty": 0.243,
+  "is_phonological": false,
+  "hint": "impersonal; used for permission",
+  "confusable": [
+   "ru_070"
+  ]
+ },
+ {
+  "id": "ru_069",
+  "lemma": "надо",
+  "gloss": "need to, must",
+  "kind": "vocab",
+  "difficulty": 0.245,
+  "is_phonological": false,
+  "hint": "impersonal: мне надо = I need to",
+  "confusable": []
+ },
+ {
+  "id": "ru_070",
+  "lemma": "мочь",
+  "gloss": "to be able, can",
+  "kind": "vocab",
+  "difficulty": 0.248,
+  "is_phonological": false,
+  "hint": "irregular: могу, можешь, могут",
+  "confusable": [
+   "ru_046",
+   "ru_068"
+  ]
+ },
+ {
+  "id": "ru_071",
+  "lemma": "делать",
+  "gloss": "to do, to make",
+  "kind": "vocab",
+  "difficulty": 0.251,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": []
+ },
+ {
+  "id": "ru_072",
+  "lemma": "идти",
+  "gloss": "to go (on foot)",
+  "kind": "vocab",
+  "difficulty": 0.254,
+  "is_phonological": false,
+  "hint": "irregular: иду, идёшь, идут",
+  "confusable": [
+   "ru_161",
+   "ru_162"
+  ]
+ },
+ {
+  "id": "ru_073",
+  "lemma": "видеть",
+  "gloss": "to see",
+  "kind": "vocab",
+  "difficulty": 0.257,
+  "is_phonological": false,
+  "hint": "вижу, видишь",
+  "confusable": []
+ },
+ {
+  "id": "ru_074",
+  "lemma": "думать",
+  "gloss": "to think",
+  "kind": "vocab",
+  "difficulty": 0.26,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_075",
+  "lemma": "любить",
+  "gloss": "to love, to like",
+  "kind": "vocab",
+  "difficulty": 0.263,
+  "is_phonological": false,
+  "hint": "люблю, любишь",
+  "confusable": [
+   "ru_224"
+  ]
+ },
+ {
+  "id": "ru_076",
+  "lemma": "работать",
+  "gloss": "to work",
+  "kind": "vocab",
+  "difficulty": 0.265,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_085"
+  ]
+ },
+ {
+  "id": "ru_077",
+  "lemma": "жить",
+  "gloss": "to live",
+  "kind": "vocab",
+  "difficulty": 0.268,
+  "is_phonological": false,
+  "hint": "живу, живёшь",
+  "confusable": [
+   "ru_086"
+  ]
+ },
+ {
+  "id": "ru_078",
+  "lemma": "давать",
+  "gloss": "to give",
+  "kind": "vocab",
+  "difficulty": 0.271,
+  "is_phonological": false,
+  "hint": "даю, даёшь",
+  "confusable": []
+ },
+ {
+  "id": "ru_079",
+  "lemma": "друг",
+  "gloss": "friend",
+  "kind": "vocab",
+  "difficulty": 0.274,
+  "is_phonological": false,
+  "hint": "masc.; plural друзья",
+  "confusable": [
+   "ru_212"
+  ]
+ },
+ {
+  "id": "ru_080",
+  "lemma": "женщина",
+  "gloss": "woman",
+  "kind": "vocab",
+  "difficulty": 0.277,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": [
+   "ru_081",
+   "ru_276"
+  ]
+ },
+ {
+  "id": "ru_081",
+  "lemma": "мужчина",
+  "gloss": "man",
+  "kind": "vocab",
+  "difficulty": 0.279,
+  "is_phonological": false,
+  "hint": "masc. despite -а ending",
+  "confusable": [
+   "ru_080",
+   "ru_275"
+  ]
+ },
+ {
+  "id": "ru_082",
+  "lemma": "ребёнок",
+  "gloss": "child",
+  "kind": "vocab",
+  "difficulty": 0.282,
+  "is_phonological": false,
+  "hint": "masc.; plural дети",
+  "confusable": []
+ },
+ {
+  "id": "ru_083",
+  "lemma": "город",
+  "gloss": "city, town",
+  "kind": "vocab",
+  "difficulty": 0.285,
+  "is_phonological": false,
+  "hint": "masc.; stress on first syllable",
+  "confusable": []
+ },
+ {
+  "id": "ru_084",
+  "lemma": "страна",
+  "gloss": "country",
+  "kind": "vocab",
+  "difficulty": 0.288,
+  "is_phonological": false,
+  "hint": "feminine; stress on -на",
+  "confusable": []
+ },
+ {
+  "id": "ru_085",
+  "lemma": "работа",
+  "gloss": "work, job",
+  "kind": "vocab",
+  "difficulty": 0.291,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": [
+   "ru_076"
+  ]
+ },
+ {
+  "id": "ru_086",
+  "lemma": "жизнь",
+  "gloss": "life",
+  "kind": "vocab",
+  "difficulty": 0.294,
+  "is_phonological": false,
+  "hint": "feminine (soft sign)",
+  "confusable": [
+   "ru_077"
+  ]
+ },
+ {
+  "id": "ru_087",
+  "lemma": "имя",
+  "gloss": "name (first name)",
+  "kind": "vocab",
+  "difficulty": 0.296,
+  "is_phonological": false,
+  "hint": "neuter; irregular declension",
+  "confusable": []
+ },
+ {
+  "id": "ru_088",
+  "lemma": "деньги",
+  "gloss": "money",
+  "kind": "vocab",
+  "difficulty": 0.299,
+  "is_phonological": false,
+  "hint": "plural only",
+  "confusable": [
+   "ru_040"
+  ]
+ },
+ {
+  "id": "ru_089",
+  "lemma": "место",
+  "gloss": "place, spot",
+  "kind": "vocab",
+  "difficulty": 0.302,
+  "is_phonological": false,
+  "hint": "neuter",
+  "confusable": [
+   "ru_215"
+  ]
+ },
+ {
+  "id": "ru_090",
+  "lemma": "новый",
+  "gloss": "new",
+  "kind": "vocab",
+  "difficulty": 0.305,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_091",
+  "lemma": "маленький",
+  "gloss": "small, little",
+  "kind": "vocab",
+  "difficulty": 0.308,
+  "is_phonological": false,
+  "hint": "opposite of большой",
+  "confusable": [
+   "ru_138"
+  ]
+ },
+ {
+  "id": "ru_092",
+  "lemma": "плохой",
+  "gloss": "bad",
+  "kind": "vocab",
+  "difficulty": 0.311,
+  "is_phonological": false,
+  "hint": "opposite of хороший",
+  "confusable": []
+ },
+ {
+  "id": "ru_093",
+  "lemma": "красивый",
+  "gloss": "beautiful, handsome",
+  "kind": "vocab",
+  "difficulty": 0.313,
+  "is_phonological": false,
+  "hint": "stress on -си-",
+  "confusable": [
+   "ru_136"
+  ]
+ },
+ {
+  "id": "ru_094",
+  "lemma": "сколько",
+  "gloss": "how much, how many",
+  "kind": "grammar",
+  "difficulty": 0.316,
+  "is_phonological": false,
+  "hint": "question word",
+  "confusable": [
+   "ru_065"
+  ]
+ },
+ {
+  "id": "ru_095",
+  "lemma": "который",
+  "gloss": "which, who, that (relative)",
+  "kind": "grammar",
+  "difficulty": 0.319,
+  "is_phonological": false,
+  "hint": "agrees in gender/number",
+  "confusable": [
+   "ru_096"
+  ]
+ },
+ {
+  "id": "ru_096",
+  "lemma": "какой",
+  "gloss": "what kind of, which",
+  "kind": "grammar",
+  "difficulty": 0.322,
+  "is_phonological": false,
+  "hint": "agrees: какая, какое",
+  "confusable": [
+   "ru_026",
+   "ru_095"
+  ]
+ },
+ {
+  "id": "ru_097",
+  "lemma": "потому что",
+  "gloss": "because",
+  "kind": "chunk",
+  "difficulty": 0.325,
+  "is_phonological": false,
+  "hint": "stress: потому ЧТО",
+  "confusable": [
+   "ru_027"
+  ]
+ },
+ {
+  "id": "ru_098",
+  "lemma": "как дела?",
+  "gloss": "how are you? / how's it going?",
+  "kind": "chunk",
+  "difficulty": 0.328,
+  "is_phonological": false,
+  "hint": "common greeting",
+  "confusable": []
+ },
+ {
+  "id": "ru_099",
+  "lemma": "меня зовут",
+  "gloss": "my name is (lit. they call me)",
+  "kind": "chunk",
+  "difficulty": 0.33,
+  "is_phonological": false,
+  "hint": "follow with your name",
+  "confusable": []
+ },
+ {
+  "id": "ru_100",
+  "lemma": "доброе утро",
+  "gloss": "good morning",
+  "kind": "chunk",
+  "difficulty": 0.333,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_201"
+  ]
+ },
+ {
+  "id": "ru_101",
+  "lemma": "мир",
+  "gloss": "world; peace",
+  "kind": "vocab",
+  "difficulty": 0.336,
+  "is_phonological": false,
+  "hint": "masc; two meanings in one word",
+  "confusable": []
+ },
+ {
+  "id": "ru_102",
+  "lemma": "стол",
+  "gloss": "table",
+  "kind": "vocab",
+  "difficulty": 0.339,
+  "is_phonological": false,
+  "hint": "masc",
+  "confusable": [
+   "ru_103"
+  ]
+ },
+ {
+  "id": "ru_103",
+  "lemma": "стул",
+  "gloss": "chair",
+  "kind": "vocab",
+  "difficulty": 0.342,
+  "is_phonological": false,
+  "hint": "masc; irregular plural стулья",
+  "confusable": [
+   "ru_102"
+  ]
+ },
+ {
+  "id": "ru_104",
+  "lemma": "книга",
+  "gloss": "book",
+  "kind": "vocab",
+  "difficulty": 0.345,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": []
+ },
+ {
+  "id": "ru_105",
+  "lemma": "машина",
+  "gloss": "car; machine",
+  "kind": "vocab",
+  "difficulty": 0.347,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": []
+ },
+ {
+  "id": "ru_106",
+  "lemma": "глаз",
+  "gloss": "eye",
+  "kind": "vocab",
+  "difficulty": 0.35,
+  "is_phonological": false,
+  "hint": "masc; plural глаза",
+  "confusable": []
+ },
+ {
+  "id": "ru_107",
+  "lemma": "рука",
+  "gloss": "hand; arm",
+  "kind": "vocab",
+  "difficulty": 0.353,
+  "is_phonological": false,
+  "hint": "fem; stress shifts: руку (acc)",
+  "confusable": [
+   "ru_108"
+  ]
+ },
+ {
+  "id": "ru_108",
+  "lemma": "нога",
+  "gloss": "leg; foot",
+  "kind": "vocab",
+  "difficulty": 0.356,
+  "is_phonological": false,
+  "hint": "fem; stress shifts",
+  "confusable": [
+   "ru_107"
+  ]
+ },
+ {
+  "id": "ru_109",
+  "lemma": "голова",
+  "gloss": "head",
+  "kind": "vocab",
+  "difficulty": 0.359,
+  "is_phonological": false,
+  "hint": "fem; stress shifts (голову)",
+  "confusable": []
+ },
+ {
+  "id": "ru_110",
+  "lemma": "еда",
+  "gloss": "food",
+  "kind": "vocab",
+  "difficulty": 0.362,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": [
+   "ru_072"
+  ]
+ },
+ {
+  "id": "ru_111",
+  "lemma": "хлеб",
+  "gloss": "bread",
+  "kind": "vocab",
+  "difficulty": 0.364,
+  "is_phonological": false,
+  "hint": "masc",
+  "confusable": []
+ },
+ {
+  "id": "ru_112",
+  "lemma": "чай",
+  "gloss": "tea",
+  "kind": "vocab",
+  "difficulty": 0.367,
+  "is_phonological": false,
+  "hint": "masc",
+  "confusable": []
+ },
+ {
+  "id": "ru_113",
+  "lemma": "мама",
+  "gloss": "mom",
+  "kind": "vocab",
+  "difficulty": 0.37,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": [
+   "ru_114"
+  ]
+ },
+ {
+  "id": "ru_114",
+  "lemma": "папа",
+  "gloss": "dad",
+  "kind": "vocab",
+  "difficulty": 0.373,
+  "is_phonological": false,
+  "hint": "masc despite -a ending",
+  "confusable": [
+   "ru_113"
+  ]
+ },
+ {
+  "id": "ru_115",
+  "lemma": "семья",
+  "gloss": "family",
+  "kind": "vocab",
+  "difficulty": 0.376,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": []
+ },
+ {
+  "id": "ru_116",
+  "lemma": "улица",
+  "gloss": "street",
+  "kind": "vocab",
+  "difficulty": 0.379,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": []
+ },
+ {
+  "id": "ru_117",
+  "lemma": "школа",
+  "gloss": "school",
+  "kind": "vocab",
+  "difficulty": 0.381,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": []
+ },
+ {
+  "id": "ru_118",
+  "lemma": "утро",
+  "gloss": "morning",
+  "kind": "vocab",
+  "difficulty": 0.384,
+  "is_phonological": false,
+  "hint": "neut",
+  "confusable": [
+   "ru_119"
+  ]
+ },
+ {
+  "id": "ru_119",
+  "lemma": "вечер",
+  "gloss": "evening",
+  "kind": "vocab",
+  "difficulty": 0.387,
+  "is_phonological": false,
+  "hint": "masc",
+  "confusable": [
+   "ru_118"
+  ]
+ },
+ {
+  "id": "ru_120",
+  "lemma": "ночь",
+  "gloss": "night",
+  "kind": "vocab",
+  "difficulty": 0.39,
+  "is_phonological": false,
+  "hint": "fem (soft sign)",
+  "confusable": []
+ },
+ {
+  "id": "ru_121",
+  "lemma": "неделя",
+  "gloss": "week",
+  "kind": "vocab",
+  "difficulty": 0.393,
+  "is_phonological": false,
+  "hint": "fem",
+  "confusable": []
+ },
+ {
+  "id": "ru_122",
+  "lemma": "час",
+  "gloss": "hour; o'clock",
+  "kind": "vocab",
+  "difficulty": 0.396,
+  "is_phonological": false,
+  "hint": "masc",
+  "confusable": []
+ },
+ {
+  "id": "ru_123",
+  "lemma": "четыре",
+  "gloss": "four",
+  "kind": "vocab",
+  "difficulty": 0.398,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_124"
+  ]
+ },
+ {
+  "id": "ru_124",
+  "lemma": "пять",
+  "gloss": "five",
+  "kind": "vocab",
+  "difficulty": 0.401,
+  "is_phonological": false,
+  "hint": "soft sign at end",
+  "confusable": [
+   "ru_123"
+  ]
+ },
+ {
+  "id": "ru_125",
+  "lemma": "шесть",
+  "gloss": "six",
+  "kind": "vocab",
+  "difficulty": 0.404,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_126"
+  ]
+ },
+ {
+  "id": "ru_126",
+  "lemma": "семь",
+  "gloss": "seven",
+  "kind": "vocab",
+  "difficulty": 0.407,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_125",
+   "ru_127"
+  ]
+ },
+ {
+  "id": "ru_127",
+  "lemma": "восемь",
+  "gloss": "eight",
+  "kind": "vocab",
+  "difficulty": 0.41,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_126"
+  ]
+ },
+ {
+  "id": "ru_128",
+  "lemma": "девять",
+  "gloss": "nine",
+  "kind": "vocab",
+  "difficulty": 0.413,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_129"
+  ]
+ },
+ {
+  "id": "ru_129",
+  "lemma": "десять",
+  "gloss": "ten",
+  "kind": "vocab",
+  "difficulty": 0.415,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_128"
+  ]
+ },
+ {
+  "id": "ru_130",
+  "lemma": "первый",
+  "gloss": "first",
+  "kind": "vocab",
+  "difficulty": 0.418,
+  "is_phonological": false,
+  "hint": "ordinal; adj endings",
+  "confusable": []
+ },
+ {
+  "id": "ru_131",
+  "lemma": "последний",
+  "gloss": "last",
+  "kind": "vocab",
+  "difficulty": 0.421,
+  "is_phonological": false,
+  "hint": "soft adj",
+  "confusable": []
+ },
+ {
+  "id": "ru_132",
+  "lemma": "старый",
+  "gloss": "old",
+  "kind": "vocab",
+  "difficulty": 0.424,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_090"
+  ]
+ },
+ {
+  "id": "ru_133",
+  "lemma": "молодой",
+  "gloss": "young",
+  "kind": "vocab",
+  "difficulty": 0.427,
+  "is_phonological": false,
+  "hint": "stress on ending",
+  "confusable": []
+ },
+ {
+  "id": "ru_134",
+  "lemma": "белый",
+  "gloss": "white",
+  "kind": "vocab",
+  "difficulty": 0.43,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_135"
+  ]
+ },
+ {
+  "id": "ru_135",
+  "lemma": "чёрный",
+  "gloss": "black",
+  "kind": "vocab",
+  "difficulty": 0.432,
+  "is_phonological": true,
+  "hint": "ё is stressed 'yo'",
+  "confusable": [
+   "ru_134"
+  ]
+ },
+ {
+  "id": "ru_136",
+  "lemma": "красный",
+  "gloss": "red",
+  "kind": "vocab",
+  "difficulty": 0.435,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_093"
+  ]
+ },
+ {
+  "id": "ru_137",
+  "lemma": "много",
+  "gloss": "many; much",
+  "kind": "vocab",
+  "difficulty": 0.438,
+  "is_phonological": false,
+  "hint": "takes genitive",
+  "confusable": [
+   "ru_138"
+  ]
+ },
+ {
+  "id": "ru_138",
+  "lemma": "мало",
+  "gloss": "few; little",
+  "kind": "vocab",
+  "difficulty": 0.441,
+  "is_phonological": false,
+  "hint": "takes genitive",
+  "confusable": [
+   "ru_091",
+   "ru_137"
+  ]
+ },
+ {
+  "id": "ru_139",
+  "lemma": "всегда",
+  "gloss": "always",
+  "kind": "vocab",
+  "difficulty": 0.444,
+  "is_phonological": true,
+  "hint": "г sounds like 'v'",
+  "confusable": [
+   "ru_140",
+   "ru_141"
+  ]
+ },
+ {
+  "id": "ru_140",
+  "lemma": "никогда",
+  "gloss": "never",
+  "kind": "vocab",
+  "difficulty": 0.447,
+  "is_phonological": false,
+  "hint": "needs не with verb",
+  "confusable": [
+   "ru_139",
+   "ru_141"
+  ]
+ },
+ {
+  "id": "ru_141",
+  "lemma": "иногда",
+  "gloss": "sometimes",
+  "kind": "vocab",
+  "difficulty": 0.449,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_139",
+   "ru_140"
+  ]
+ },
+ {
+  "id": "ru_142",
+  "lemma": "потом",
+  "gloss": "then; later",
+  "kind": "vocab",
+  "difficulty": 0.452,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_027"
+  ]
+ },
+ {
+  "id": "ru_143",
+  "lemma": "тогда",
+  "gloss": "then; in that case",
+  "kind": "vocab",
+  "difficulty": 0.455,
+  "is_phonological": true,
+  "hint": "г sounds like 'v'",
+  "confusable": [
+   "ru_025"
+  ]
+ },
+ {
+  "id": "ru_144",
+  "lemma": "если",
+  "gloss": "if",
+  "kind": "grammar",
+  "difficulty": 0.458,
+  "is_phonological": false,
+  "hint": "conjunction",
+  "confusable": []
+ },
+ {
+  "id": "ru_145",
+  "lemma": "или",
+  "gloss": "or",
+  "kind": "grammar",
+  "difficulty": 0.461,
+  "is_phonological": false,
+  "hint": "conjunction",
+  "confusable": []
+ },
+ {
+  "id": "ru_146",
+  "lemma": "что-то",
+  "gloss": "something",
+  "kind": "grammar",
+  "difficulty": 0.464,
+  "is_phonological": false,
+  "hint": "indefinite pronoun",
+  "confusable": [
+   "ru_022"
+  ]
+ },
+ {
+  "id": "ru_147",
+  "lemma": "ничего",
+  "gloss": "nothing; it's okay",
+  "kind": "grammar",
+  "difficulty": 0.466,
+  "is_phonological": true,
+  "hint": "г = 'v'; also means 'no problem'",
+  "confusable": []
+ },
+ {
+  "id": "ru_148",
+  "lemma": "о",
+  "gloss": "about",
+  "kind": "grammar",
+  "difficulty": 0.469,
+  "is_phonological": false,
+  "hint": "preposition + prepositional case; об before vowels",
+  "confusable": [
+   "ru_203"
+  ]
+ },
+ {
+  "id": "ru_149",
+  "lemma": "из",
+  "gloss": "from; out of",
+  "kind": "grammar",
+  "difficulty": 0.472,
+  "is_phonological": false,
+  "hint": "preposition + genitive",
+  "confusable": [
+   "ru_015"
+  ]
+ },
+ {
+  "id": "ru_150",
+  "lemma": "за",
+  "gloss": "behind; for",
+  "kind": "grammar",
+  "difficulty": 0.475,
+  "is_phonological": false,
+  "hint": "preposition; case varies",
+  "confusable": []
+ },
+ {
+  "id": "ru_151",
+  "lemma": "спасибо большое",
+  "gloss": "thank you very much",
+  "kind": "chunk",
+  "difficulty": 0.478,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_152",
+  "lemma": "спать",
+  "gloss": "to sleep",
+  "kind": "vocab",
+  "difficulty": 0.481,
+  "is_phonological": false,
+  "hint": "imperfective; сплю, спишь",
+  "confusable": []
+ },
+ {
+  "id": "ru_153",
+  "lemma": "пить",
+  "gloss": "to drink",
+  "kind": "vocab",
+  "difficulty": 0.483,
+  "is_phonological": false,
+  "hint": "пью, пьёшь",
+  "confusable": [
+   "ru_021"
+  ]
+ },
+ {
+  "id": "ru_154",
+  "lemma": "читать",
+  "gloss": "to read",
+  "kind": "vocab",
+  "difficulty": 0.486,
+  "is_phonological": false,
+  "hint": "regular -ать verb",
+  "confusable": []
+ },
+ {
+  "id": "ru_155",
+  "lemma": "писать",
+  "gloss": "to write",
+  "kind": "vocab",
+  "difficulty": 0.489,
+  "is_phonological": false,
+  "hint": "пишу, пишешь; stress shifts",
+  "confusable": []
+ },
+ {
+  "id": "ru_156",
+  "lemma": "понимать",
+  "gloss": "to understand",
+  "kind": "vocab",
+  "difficulty": 0.492,
+  "is_phonological": false,
+  "hint": "imperfective of понять",
+  "confusable": []
+ },
+ {
+  "id": "ru_157",
+  "lemma": "стоить",
+  "gloss": "to cost",
+  "kind": "vocab",
+  "difficulty": 0.495,
+  "is_phonological": false,
+  "hint": "сколько стоит = how much does it cost",
+  "confusable": [
+   "ru_159"
+  ]
+ },
+ {
+  "id": "ru_158",
+  "lemma": "купить",
+  "gloss": "to buy",
+  "kind": "vocab",
+  "difficulty": 0.498,
+  "is_phonological": false,
+  "hint": "perfective; куплю, купишь",
+  "confusable": []
+ },
+ {
+  "id": "ru_159",
+  "lemma": "стоять",
+  "gloss": "to stand",
+  "kind": "vocab",
+  "difficulty": 0.5,
+  "is_phonological": false,
+  "hint": "стою, стоишь",
+  "confusable": [
+   "ru_157"
+  ]
+ },
+ {
+  "id": "ru_160",
+  "lemma": "сидеть",
+  "gloss": "to sit",
+  "kind": "vocab",
+  "difficulty": 0.503,
+  "is_phonological": false,
+  "hint": "сижу, сидишь",
+  "confusable": [
+   "ru_073"
+  ]
+ },
+ {
+  "id": "ru_161",
+  "lemma": "ходить",
+  "gloss": "to go (on foot, regularly)",
+  "kind": "vocab",
+  "difficulty": 0.506,
+  "is_phonological": false,
+  "hint": "multidirectional of идти; хожу, ходишь",
+  "confusable": [
+   "ru_072"
+  ]
+ },
+ {
+  "id": "ru_162",
+  "lemma": "ехать",
+  "gloss": "to go (by vehicle)",
+  "kind": "vocab",
+  "difficulty": 0.509,
+  "is_phonological": false,
+  "hint": "еду, едешь",
+  "confusable": [
+   "ru_021"
+  ]
+ },
+ {
+  "id": "ru_163",
+  "lemma": "учить",
+  "gloss": "to study/learn, to teach",
+  "kind": "vocab",
+  "difficulty": 0.512,
+  "is_phonological": false,
+  "hint": "учу, учишь",
+  "confusable": []
+ },
+ {
+  "id": "ru_164",
+  "lemma": "помогать",
+  "gloss": "to help",
+  "kind": "vocab",
+  "difficulty": 0.515,
+  "is_phonological": false,
+  "hint": "takes dative object",
+  "confusable": []
+ },
+ {
+  "id": "ru_165",
+  "lemma": "спрашивать",
+  "gloss": "to ask (a question)",
+  "kind": "vocab",
+  "difficulty": 0.517,
+  "is_phonological": false,
+  "hint": "imperfective of спросить",
+  "confusable": []
+ },
+ {
+  "id": "ru_166",
+  "lemma": "отвечать",
+  "gloss": "to answer",
+  "kind": "vocab",
+  "difficulty": 0.52,
+  "is_phonological": false,
+  "hint": "отвечать на + acc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_167",
+  "lemma": "открыть",
+  "gloss": "to open",
+  "kind": "vocab",
+  "difficulty": 0.523,
+  "is_phonological": false,
+  "hint": "perfective; открою, откроешь",
+  "confusable": [
+   "ru_168"
+  ]
+ },
+ {
+  "id": "ru_168",
+  "lemma": "закрыть",
+  "gloss": "to close",
+  "kind": "vocab",
+  "difficulty": 0.526,
+  "is_phonological": false,
+  "hint": "perfective; pairs with открыть",
+  "confusable": [
+   "ru_167"
+  ]
+ },
+ {
+  "id": "ru_169",
+  "lemma": "слушать",
+  "gloss": "to listen",
+  "kind": "vocab",
+  "difficulty": 0.529,
+  "is_phonological": false,
+  "hint": "слушать + acc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_170",
+  "lemma": "гулять",
+  "gloss": "to take a walk, stroll",
+  "kind": "vocab",
+  "difficulty": 0.532,
+  "is_phonological": false,
+  "hint": "regular -ять verb",
+  "confusable": []
+ },
+ {
+  "id": "ru_171",
+  "lemma": "квартира",
+  "gloss": "apartment, flat",
+  "kind": "vocab",
+  "difficulty": 0.534,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": []
+ },
+ {
+  "id": "ru_172",
+  "lemma": "комната",
+  "gloss": "room",
+  "kind": "vocab",
+  "difficulty": 0.537,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": []
+ },
+ {
+  "id": "ru_173",
+  "lemma": "окно",
+  "gloss": "window",
+  "kind": "vocab",
+  "difficulty": 0.54,
+  "is_phonological": false,
+  "hint": "neuter; pl. окна",
+  "confusable": []
+ },
+ {
+  "id": "ru_174",
+  "lemma": "дверь",
+  "gloss": "door",
+  "kind": "vocab",
+  "difficulty": 0.543,
+  "is_phonological": false,
+  "hint": "feminine (ends in soft -ь)",
+  "confusable": []
+ },
+ {
+  "id": "ru_175",
+  "lemma": "магазин",
+  "gloss": "shop, store",
+  "kind": "vocab",
+  "difficulty": 0.546,
+  "is_phonological": false,
+  "hint": "masculine; stress on -зин",
+  "confusable": []
+ },
+ {
+  "id": "ru_176",
+  "lemma": "телефон",
+  "gloss": "telephone, phone",
+  "kind": "vocab",
+  "difficulty": 0.549,
+  "is_phonological": false,
+  "hint": "masculine; cognate",
+  "confusable": []
+ },
+ {
+  "id": "ru_177",
+  "lemma": "парк",
+  "gloss": "park",
+  "kind": "vocab",
+  "difficulty": 0.551,
+  "is_phonological": false,
+  "hint": "masculine; cognate",
+  "confusable": []
+ },
+ {
+  "id": "ru_178",
+  "lemma": "кафе",
+  "gloss": "café",
+  "kind": "vocab",
+  "difficulty": 0.554,
+  "is_phonological": false,
+  "hint": "neuter, indeclinable; stress on -фе",
+  "confusable": []
+ },
+ {
+  "id": "ru_179",
+  "lemma": "кофе",
+  "gloss": "coffee",
+  "kind": "vocab",
+  "difficulty": 0.557,
+  "is_phonological": false,
+  "hint": "masculine, indeclinable",
+  "confusable": [
+   "ru_178"
+  ]
+ },
+ {
+  "id": "ru_180",
+  "lemma": "молоко",
+  "gloss": "milk",
+  "kind": "vocab",
+  "difficulty": 0.56,
+  "is_phonological": true,
+  "hint": "neuter; akanye: sounds like 'malako'",
+  "confusable": []
+ },
+ {
+  "id": "ru_181",
+  "lemma": "мясо",
+  "gloss": "meat",
+  "kind": "vocab",
+  "difficulty": 0.563,
+  "is_phonological": false,
+  "hint": "neuter",
+  "confusable": []
+ },
+ {
+  "id": "ru_182",
+  "lemma": "яблоко",
+  "gloss": "apple",
+  "kind": "vocab",
+  "difficulty": 0.566,
+  "is_phonological": false,
+  "hint": "neuter; pl. яблоки",
+  "confusable": []
+ },
+ {
+  "id": "ru_183",
+  "lemma": "собака",
+  "gloss": "dog",
+  "kind": "vocab",
+  "difficulty": 0.569,
+  "is_phonological": false,
+  "hint": "feminine",
+  "confusable": []
+ },
+ {
+  "id": "ru_184",
+  "lemma": "кошка",
+  "gloss": "cat",
+  "kind": "vocab",
+  "difficulty": 0.571,
+  "is_phonological": false,
+  "hint": "feminine; кот = male cat",
+  "confusable": []
+ },
+ {
+  "id": "ru_185",
+  "lemma": "учитель",
+  "gloss": "teacher",
+  "kind": "vocab",
+  "difficulty": 0.574,
+  "is_phonological": false,
+  "hint": "masculine; fem. учительница",
+  "confusable": []
+ },
+ {
+  "id": "ru_186",
+  "lemma": "студент",
+  "gloss": "student",
+  "kind": "vocab",
+  "difficulty": 0.577,
+  "is_phonological": false,
+  "hint": "masculine; fem. студентка",
+  "confusable": []
+ },
+ {
+  "id": "ru_187",
+  "lemma": "язык",
+  "gloss": "language; tongue",
+  "kind": "vocab",
+  "difficulty": 0.58,
+  "is_phonological": false,
+  "hint": "masculine; stress on -ык",
+  "confusable": []
+ },
+ {
+  "id": "ru_188",
+  "lemma": "слово",
+  "gloss": "word",
+  "kind": "vocab",
+  "difficulty": 0.583,
+  "is_phonological": false,
+  "hint": "neuter; pl. слова",
+  "confusable": []
+ },
+ {
+  "id": "ru_189",
+  "lemma": "вопрос",
+  "gloss": "question",
+  "kind": "vocab",
+  "difficulty": 0.586,
+  "is_phonological": false,
+  "hint": "masculine",
+  "confusable": []
+ },
+ {
+  "id": "ru_190",
+  "lemma": "добрый",
+  "gloss": "kind, good (of person)",
+  "kind": "vocab",
+  "difficulty": 0.588,
+  "is_phonological": false,
+  "hint": "used in greetings: добрый вечер",
+  "confusable": [
+   "ru_048"
+  ]
+ },
+ {
+  "id": "ru_191",
+  "lemma": "интересный",
+  "gloss": "interesting",
+  "kind": "vocab",
+  "difficulty": 0.591,
+  "is_phonological": false,
+  "hint": "adjective",
+  "confusable": []
+ },
+ {
+  "id": "ru_192",
+  "lemma": "трудный",
+  "gloss": "difficult, hard",
+  "kind": "vocab",
+  "difficulty": 0.594,
+  "is_phonological": false,
+  "hint": "adjective",
+  "confusable": []
+ },
+ {
+  "id": "ru_193",
+  "lemma": "лёгкий",
+  "gloss": "easy; light",
+  "kind": "vocab",
+  "difficulty": 0.597,
+  "is_phonological": true,
+  "hint": "гк pronounced 'хк'",
+  "confusable": []
+ },
+ {
+  "id": "ru_194",
+  "lemma": "вкусный",
+  "gloss": "tasty, delicious",
+  "kind": "vocab",
+  "difficulty": 0.6,
+  "is_phonological": false,
+  "hint": "adjective",
+  "confusable": []
+ },
+ {
+  "id": "ru_195",
+  "lemma": "немного",
+  "gloss": "a little, a few",
+  "kind": "grammar",
+  "difficulty": 0.603,
+  "is_phonological": false,
+  "hint": "немного + genitive",
+  "confusable": [
+   "ru_137",
+   "ru_138"
+  ]
+ },
+ {
+  "id": "ru_196",
+  "lemma": "около",
+  "gloss": "near, about (approx.)",
+  "kind": "grammar",
+  "difficulty": 0.605,
+  "is_phonological": false,
+  "hint": "preposition + genitive",
+  "confusable": []
+ },
+ {
+  "id": "ru_197",
+  "lemma": "под",
+  "gloss": "under",
+  "kind": "grammar",
+  "difficulty": 0.608,
+  "is_phonological": false,
+  "hint": "preposition; + instr. (location) / acc. (motion)",
+  "confusable": [
+   "ru_198",
+   "ru_204"
+  ]
+ },
+ {
+  "id": "ru_198",
+  "lemma": "над",
+  "gloss": "above, over",
+  "kind": "grammar",
+  "difficulty": 0.611,
+  "is_phonological": false,
+  "hint": "preposition + instrumental",
+  "confusable": [
+   "ru_197"
+  ]
+ },
+ {
+  "id": "ru_199",
+  "lemma": "между",
+  "gloss": "between",
+  "kind": "grammar",
+  "difficulty": 0.614,
+  "is_phonological": false,
+  "hint": "preposition + instrumental",
+  "confusable": []
+ },
+ {
+  "id": "ru_200",
+  "lemma": "добрый вечер",
+  "gloss": "good evening",
+  "kind": "chunk",
+  "difficulty": 0.617,
+  "is_phonological": false,
+  "hint": "standard evening greeting",
+  "confusable": [
+   "ru_100"
+  ]
+ },
+ {
+  "id": "ru_201",
+  "lemma": "добрый день",
+  "gloss": "good afternoon/day",
+  "kind": "chunk",
+  "difficulty": 0.62,
+  "is_phonological": false,
+  "hint": "standard daytime greeting",
+  "confusable": []
+ },
+ {
+  "id": "ru_202",
+  "lemma": "по",
+  "gloss": "along/by/according to",
+  "kind": "grammar",
+  "difficulty": 0.622,
+  "is_phonological": false,
+  "hint": "preposition, many uses",
+  "confusable": [
+   "ru_197",
+   "ru_207"
+  ]
+ },
+ {
+  "id": "ru_203",
+  "lemma": "от",
+  "gloss": "from (away from)",
+  "kind": "grammar",
+  "difficulty": 0.625,
+  "is_phonological": false,
+  "hint": "takes genitive",
+  "confusable": [
+   "ru_149",
+   "ru_204"
+  ]
+ },
+ {
+  "id": "ru_204",
+  "lemma": "до",
+  "gloss": "until/up to",
+  "kind": "grammar",
+  "difficulty": 0.628,
+  "is_phonological": false,
+  "hint": "takes genitive",
+  "confusable": [
+   "ru_203",
+   "ru_205"
+  ]
+ },
+ {
+  "id": "ru_205",
+  "lemma": "для",
+  "gloss": "for (the sake of)",
+  "kind": "grammar",
+  "difficulty": 0.631,
+  "is_phonological": false,
+  "hint": "takes genitive",
+  "confusable": [
+   "ru_204",
+   "ru_206"
+  ]
+ },
+ {
+  "id": "ru_206",
+  "lemma": "про",
+  "gloss": "about (informal)",
+  "kind": "grammar",
+  "difficulty": 0.634,
+  "is_phonological": false,
+  "hint": "takes accusative",
+  "confusable": [
+   "ru_148",
+   "ru_207"
+  ]
+ },
+ {
+  "id": "ru_207",
+  "lemma": "при",
+  "gloss": "near/in the presence of",
+  "kind": "grammar",
+  "difficulty": 0.636,
+  "is_phonological": false,
+  "hint": "takes prepositional",
+  "confusable": [
+   "ru_202",
+   "ru_206"
+  ]
+ },
+ {
+  "id": "ru_208",
+  "lemma": "себя",
+  "gloss": "oneself",
+  "kind": "grammar",
+  "difficulty": 0.639,
+  "is_phonological": false,
+  "hint": "reflexive pronoun, no nominative",
+  "confusable": [
+   "ru_209",
+   "ru_210"
+  ]
+ },
+ {
+  "id": "ru_209",
+  "lemma": "свой",
+  "gloss": "one's own",
+  "kind": "grammar",
+  "difficulty": 0.642,
+  "is_phonological": false,
+  "hint": "reflexive possessive",
+  "confusable": [
+   "ru_050",
+   "ru_208"
+  ]
+ },
+ {
+  "id": "ru_210",
+  "lemma": "сам",
+  "gloss": "oneself/myself (emphatic)",
+  "kind": "grammar",
+  "difficulty": 0.645,
+  "is_phonological": false,
+  "hint": "stress shifts: сам, сама, сами",
+  "confusable": [
+   "ru_208"
+  ]
+ },
+ {
+  "id": "ru_211",
+  "lemma": "каждый",
+  "gloss": "each/every",
+  "kind": "vocab",
+  "difficulty": 0.648,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_095"
+  ]
+ },
+ {
+  "id": "ru_212",
+  "lemma": "другой",
+  "gloss": "other/another",
+  "kind": "vocab",
+  "difficulty": 0.651,
+  "is_phonological": false,
+  "hint": "stress on -ой",
+  "confusable": [
+   "ru_079",
+   "ru_257"
+  ]
+ },
+ {
+  "id": "ru_213",
+  "lemma": "такой",
+  "gloss": "such/so (a)",
+  "kind": "grammar",
+  "difficulty": 0.653,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_096",
+   "ru_214"
+  ]
+ },
+ {
+  "id": "ru_214",
+  "lemma": "так",
+  "gloss": "so/thus/like that",
+  "kind": "grammar",
+  "difficulty": 0.656,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_064",
+   "ru_213"
+  ]
+ },
+ {
+  "id": "ru_215",
+  "lemma": "вместе",
+  "gloss": "together",
+  "kind": "vocab",
+  "difficulty": 0.659,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_089"
+  ]
+ },
+ {
+  "id": "ru_216",
+  "lemma": "снова",
+  "gloss": "again",
+  "kind": "vocab",
+  "difficulty": 0.662,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_188"
+  ]
+ },
+ {
+  "id": "ru_217",
+  "lemma": "быстро",
+  "gloss": "quickly/fast",
+  "kind": "vocab",
+  "difficulty": 0.665,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_218",
+   "ru_219"
+  ]
+ },
+ {
+  "id": "ru_218",
+  "lemma": "медленно",
+  "gloss": "slowly",
+  "kind": "vocab",
+  "difficulty": 0.668,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_217"
+  ]
+ },
+ {
+  "id": "ru_219",
+  "lemma": "просто",
+  "gloss": "simply/just",
+  "kind": "vocab",
+  "difficulty": 0.67,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_217"
+  ]
+ },
+ {
+  "id": "ru_220",
+  "lemma": "правда",
+  "gloss": "truth/really",
+  "kind": "vocab",
+  "difficulty": 0.673,
+  "is_phonological": false,
+  "hint": "fem. noun; also means 'right?'",
+  "confusable": []
+ },
+ {
+  "id": "ru_221",
+  "lemma": "конечно",
+  "gloss": "of course",
+  "kind": "vocab",
+  "difficulty": 0.676,
+  "is_phonological": true,
+  "hint": "ч pronounced like 'sh': /kɐˈnʲeʂnə/",
+  "confusable": [
+   "ru_222"
+  ]
+ },
+ {
+  "id": "ru_222",
+  "lemma": "наверное",
+  "gloss": "probably/maybe",
+  "kind": "vocab",
+  "difficulty": 0.679,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_221",
+   "ru_223"
+  ]
+ },
+ {
+  "id": "ru_223",
+  "lemma": "может быть",
+  "gloss": "maybe",
+  "kind": "chunk",
+  "difficulty": 0.682,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_222"
+  ]
+ },
+ {
+  "id": "ru_224",
+  "lemma": "нравиться",
+  "gloss": "to be pleasing (to like)",
+  "kind": "vocab",
+  "difficulty": 0.685,
+  "is_phonological": false,
+  "hint": "used as 'мне нравится' = I like",
+  "confusable": [
+   "ru_075"
+  ]
+ },
+ {
+  "id": "ru_225",
+  "lemma": "называться",
+  "gloss": "to be called/named",
+  "kind": "vocab",
+  "difficulty": 0.688,
+  "is_phonological": false,
+  "hint": "for things, not people",
+  "confusable": [
+   "ru_235"
+  ]
+ },
+ {
+  "id": "ru_226",
+  "lemma": "начинать",
+  "gloss": "to begin/start",
+  "kind": "vocab",
+  "difficulty": 0.69,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": [
+   "ru_227"
+  ]
+ },
+ {
+  "id": "ru_227",
+  "lemma": "кончать",
+  "gloss": "to finish/end",
+  "kind": "vocab",
+  "difficulty": 0.693,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": [
+   "ru_226"
+  ]
+ },
+ {
+  "id": "ru_228",
+  "lemma": "получать",
+  "gloss": "to receive/get",
+  "kind": "vocab",
+  "difficulty": 0.696,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": [
+   "ru_164"
+  ]
+ },
+ {
+  "id": "ru_229",
+  "lemma": "брать",
+  "gloss": "to take",
+  "kind": "vocab",
+  "difficulty": 0.699,
+  "is_phonological": false,
+  "hint": "irregular: беру, берёшь",
+  "confusable": [
+   "ru_078"
+  ]
+ },
+ {
+  "id": "ru_230",
+  "lemma": "найти",
+  "gloss": "to find",
+  "kind": "vocab",
+  "difficulty": 0.702,
+  "is_phonological": false,
+  "hint": "perfective: найду, найдёшь",
+  "confusable": [
+   "ru_072",
+   "ru_231"
+  ]
+ },
+ {
+  "id": "ru_231",
+  "lemma": "искать",
+  "gloss": "to look for/search",
+  "kind": "vocab",
+  "difficulty": 0.705,
+  "is_phonological": false,
+  "hint": "ищу, ищешь",
+  "confusable": [
+   "ru_230"
+  ]
+ },
+ {
+  "id": "ru_232",
+  "lemma": "показывать",
+  "gloss": "to show",
+  "kind": "vocab",
+  "difficulty": 0.707,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": [
+   "ru_233"
+  ]
+ },
+ {
+  "id": "ru_233",
+  "lemma": "рассказывать",
+  "gloss": "to tell/narrate",
+  "kind": "vocab",
+  "difficulty": 0.71,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": [
+   "ru_232",
+   "ru_234"
+  ]
+ },
+ {
+  "id": "ru_234",
+  "lemma": "сказать",
+  "gloss": "to say/tell",
+  "kind": "vocab",
+  "difficulty": 0.713,
+  "is_phonological": false,
+  "hint": "perfective of говорить; скажу, скажешь",
+  "confusable": [
+   "ru_047",
+   "ru_233"
+  ]
+ },
+ {
+  "id": "ru_235",
+  "lemma": "звать",
+  "gloss": "to call (by name)/summon",
+  "kind": "vocab",
+  "difficulty": 0.716,
+  "is_phonological": false,
+  "hint": "зову, зовёшь; as in 'меня зовут'",
+  "confusable": [
+   "ru_045",
+   "ru_225"
+  ]
+ },
+ {
+  "id": "ru_236",
+  "lemma": "встречать",
+  "gloss": "to meet",
+  "kind": "vocab",
+  "difficulty": 0.719,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": []
+ },
+ {
+  "id": "ru_237",
+  "lemma": "играть",
+  "gloss": "to play",
+  "kind": "vocab",
+  "difficulty": 0.722,
+  "is_phonological": false,
+  "hint": "играть в (game), играть на (instrument)",
+  "confusable": []
+ },
+ {
+  "id": "ru_238",
+  "lemma": "чувствовать",
+  "gloss": "to feel",
+  "kind": "vocab",
+  "difficulty": 0.724,
+  "is_phonological": true,
+  "hint": "в silent: /ˈt͡ɕustvəvətʲ/",
+  "confusable": [
+   "ru_169"
+  ]
+ },
+ {
+  "id": "ru_239",
+  "lemma": "плакать",
+  "gloss": "to cry",
+  "kind": "vocab",
+  "difficulty": 0.727,
+  "is_phonological": false,
+  "hint": "плачу, плачешь",
+  "confusable": []
+ },
+ {
+  "id": "ru_240",
+  "lemma": "смеяться",
+  "gloss": "to laugh",
+  "kind": "vocab",
+  "difficulty": 0.73,
+  "is_phonological": false,
+  "hint": "смеюсь, смеёшься",
+  "confusable": []
+ },
+ {
+  "id": "ru_241",
+  "lemma": "время года",
+  "gloss": "season (of the year)",
+  "kind": "chunk",
+  "difficulty": 0.733,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_242",
+  "lemma": "лето",
+  "gloss": "summer",
+  "kind": "vocab",
+  "difficulty": 0.736,
+  "is_phonological": false,
+  "hint": "neuter; летом = in summer",
+  "confusable": [
+   "ru_243"
+  ]
+ },
+ {
+  "id": "ru_243",
+  "lemma": "зима",
+  "gloss": "winter",
+  "kind": "vocab",
+  "difficulty": 0.738,
+  "is_phonological": false,
+  "hint": "fem.; зимой = in winter",
+  "confusable": [
+   "ru_242",
+   "ru_245"
+  ]
+ },
+ {
+  "id": "ru_244",
+  "lemma": "весна",
+  "gloss": "spring",
+  "kind": "vocab",
+  "difficulty": 0.741,
+  "is_phonological": false,
+  "hint": "fem.; весной = in spring",
+  "confusable": [
+   "ru_245"
+  ]
+ },
+ {
+  "id": "ru_245",
+  "lemma": "осень",
+  "gloss": "autumn/fall",
+  "kind": "vocab",
+  "difficulty": 0.744,
+  "is_phonological": false,
+  "hint": "fem. (soft sign); осенью = in autumn",
+  "confusable": [
+   "ru_243",
+   "ru_244"
+  ]
+ },
+ {
+  "id": "ru_246",
+  "lemma": "погода",
+  "gloss": "weather",
+  "kind": "vocab",
+  "difficulty": 0.747,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": [
+   "ru_042"
+  ]
+ },
+ {
+  "id": "ru_247",
+  "lemma": "врач",
+  "gloss": "doctor",
+  "kind": "vocab",
+  "difficulty": 0.75,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_248",
+  "lemma": "ресторан",
+  "gloss": "restaurant",
+  "kind": "vocab",
+  "difficulty": 0.753,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": [
+   "ru_178"
+  ]
+ },
+ {
+  "id": "ru_249",
+  "lemma": "деньги есть?",
+  "gloss": "got any money?",
+  "kind": "chunk",
+  "difficulty": 0.755,
+  "is_phonological": false,
+  "hint": "common colloquial question",
+  "confusable": []
+ },
+ {
+  "id": "ru_250",
+  "lemma": "номер",
+  "gloss": "number/hotel room",
+  "kind": "vocab",
+  "difficulty": 0.758,
+  "is_phonological": false,
+  "hint": "masc.; pl. номера",
+  "confusable": [
+   "ru_172"
+  ]
+ },
+ {
+  "id": "ru_251",
+  "lemma": "ноль",
+  "gloss": "zero",
+  "kind": "vocab",
+  "difficulty": 0.761,
+  "is_phonological": false,
+  "hint": "also spelled нуль",
+  "confusable": []
+ },
+ {
+  "id": "ru_252",
+  "lemma": "одиннадцать",
+  "gloss": "eleven",
+  "kind": "vocab",
+  "difficulty": 0.764,
+  "is_phonological": false,
+  "hint": "stress on -на-",
+  "confusable": [
+   "ru_253"
+  ]
+ },
+ {
+  "id": "ru_253",
+  "lemma": "двенадцать",
+  "gloss": "twelve",
+  "kind": "vocab",
+  "difficulty": 0.767,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_252"
+  ]
+ },
+ {
+  "id": "ru_254",
+  "lemma": "двадцать",
+  "gloss": "twenty",
+  "kind": "vocab",
+  "difficulty": 0.77,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_253"
+  ]
+ },
+ {
+  "id": "ru_255",
+  "lemma": "сто",
+  "gloss": "hundred",
+  "kind": "vocab",
+  "difficulty": 0.772,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": [
+   "ru_057"
+  ]
+ },
+ {
+  "id": "ru_256",
+  "lemma": "тысяча",
+  "gloss": "thousand",
+  "kind": "vocab",
+  "difficulty": 0.775,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "ru_257",
+  "lemma": "второй",
+  "gloss": "second (ordinal)",
+  "kind": "vocab",
+  "difficulty": 0.778,
+  "is_phonological": false,
+  "hint": "stress on -ой",
+  "confusable": []
+ },
+ {
+  "id": "ru_258",
+  "lemma": "третий",
+  "gloss": "third (ordinal)",
+  "kind": "vocab",
+  "difficulty": 0.781,
+  "is_phonological": false,
+  "hint": "soft-stem adjective",
+  "confusable": [
+   "ru_038"
+  ]
+ },
+ {
+  "id": "ru_259",
+  "lemma": "минута",
+  "gloss": "minute",
+  "kind": "vocab",
+  "difficulty": 0.784,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "ru_260",
+  "lemma": "месяц",
+  "gloss": "month",
+  "kind": "vocab",
+  "difficulty": 0.787,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_261",
+  "lemma": "понедельник",
+  "gloss": "Monday",
+  "kind": "vocab",
+  "difficulty": 0.789,
+  "is_phonological": false,
+  "hint": "masc.; lowercase",
+  "confusable": []
+ },
+ {
+  "id": "ru_262",
+  "lemma": "суббота",
+  "gloss": "Saturday",
+  "kind": "vocab",
+  "difficulty": 0.792,
+  "is_phonological": false,
+  "hint": "double б; lowercase",
+  "confusable": []
+ },
+ {
+  "id": "ru_263",
+  "lemma": "воскресенье",
+  "gloss": "Sunday",
+  "kind": "vocab",
+  "difficulty": 0.795,
+  "is_phonological": false,
+  "hint": "neut.; lowercase",
+  "confusable": []
+ },
+ {
+  "id": "ru_264",
+  "lemma": "число",
+  "gloss": "number / date",
+  "kind": "vocab",
+  "difficulty": 0.798,
+  "is_phonological": false,
+  "hint": "neut.; stress on -о",
+  "confusable": []
+ },
+ {
+  "id": "ru_265",
+  "lemma": "сок",
+  "gloss": "juice",
+  "kind": "vocab",
+  "difficulty": 0.801,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_266",
+  "lemma": "суп",
+  "gloss": "soup",
+  "kind": "vocab",
+  "difficulty": 0.804,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_267",
+  "lemma": "сыр",
+  "gloss": "cheese",
+  "kind": "vocab",
+  "difficulty": 0.806,
+  "is_phonological": true,
+  "hint": "masc.; ы sound",
+  "confusable": [
+   "ru_271"
+  ]
+ },
+ {
+  "id": "ru_268",
+  "lemma": "рыба",
+  "gloss": "fish",
+  "kind": "vocab",
+  "difficulty": 0.809,
+  "is_phonological": true,
+  "hint": "fem.; ы sound",
+  "confusable": []
+ },
+ {
+  "id": "ru_269",
+  "lemma": "овощи",
+  "gloss": "vegetables",
+  "kind": "vocab",
+  "difficulty": 0.812,
+  "is_phonological": false,
+  "hint": "usually plural",
+  "confusable": [
+   "ru_270"
+  ]
+ },
+ {
+  "id": "ru_270",
+  "lemma": "фрукты",
+  "gloss": "fruit",
+  "kind": "vocab",
+  "difficulty": 0.815,
+  "is_phonological": false,
+  "hint": "usually plural",
+  "confusable": [
+   "ru_269"
+  ]
+ },
+ {
+  "id": "ru_271",
+  "lemma": "сын",
+  "gloss": "son",
+  "kind": "vocab",
+  "difficulty": 0.818,
+  "is_phonological": false,
+  "hint": "masc.; pl. сыновья",
+  "confusable": [
+   "ru_267"
+  ]
+ },
+ {
+  "id": "ru_272",
+  "lemma": "дочь",
+  "gloss": "daughter",
+  "kind": "vocab",
+  "difficulty": 0.821,
+  "is_phonological": false,
+  "hint": "fem.; soft sign",
+  "confusable": []
+ },
+ {
+  "id": "ru_273",
+  "lemma": "брат",
+  "gloss": "brother",
+  "kind": "vocab",
+  "difficulty": 0.824,
+  "is_phonological": false,
+  "hint": "masc.; pl. братья",
+  "confusable": [
+   "ru_229"
+  ]
+ },
+ {
+  "id": "ru_274",
+  "lemma": "сестра",
+  "gloss": "sister",
+  "kind": "vocab",
+  "difficulty": 0.826,
+  "is_phonological": false,
+  "hint": "fem.; pl. сёстры",
+  "confusable": []
+ },
+ {
+  "id": "ru_275",
+  "lemma": "муж",
+  "gloss": "husband",
+  "kind": "vocab",
+  "difficulty": 0.829,
+  "is_phonological": false,
+  "hint": "masc.; pl. мужья",
+  "confusable": [
+   "ru_081"
+  ]
+ },
+ {
+  "id": "ru_276",
+  "lemma": "жена",
+  "gloss": "wife",
+  "kind": "vocab",
+  "difficulty": 0.832,
+  "is_phonological": false,
+  "hint": "fem.; pl. жёны",
+  "confusable": [
+   "ru_080"
+  ]
+ },
+ {
+  "id": "ru_277",
+  "lemma": "автобус",
+  "gloss": "bus",
+  "kind": "vocab",
+  "difficulty": 0.835,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_278",
+  "lemma": "поезд",
+  "gloss": "train",
+  "kind": "vocab",
+  "difficulty": 0.838,
+  "is_phonological": false,
+  "hint": "masc.; pl. поезда",
+  "confusable": []
+ },
+ {
+  "id": "ru_279",
+  "lemma": "самолёт",
+  "gloss": "airplane",
+  "kind": "vocab",
+  "difficulty": 0.841,
+  "is_phonological": false,
+  "hint": "masc.; ё stressed",
+  "confusable": []
+ },
+ {
+  "id": "ru_280",
+  "lemma": "билет",
+  "gloss": "ticket",
+  "kind": "vocab",
+  "difficulty": 0.843,
+  "is_phonological": false,
+  "hint": "masc.",
+  "confusable": []
+ },
+ {
+  "id": "ru_281",
+  "lemma": "дорога",
+  "gloss": "road / way",
+  "kind": "vocab",
+  "difficulty": 0.846,
+  "is_phonological": false,
+  "hint": "fem.",
+  "confusable": []
+ },
+ {
+  "id": "ru_282",
+  "lemma": "цена",
+  "gloss": "price",
+  "kind": "vocab",
+  "difficulty": 0.849,
+  "is_phonological": true,
+  "hint": "fem.; ц sound",
+  "confusable": []
+ },
+ {
+  "id": "ru_283",
+  "lemma": "лицо",
+  "gloss": "face",
+  "kind": "vocab",
+  "difficulty": 0.852,
+  "is_phonological": true,
+  "hint": "neut.; ц sound",
+  "confusable": []
+ },
+ {
+  "id": "ru_284",
+  "lemma": "тело",
+  "gloss": "body",
+  "kind": "vocab",
+  "difficulty": 0.855,
+  "is_phonological": false,
+  "hint": "neut.",
+  "confusable": [
+   "ru_285"
+  ]
+ },
+ {
+  "id": "ru_285",
+  "lemma": "дело",
+  "gloss": "matter / affair",
+  "kind": "vocab",
+  "difficulty": 0.857,
+  "is_phonological": false,
+  "hint": "neut.; in 'как дела'",
+  "confusable": [
+   "ru_284"
+  ]
+ },
+ {
+  "id": "ru_286",
+  "lemma": "одежда",
+  "gloss": "clothes",
+  "kind": "vocab",
+  "difficulty": 0.86,
+  "is_phonological": false,
+  "hint": "fem.; collective, no plural",
+  "confusable": []
+ },
+ {
+  "id": "ru_287",
+  "lemma": "цвет",
+  "gloss": "color",
+  "kind": "vocab",
+  "difficulty": 0.863,
+  "is_phonological": true,
+  "hint": "masc.; pl. цвета",
+  "confusable": []
+ },
+ {
+  "id": "ru_288",
+  "lemma": "зелёный",
+  "gloss": "green",
+  "kind": "vocab",
+  "difficulty": 0.866,
+  "is_phonological": false,
+  "hint": "ё stressed",
+  "confusable": []
+ },
+ {
+  "id": "ru_289",
+  "lemma": "синий",
+  "gloss": "blue",
+  "kind": "vocab",
+  "difficulty": 0.869,
+  "is_phonological": false,
+  "hint": "soft-stem adjective",
+  "confusable": []
+ },
+ {
+  "id": "ru_290",
+  "lemma": "счастливый",
+  "gloss": "happy",
+  "kind": "vocab",
+  "difficulty": 0.872,
+  "is_phonological": true,
+  "hint": "счаст- = [щас]",
+  "confusable": []
+ },
+ {
+  "id": "ru_291",
+  "lemma": "весёлый",
+  "gloss": "cheerful / fun",
+  "kind": "vocab",
+  "difficulty": 0.874,
+  "is_phonological": false,
+  "hint": "ё stressed",
+  "confusable": []
+ },
+ {
+  "id": "ru_292",
+  "lemma": "важный",
+  "gloss": "important",
+  "kind": "vocab",
+  "difficulty": 0.877,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_293",
+  "lemma": "сильный",
+  "gloss": "strong",
+  "kind": "vocab",
+  "difficulty": 0.88,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_294",
+  "lemma": "тёплый",
+  "gloss": "warm",
+  "kind": "vocab",
+  "difficulty": 0.883,
+  "is_phonological": false,
+  "hint": "ё stressed",
+  "confusable": []
+ },
+ {
+  "id": "ru_295",
+  "lemma": "холодный",
+  "gloss": "cold",
+  "kind": "vocab",
+  "difficulty": 0.886,
+  "is_phonological": false,
+  "hint": "",
+  "confusable": []
+ },
+ {
+  "id": "ru_296",
+  "lemma": "встать",
+  "gloss": "to get up / stand up",
+  "kind": "vocab",
+  "difficulty": 0.889,
+  "is_phonological": false,
+  "hint": "perfective; встану, встанешь",
+  "confusable": [
+   "ru_159"
+  ]
+ },
+ {
+  "id": "ru_297",
+  "lemma": "сесть",
+  "gloss": "to sit down",
+  "kind": "vocab",
+  "difficulty": 0.891,
+  "is_phonological": false,
+  "hint": "perfective; сяду, сядешь",
+  "confusable": [
+   "ru_160"
+  ]
+ },
+ {
+  "id": "ru_298",
+  "lemma": "ждать",
+  "gloss": "to wait",
+  "kind": "vocab",
+  "difficulty": 0.894,
+  "is_phonological": false,
+  "hint": "жду, ждёшь",
+  "confusable": []
+ },
+ {
+  "id": "ru_299",
+  "lemma": "приходить",
+  "gloss": "to come / arrive (on foot)",
+  "kind": "vocab",
+  "difficulty": 0.897,
+  "is_phonological": false,
+  "hint": "imperfective",
+  "confusable": []
+ },
+ {
+  "id": "ru_300",
+  "lemma": "очень приятно",
+  "gloss": "nice to meet you",
+  "kind": "chunk",
+  "difficulty": 0.9,
+  "is_phonological": false,
+  "hint": "lit. very pleasant",
+  "confusable": []
+ }
+]

@@ -19,11 +19,14 @@ class Lang:
     voice: str         # edge-tts voice
     flag: str
     curriculum: Callable   # () -> list[Item]
+    whisper_model: str = "base"   # faster-whisper size (ru needs 'small' for noisy clips)
 
 
 LANGS = {
     "pt": Lang("pt", "Português (BR)", "Brazilian Portuguese", "pt",
-               "pt-BR-FranciscaNeural", "🇧🇷", partial(load_curriculum, "pt")),
+               "pt-BR-FranciscaNeural", "🇧🇷", partial(load_curriculum, "pt"),
+               whisper_model="base"),
     "ru": Lang("ru", "Русский", "Russian", "ru",
-               "ru-RU-SvetlanaNeural", "🇷🇺", partial(load_curriculum, "ru")),
+               "ru-RU-SvetlanaNeural", "🇷🇺", partial(load_curriculum, "ru"),
+               whisper_model="small"),
 }

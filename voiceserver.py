@@ -159,7 +159,7 @@ def do_start(lang_id: str = "pt") -> dict:
 def do_turn(audio_bytes: bytes) -> dict:
     with LOCK:
         t0 = time.time()
-        transcript = media.transcribe(audio_bytes, S.lang.whisper)
+        transcript = media.transcribe(audio_bytes, S.lang.whisper, S.lang.whisper_model)
         stt_ms = int((time.time() - t0) * 1000)
         # nothing intelligible heard -> re-ask; DON'T grade it wrong or advance the turn
         if not transcript.strip():

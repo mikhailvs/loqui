@@ -18,21 +18,22 @@ import voice
 
 log = logging.getLogger("loqui.media")
 MIN_SPEECH_SEC = 0.35
-_WMODEL = None
+_WMODELS = {}
 _DBG = 0
 
 
-def warm() -> None:
-    _whisper()
+def warm(name=None) -> None:
+    _whisper(name or app_settings.WHISPER_MODEL)
 
 
-def _whisper():
-    """Load the STT model ONCE and keep it resident (int8 on CPU, built-in VAD)."""
-    global _WMODEL
-    if _WMODEL is None:
+def _whisper(name: str):
+    """Load an STT model ONCE per name and keep it resident (int8 on CPU, VAD).
+    Models are per-name so a language can use a more accurate model (e.g. Russian
+    needs 'small'; 'base' mis-hears noisy real-mic clips)."""
+    if name not in _WMODELS:
         from faster_whisper import WhisperModel
-        _WMODEL = WhisperModel(app_settings.WHISPER_MODEL, device="cpu", compute_type="int8")
-    return _WMODEL
+        _WMODELS[name] = WhisperModel(name, device="cpu", compute_type="int8")
+    return _WMODELS[name]
 
 
 def _duration(path: str) -> float:
@@ -62,9 +63,10 @@ def _debug(audio_bytes: bytes, wav: str, transcript: str) -> None:
         pass
 
 
-def transcribe(audio_bytes: bytes, lang: str = "pt") -> str:
+def transcribe(audio_bytes: bytes, lang: str = "pt", model_name: str = None) -> str:
     """Browser audio (webm/mp4) -> 16k mono wav -> text. Returns '' for silence or
     on any decode/transcribe failure (logged); the caller treats '' as 'no input'."""
+    name = model_name or app_settings.WHISPER_MODEL
     with tempfile.TemporaryDirectory() as td:
         raw, wav = os.path.join(td, "in.bin"), os.path.join(td, "in.wav")
         with open(raw, "wb") as f:
@@ -79,7 +81,7 @@ def transcribe(audio_bytes: bytes, lang: str = "pt") -> str:
             _debug(audio_bytes, wav, "")
             return ""
         try:
-            segs, _info = _whisper().transcribe(
+            segs, _info = _whisper(name).transcribe(
                 wav, language=lang, beam_size=1, temperature=0,
                 vad_filter=True, condition_on_previous_text=False)
             txt = " ".join(s.text.strip() for s in segs).strip()

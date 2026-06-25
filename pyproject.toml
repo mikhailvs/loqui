@@ -9,6 +9,7 @@ license = { text = "MIT" }
 dependencies = [
     "faster-whisper",   # speech-to-text
     "edge-tts",         # text-to-speech
+    "qrcode",           # QR for portable progress codes
 ]
 
 # System prerequisites (not pip-installable): ffmpeg, openssl, and a brain —

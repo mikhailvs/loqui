@@ -25,11 +25,24 @@ footer{padding:14px;background:#15181d;border-top:1px solid #262a30;text-align:c
 #langsel{display:flex;gap:8px;justify-content:center;margin-bottom:10px}
 .lang{background:#1b2330;border:1px solid #29384d;color:#cbd3dc;border-radius:18px;padding:6px 14px;font-size:13px;cursor:pointer}
 .lang.active{background:#2b6cb0;color:#fff;border-color:#2b6cb0}
+#pk{width:100%;max-width:340px;background:#1b2330;border:1px solid #29384d;color:#e9edf2;border-radius:10px;padding:8px 12px;font-size:13px;margin-bottom:10px;text-align:center}
+#tools{margin-top:12px;font-size:12px;color:#8a929c}
+#tools a{color:#6aa3e0;cursor:pointer}
+#panel{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:9}
+.box{background:#15181d;border:1px solid #2a2f37;border-radius:14px;padding:18px;max-width:420px;width:100%;max-height:88dvh;overflow:auto}
+.box h3{margin:0 0 6px;font-size:15px}
+.box .note{color:#8a929c;font-size:12px;margin-bottom:8px}
+.box textarea{width:100%;height:86px;background:#0d0f12;color:#cbd3dc;border:1px solid #29384d;border-radius:8px;font:12px ui-monospace,monospace;padding:8px;word-break:break-all}
+.box .qr{background:#fff;border-radius:10px;padding:10px;margin:10px 0;display:flex;justify-content:center}
+.box .qr svg{width:210px;height:210px}
+.box button{background:#2b6cb0;color:#fff;border:none;border-radius:9px;padding:9px 16px;font-size:14px;cursor:pointer;margin:6px 8px 0 0}
+.box .sec{background:none;border:1px solid #3a4150;color:#9aa3ad}
 </style></head><body>
 <header><h1>🗣️ loqui <span style="color:#8a929c;font-weight:400">— voice tutor</span></h1>
 <div class="prog" id="prog">pick a language &amp; start</div></header>
 <div id="log"></div>
 <footer>
+<input id="pk" placeholder="passkey — optional, resumes your progress" autocomplete="off">
 <div id="langsel">
 <button class="lang active" data-l="pt">🇧🇷 Português</button>
 <button class="lang" data-l="ru">🇷🇺 Русский</button>
@@ -37,12 +50,17 @@ footer{padding:14px;background:#15181d;border-top:1px solid #262a30;text-align:c
 <button id="mic" disabled>🎤</button>
 <div id="hint">pick a language, then start</div>
 <button id="start" class="play" style="margin-top:10px">▶ start</button>
+<div id="tools"><a id="saveBtn">💾 save code</a> &nbsp;·&nbsp; <a id="resumeBtn">📥 resume from code</a></div>
 </footer>
+<div id="panel"><div class="box" id="box"></div></div>
 <audio id="player"></audio>
 <script>
 const log=document.getElementById('log'),player=document.getElementById('player'),
  mic=document.getElementById('mic'),hint=document.getElementById('hint'),
- prog=document.getElementById('prog'),startBtn=document.getElementById('start');
+ prog=document.getElementById('prog'),startBtn=document.getElementById('start'),
+ pk=document.getElementById('pk'),panel=document.getElementById('panel'),box=document.getElementById('box');
+pk.value=localStorage.getItem('loqui_pk')||'';
+pk.onchange=function(){localStorage.setItem('loqui_pk',pk.value.trim());};
 let rec,chunks=[],busy=false,unlocked=false,lang='pt';
 window.addEventListener('error',function(e){if(hint)hint.textContent='⚠ '+e.message;});
 function add(html,cls){const d=document.createElement('div');d.className='msg '+cls;
@@ -69,7 +87,7 @@ async function start(){
  try{player.play().catch(function(){});}catch(e){}   // unlock audio, never block on it
  hint.textContent='thinking…';
  try{
-  const r=await fetch('/start?lang='+lang,{method:'POST'});
+  const r=await fetch('/start?lang='+lang+'&passkey='+encodeURIComponent(pk.value.trim()),{method:'POST'});
   showTutor(await r.json());
   mic.disabled=false;hint.textContent='tap 🎤 and speak';
  }catch(e){hint.textContent='start failed: '+e.message;startBtn.style.display='';}
@@ -95,6 +113,32 @@ async function toggle(){
   rec.start();mic.classList.add('rec');hint.textContent='● recording — tap to send';
  }catch(e){hint.textContent='mic blocked — allow microphone access';}
 }
+function closePanel(){panel.style.display='none';box.innerHTML='';}
+panel.onclick=function(e){if(e.target===panel)closePanel();};
+async function saveCode(){
+ panel.style.display='flex';box.innerHTML='<h3>💾 Your progress code</h3><div class="note">…</div>';
+ try{const d=await (await fetch('/export',{method:'POST'})).json();
+  let h='<h3>💾 Your progress code</h3><div class="note">Keep this to resume on any device — scan the QR or copy the text.</div>';
+  h+=(d.qr?'<div class="qr">'+d.qr+'</div>':'<div class="note">'+d.items+' words learned — code is long, so no QR; use the text.</div>');
+  h+='<textarea id="codeT" readonly>'+esc(d.code)+'</textarea>';
+  h+='<div><button id="copyB">copy</button><button class="sec" onclick="closePanel()">close</button></div>';
+  box.innerHTML=h;
+  document.getElementById('copyB').onclick=function(){const t=document.getElementById('codeT');t.select();try{navigator.clipboard.writeText(t.value);}catch(e){document.execCommand('copy');}this.textContent='copied ✓';};
+ }catch(e){box.innerHTML='<h3>error</h3><div class="note">'+esc(e.message)+'</div><button class="sec" onclick="closePanel()">close</button>';}
+}
+function resumePanel(){
+ panel.style.display='flex';
+ box.innerHTML='<h3>📥 Resume from a code</h3><textarea id="impT" placeholder="paste your loqui code"></textarea><div><button id="impB">resume</button><button class="sec" onclick="closePanel()">close</button></div>';
+ document.getElementById('impB').onclick=async function(){
+  const code=document.getElementById('impT').value.trim();if(!code)return;this.textContent='…';
+  const d=await (await fetch('/import',{method:'POST',body:code})).json();
+  if(d.error){this.textContent='resume';hint.textContent=d.error;document.getElementById('impT').style.borderColor='#e03131';return;}
+  closePanel();startBtn.style.display='none';unlocked=true;try{player.play().catch(function(){});}catch(e){}
+  showTutor(d);mic.disabled=false;hint.textContent='resumed — tap 🎤 and speak';
+ };
+}
+document.getElementById('saveBtn').onclick=saveCode;
+document.getElementById('resumeBtn').onclick=resumePanel;
 document.querySelectorAll('.lang').forEach(function(b){b.onclick=function(){lang=b.dataset.l;document.querySelectorAll('.lang').forEach(x=>x.classList.remove('active'));b.classList.add('active');};});
 startBtn.onclick=start;mic.onclick=toggle;
 </script></body></html>

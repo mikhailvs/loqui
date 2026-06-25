@@ -279,6 +279,29 @@ def test_local_match():
     assert not voiceserver.local_match("café", "água")
 
 
+def test_portable_roundtrip():
+    from harness import portable
+    cur = brazilian_curriculum()
+    lm = LearnerModel(cur)
+    lm.new_session()
+    lm.global_time = 77
+    st = lm.states["oi"]
+    st.total_exposures = 4
+    st.successful_exposures = 3
+    st.stability = 250.0
+    st.last_seen_time = 50
+    st.declarative = Declarative.RECALL
+    st.declarative_known = True
+    st.production_events = [0, 0]
+    st.production_known = True
+    lm2 = portable.decode(cur, portable.encode(lm))
+    s2 = lm2.states["oi"]
+    assert lm2.global_time == 77
+    assert s2.successful_exposures == 3 and s2.production_known
+    assert s2.declarative == Declarative.RECALL and len(s2.production_events) == 2
+    assert lm2.states["agua"].total_exposures == 0   # untouched item stays fresh
+
+
 def test_drive_proposes_contrast_for_confusable():
     a = Item("ser", "ser", "grammar", 0.5, confusable=("estar",))
     b = Item("estar", "estar", "grammar", 0.5, confusable=("ser",))

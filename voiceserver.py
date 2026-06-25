@@ -12,6 +12,7 @@ Run:  python voiceserver.py   then open https://<lan-ip>:8443 .
 from __future__ import annotations
 import json
 import os
+import re
 import ssl
 import threading
 import time
@@ -30,14 +31,44 @@ from harness.moves import MoveType, RETRIEVAL_MOVES
 from harness.arbiter import Arbiter
 from harness.sim import Response
 from harness.languages import LANGS
-from harness import persistence
+from harness import persistence, portable
 
 log = logging.getLogger("loqui.server")
 HERE = os.path.dirname(os.path.abspath(__file__))
 AUDIO_DIR = os.path.join(HERE, "audio")
 PAGE_PATH = os.path.join(HERE, "index.html")
+PROGRESS_DIR = os.path.join(HERE, "progress")
 os.makedirs(AUDIO_DIR, exist_ok=True)
+os.makedirs(PROGRESS_DIR, exist_ok=True)
 LOCK = threading.Lock()                 # serializes whole turns (single-user prototype)
+
+
+def _state_path(passkey: str, lang: str) -> str:
+    """Where this learner's progress is stored. Keyed by a sanitized passkey;
+    an empty passkey uses an anonymous per-language file."""
+    pk = re.sub(r"[^a-z0-9_-]", "", (passkey or "").lower())[:40]
+    if pk:
+        return os.path.join(PROGRESS_DIR, f"{pk}.{lang}.json")
+    return os.path.join(HERE, f".learner_{lang}.json")
+
+
+def _qr_svg(data: str):
+    """An SVG QR for the code, or None if it's too dense to scan / qrcode missing."""
+    if len(data) > 1800:                 # beyond this a QR is too dense to scan by phone
+        return None
+    try:
+        import io
+        import qrcode
+        import qrcode.image.svg
+        img = qrcode.make(data, image_factory=qrcode.image.svg.SvgImage,
+                          error_correction=qrcode.constants.ERROR_CORRECT_L)
+        buf = io.BytesIO()
+        img.save(buf)
+        svg = buf.getvalue().decode()
+        return svg[svg.find("<svg"):]    # drop xml prolog so it embeds in HTML
+    except Exception:
+        log.exception("qr generation failed")
+        return None
 
 
 class Session:
@@ -47,6 +78,7 @@ class Session:
         self.arb = Arbiter()
         self.lang = LANGS["pt"]
         self.curriculum = self.lang.curriculum()
+        self.passkey = ""
 
     def reset(self, lang_id="pt"):
         self.lang = LANGS.get(lang_id, LANGS["pt"])
@@ -138,7 +170,7 @@ def _emit_next(ctx: dict) -> dict:
     audio_url = media.synth_turn(r.get("say", ""), AUDIO_DIR, S.lang.voice)
     tts_ms = int((time.time() - tv) * 1000)
 
-    persistence.save(S.lm, move, os.path.join(HERE, f".learner_{S.lang.id}.json"))
+    persistence.save(S.lm, move, _state_path(S.passkey, S.lang.id))
     blocked = sorted({n for _c, vs in trace.vetoes for n, _r in vs})
     return {
         "say": r.get("say", ""), "display": r.get("display", ""), "audio": audio_url,
@@ -149,11 +181,37 @@ def _emit_next(ctx: dict) -> dict:
     }
 
 
-def do_start(lang_id: str = "pt") -> dict:
+def do_start(lang_id: str = "pt", passkey: str = "", fresh: bool = False) -> dict:
     with LOCK:
         S.reset(lang_id)
-        return _emit_next({"transcript": None, "correct": None, "known": [],
-                           "lang": S.lang.adjective})
+        S.passkey = passkey
+        path = _state_path(passkey, lang_id)
+        if passkey and not fresh and os.path.exists(path):     # resume saved progress
+            lm, _pending = persistence.load(S.curriculum, path)
+            S.lm = lm
+            S.lm.new_session()                                  # new session on top
+        return _emit_next({"transcript": None, "correct": None,
+                           "known": _known_lemmas(), "lang": S.lang.adjective})
+
+
+def do_export() -> dict:
+    with LOCK:
+        code = f"{S.lang.id}.{portable.encode(S.lm)}"           # lang-tagged, self-contained
+        intro = sum(1 for it in S.curriculum if S.lm.states[it.id].total_exposures > 0)
+        return {"code": code, "qr": _qr_svg(code), "items": intro, "language": S.lang.name}
+
+
+def do_import(code: str) -> dict:
+    with LOCK:
+        lang_id, _, payload = code.strip().partition(".")
+        if lang_id not in LANGS or not payload:
+            return {"error": "that doesn't look like a valid loqui code"}
+        S.reset(lang_id)
+        S.passkey = ""
+        S.lm = portable.decode(S.curriculum, payload)
+        S.lm.new_session()
+        return _emit_next({"transcript": None, "correct": None,
+                           "known": _known_lemmas(), "lang": S.lang.adjective})
 
 
 def do_turn(audio_bytes: bytes) -> dict:
@@ -209,8 +267,10 @@ class Handler(BaseHTTPRequestHandler):
             if path == "/start":
                 q = parse_qs(urlparse(self.path).query)
                 lang_id = q.get("lang", ["pt"])[0]
-                return self._send(200, json.dumps(do_start(lang_id), ensure_ascii=False),
-                                  "application/json")
+                passkey = q.get("passkey", [""])[0]
+                fresh = q.get("fresh", ["0"])[0] in ("1", "true")
+                return self._send(200, json.dumps(do_start(lang_id, passkey, fresh),
+                                  ensure_ascii=False), "application/json")
             if path == "/turn":
                 n = int(self.headers.get("Content-Length", 0) or 0)
                 if n <= 0 or n > 25_000_000:    # guard a stuck recorder / bad length
@@ -218,6 +278,14 @@ class Handler(BaseHTTPRequestHandler):
                                       "application/json")
                 data = self.rfile.read(n)
                 return self._send(200, json.dumps(do_turn(data), ensure_ascii=False),
+                                  "application/json")
+            if path == "/export":
+                return self._send(200, json.dumps(do_export(), ensure_ascii=False),
+                                  "application/json")
+            if path == "/import":
+                n = int(self.headers.get("Content-Length", 0) or 0)
+                code = self.rfile.read(n).decode("utf-8", "replace") if 0 < n < 200_000 else ""
+                return self._send(200, json.dumps(do_import(code), ensure_ascii=False),
                                   "application/json")
         except Exception as e:
             log.exception("request %s failed", path)

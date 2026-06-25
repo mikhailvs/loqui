@@ -7,9 +7,10 @@ models/
 # generated audio + transient
 audio/
 .voicetmp/
-# learner state (per-run)
+# learner state (per-run) + passkey progress store
 learner_state.json
 .learner_*.json
+progress/
 # python
 __pycache__/
 *.pyc

@@ -25,6 +25,10 @@ footer{padding:14px;background:#15181d;border-top:1px solid #262a30;text-align:c
 #langsel{display:flex;gap:8px;justify-content:center;margin-bottom:10px}
 .lang{background:#1b2330;border:1px solid #29384d;color:#cbd3dc;border-radius:18px;padding:6px 14px;font-size:13px;cursor:pointer}
 .lang.active{background:#2b6cb0;color:#fff;border-color:#2b6cb0}
+#levelsel{display:flex;gap:6px;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
+.lvl{background:#1b2330;border:1px solid #29384d;color:#cbd3dc;border-radius:18px;padding:5px 11px;font-size:12px;cursor:pointer}
+.lvl.active{background:#2b6cb0;color:#fff;border-color:#2b6cb0}
+.box table td{padding:4px 6px;border-bottom:1px solid #1c2027}
 #pk{width:100%;max-width:340px;background:#1b2330;border:1px solid #29384d;color:#e9edf2;border-radius:10px;padding:8px 12px;font-size:13px;margin-bottom:10px;text-align:center}
 #tools{margin-top:12px;font-size:12px;color:#8a929c}
 #tools a{color:#6aa3e0;cursor:pointer}
@@ -47,10 +51,15 @@ footer{padding:14px;background:#15181d;border-top:1px solid #262a30;text-align:c
 <button class="lang active" data-l="pt">🇧🇷 Português</button>
 <button class="lang" data-l="ru">🇷🇺 Русский</button>
 </div>
+<div id="levelsel">
+<button class="lvl active" data-n="0">🌱 beginner</button>
+<button class="lvl" data-n="40">📗 some basics</button>
+<button class="lvl" data-n="100">📘 intermediate</button>
+</div>
 <button id="mic" disabled>🎤</button>
 <div id="hint">pick a language, then start</div>
 <button id="start" class="play" style="margin-top:10px">▶ start</button>
-<div id="tools"><a id="saveBtn">💾 save code</a> &nbsp;·&nbsp; <a id="resumeBtn">📥 resume from code</a></div>
+<div id="tools"><a id="saveBtn">💾 save code</a> &nbsp;·&nbsp; <a id="resumeBtn">📥 resume</a> &nbsp;·&nbsp; <a id="statusBtn">📊 progress</a></div>
 </footer>
 <div id="panel"><div class="box" id="box"></div></div>
 <audio id="player"></audio>
@@ -61,7 +70,7 @@ const log=document.getElementById('log'),player=document.getElementById('player'
  pk=document.getElementById('pk'),panel=document.getElementById('panel'),box=document.getElementById('box');
 pk.value=localStorage.getItem('loqui_pk')||'';
 pk.onchange=function(){localStorage.setItem('loqui_pk',pk.value.trim());};
-let rec,chunks=[],busy=false,unlocked=false,lang='pt';
+let rec,chunks=[],busy=false,unlocked=false,lang='pt',level=0;
 window.addEventListener('error',function(e){if(hint)hint.textContent='⚠ '+e.message;});
 function add(html,cls){const d=document.createElement('div');d.className='msg '+cls;
  d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
@@ -87,7 +96,7 @@ async function start(){
  try{player.play().catch(function(){});}catch(e){}   // unlock audio, never block on it
  hint.textContent='thinking…';
  try{
-  const r=await fetch('/start?lang='+lang+'&passkey='+encodeURIComponent(pk.value.trim()),{method:'POST'});
+  const r=await fetch('/start?lang='+lang+'&level='+level+'&passkey='+encodeURIComponent(pk.value.trim()),{method:'POST'});
   showTutor(await r.json());
   mic.disabled=false;hint.textContent='tap 🎤 and speak';
  }catch(e){hint.textContent='start failed: '+e.message;startBtn.style.display='';}
@@ -137,8 +146,22 @@ function resumePanel(){
   showTutor(d);mic.disabled=false;hint.textContent='resumed — tap 🎤 and speak';
  };
 }
+async function statusPanel(){
+ panel.style.display='flex';box.innerHTML='<h3>📊 Progress</h3><div class="note">…</div>';
+ try{const d=await (await fetch('/status',{method:'POST'})).json();
+  let h='<h3>📊 Progress — '+esc(d.language)+'</h3>';
+  h+='<div class="note">'+d.introduced+' / '+d.of+' words seen · '+d.production_known+' you can produce · '+d.due+' due for review</div>';
+  if(d.words.length){h+='<table style="width:100%;border-collapse:collapse;font-size:12.5px">';
+   for(const w of d.words.slice(0,80)){const c=w.production?'#51cf66':(w.due?'#ffa94d':'#6b7280');
+    h+='<tr><td>'+esc(w.lemma)+'</td><td style="color:#8a929c">'+esc(w.gloss)+'</td><td style="text-align:right;color:'+c+'">'+(w.production?'✓ produce':(w.due?'due':esc(w.state)))+'</td></tr>';}
+   h+='</table>';}else{h+='<div class="note">No words yet — tap start and learn a few!</div>';}
+  h+='<div><button class="sec" onclick="closePanel()">close</button></div>';box.innerHTML=h;
+ }catch(e){box.innerHTML='<h3>error</h3><div class="note">'+esc(e.message)+'</div><button class="sec" onclick="closePanel()">close</button>';}
+}
 document.getElementById('saveBtn').onclick=saveCode;
 document.getElementById('resumeBtn').onclick=resumePanel;
+document.getElementById('statusBtn').onclick=statusPanel;
+document.querySelectorAll('.lvl').forEach(function(b){b.onclick=function(){level=+b.dataset.n;document.querySelectorAll('.lvl').forEach(x=>x.classList.remove('active'));b.classList.add('active');};});
 document.querySelectorAll('.lang').forEach(function(b){b.onclick=function(){lang=b.dataset.l;document.querySelectorAll('.lang').forEach(x=>x.classList.remove('active'));b.classList.add('active');};});
 startBtn.onclick=start;mic.onclick=toggle;
 </script></body></html>

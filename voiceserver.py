@@ -26,7 +26,7 @@ import app_settings
 import brain
 import media
 from harness import config as C
-from harness.model import LearnerModel
+from harness.model import LearnerModel, Declarative
 from harness.moves import MoveType, RETRIEVAL_MOVES
 from harness.arbiter import Arbiter
 from harness.sim import Response
@@ -181,17 +181,56 @@ def _emit_next(ctx: dict) -> dict:
     }
 
 
-def do_start(lang_id: str = "pt", passkey: str = "", fresh: bool = False) -> dict:
+def _place(lm, curriculum, n: int) -> None:
+    """Placement: mark the n most-frequent items as already recognized, so a
+    non-beginner skips them (they still enter the spaced-review pool)."""
+    now = lm.global_time
+    for it in curriculum[:max(0, n)]:
+        st = lm.states[it.id]
+        st.successful_exposures = 2
+        st.total_exposures = 2
+        st.encounters = C.RECOGNITION_ENCOUNTER_MIN
+        st.declarative = Declarative.RECOGNITION
+        st.declarative_known = True
+        st.last_seen_time = now
+        st.last_seen_session = lm.session
+        st.stability = C.INIT_STABILITY * 2
+
+
+def do_start(lang_id: str = "pt", passkey: str = "", fresh: bool = False, level: int = 0) -> dict:
     with LOCK:
         S.reset(lang_id)
         S.passkey = passkey
         path = _state_path(passkey, lang_id)
+        resumed = False
         if passkey and not fresh and os.path.exists(path):     # resume saved progress
             lm, _pending = persistence.load(S.curriculum, path)
             S.lm = lm
             S.lm.new_session()                                  # new session on top
+            resumed = True
+        if not resumed and level > 0:                           # placement for a non-beginner
+            _place(S.lm, S.curriculum, level)
         return _emit_next({"transcript": None, "correct": None,
                            "known": _known_lemmas(), "lang": S.lang.adjective})
+
+
+def do_status() -> dict:
+    with LOCK:
+        rows = []
+        for it in S.curriculum:
+            st = S.lm.states[it.id]
+            if st.total_exposures == 0:
+                continue
+            recall = round(S.lm.recall(it.id), 2)
+            rows.append({"lemma": it.lemma, "gloss": it.gloss,
+                         "state": st.declarative.name.lower(),
+                         "recall": recall, "production": st.production_known,
+                         "due": st.encoded and recall <= C.REVIEW_FIRE})
+        return {"language": S.lang.name, "of": len(S.curriculum), "introduced": len(rows),
+                "declarative_known": sum(1 for r in rows if r["state"] != "unseen"),
+                "production_known": sum(1 for r in rows if r["production"]),
+                "due": sum(1 for r in rows if r["due"]),
+                "words": rows}
 
 
 def do_export() -> dict:
@@ -269,8 +308,12 @@ class Handler(BaseHTTPRequestHandler):
                 lang_id = q.get("lang", ["pt"])[0]
                 passkey = q.get("passkey", [""])[0]
                 fresh = q.get("fresh", ["0"])[0] in ("1", "true")
-                return self._send(200, json.dumps(do_start(lang_id, passkey, fresh),
+                level = int(q.get("level", ["0"])[0] or 0)
+                return self._send(200, json.dumps(do_start(lang_id, passkey, fresh, level),
                                   ensure_ascii=False), "application/json")
+            if path == "/status":
+                return self._send(200, json.dumps(do_status(), ensure_ascii=False),
+                                  "application/json")
             if path == "/turn":
                 n = int(self.headers.get("Content-Length", 0) or 0)
                 if n <= 0 or n > 25_000_000:    # guard a stuck recorder / bad length

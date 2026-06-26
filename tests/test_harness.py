@@ -344,6 +344,27 @@ def test_feedback_does_not_consume_massing_budget():
     assert lm.states["x"].session_exposures == 1
 
 
+def test_mastery_demotes_on_failure():
+    # a failed retrieval demotes the known flags (no longer a write-once latch)
+    lm = LearnerModel([Item("x", "x", "vocab", 0.3)])
+    _encode(lm, "x")
+    lm.states["x"].declarative_known = True
+    lm.states["x"].production_known = True
+    arb = Arbiter()
+    el = Move(MoveType.ELICIT, "x", variant="production")
+    arb.apply_emit(lm, el)
+    arb.ingest(lm, el, Response(success=False))
+    assert lm.states["x"].declarative_known is False
+    assert lm.states["x"].production_known is False
+    # a recognition probe failure should NOT demote production-known
+    lm.states["x"].production_known = True
+    lm.pending_error = None
+    pr = Move(MoveType.PROBE, "x", variant="recognition")
+    arb.apply_emit(lm, pr)
+    arb.ingest(lm, pr, Response(success=False))
+    assert lm.states["x"].production_known is True
+
+
 def test_multi_seed_no_starvation():
     # across many seeds: never dead-end, never an illegal move, and progress is made
     # [back-ported from the lsat-harness audit: multi-seed no-starvation property]

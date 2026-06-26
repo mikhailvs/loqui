@@ -1,0 +1,19 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Only edge-tts/qrcode are needed to import the app layer; faster-whisper
+      # and the LLM/network paths are lazy or pure, so the suite runs without them.
+      - run: pip install edge-tts qrcode
+      - run: python tests/test_harness.py

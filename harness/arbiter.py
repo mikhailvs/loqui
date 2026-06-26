@@ -89,6 +89,12 @@ class Arbiter:
                     st.declarative = Declarative.RECALL
                 st.declarative_known = True
             elif m.type != MoveType.PROMPT:
+                # a failed retrieval is evidence the item isn't currently known ->
+                # demote (the known flags were write-once latches; now they reflect
+                # recent performance). Re-earned on the next success.
+                st.declarative_known = False
+                if m.variant != "recognition":      # failed a production-level retrieval
+                    st.production_known = False
                 lm.pending_error = PendingError(m.target, "production", st.encoded)
                 st.awaiting_feedback = True
 
